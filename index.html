@@ -1,171 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spell It</title>
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #f0f7f4;
-    --card: #ffffff;
-    --accent: #0d6e5a;
-    --accent2: #1aab88;
-    --accent-light: #e0f5ef;
-    --text: #0d1f1a;
-    --muted: #7a9e94;
-    --border: #c5e0d8;
-    --correct: #0d6e5a;
-    --wrong: #c0392b;
-    --wrong-bg: #fdf0ee;
-    --wrong-border: #f5c0bb;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px 20px 40px;
-    background-image:
-      radial-gradient(circle at 10% 20%, rgba(13,110,90,0.07) 0%, transparent 50%),
-      radial-gradient(circle at 90% 80%, rgba(26,171,136,0.06) 0%, transparent 50%);
-  }
-
-  /* ── HEADER ── */
-  .header { text-align: center; margin-bottom: 6px; }
-  h1 { font-family:'Syne',sans-serif; font-size:clamp(1.9rem,7vw,3.4rem); font-weight:800; color:var(--accent); line-height:1; letter-spacing:-0.02em; }
-  .subtitle { color:var(--muted); font-size:0.6rem; letter-spacing:0.22em; text-transform:uppercase; margin-top:2px; }
-
-  /* ── MODE TABS ── */
-  .mode-tabs { display:flex; gap:6px; margin:10px 0 0; flex-wrap:wrap; justify-content:center; }
-  .tab { padding:6px 14px; border-radius:99px; font-family:'JetBrains Mono',monospace; font-size:0.6rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; border:2px solid var(--border); background:transparent; color:var(--muted); transition:all 0.18s; }
-  .tab.active { background:var(--accent); color:#fff; border-color:var(--accent); }
-  .tab:hover:not(.active) { border-color:var(--accent); color:var(--accent); }
-
-  /* ── MAIN LAYOUT ── */
-  .game-container { width:100%; max-width:640px; margin-top:14px; }
-
-  /* ── STATS ── */
-  .stats-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
-  .badges { display:flex; gap:12px; }
-  .badge { font-size:0.62rem; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; }
-  .badge strong { font-size:0.88rem; font-weight:700; color:var(--accent); }
-  .badge.wb strong { color:var(--wrong); }
-  .progress-wrap { background:var(--border); border-radius:99px; height:4px; margin-bottom:12px; overflow:hidden; }
-  .progress-bar { height:100%; background:linear-gradient(90deg,var(--accent),var(--accent2)); border-radius:99px; transition:width 0.5s cubic-bezier(.4,0,.2,1); }
-
-  /* ── CARD ── */
-  .card {
-    background:var(--card); border:2px solid var(--border);
-    border-radius:16px; padding:18px 22px 16px;
-    margin-bottom:10px;
-    box-shadow:0 4px 20px rgba(13,110,90,0.07);
-    transition:border-color 0.25s, box-shadow 0.25s;
-  }
-  .card.fc { border-color:var(--accent); box-shadow:0 4px 24px rgba(13,110,90,0.18); }
-  .card.fw { border-color:var(--wrong); box-shadow:0 4px 24px rgba(192,57,43,0.13); }
-
-  .tag-row { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
-  .word-tag { background:var(--accent-light); color:var(--accent); font-size:0.55rem; letter-spacing:0.16em; text-transform:uppercase; padding:3px 8px; border-radius:99px; font-weight:700; }
-  .word-num { font-size:0.55rem; color:var(--muted); letter-spacing:0.08em; }
-
-  .bengali-hint { font-family:'Tiro Bangla',serif; font-size:clamp(1.6rem,5vw,2.4rem); color:var(--accent); line-height:1.25; margin-bottom:5px; }
-  .meaning { font-size:0.67rem; color:var(--muted); line-height:1.6; border-left:3px solid var(--border); padding-left:8px; margin-bottom:14px; }
-
-  /* ── INPUT ── */
-  .input-row { display:flex; gap:8px; }
-  input[type="text"] {
-    flex:1; background:var(--accent-light); border:2px solid var(--border);
-    border-radius:10px; color:var(--text); font-family:'JetBrains Mono',monospace;
-    font-size:0.95rem; padding:10px 13px; outline:none; letter-spacing:0.04em;
-    transition:border-color 0.2s, box-shadow 0.2s, background 0.2s;
-  }
-  input[type="text"]:focus { border-color:var(--accent2); background:#fff; box-shadow:0 0 0 3px rgba(26,171,136,0.14); }
-  input.ci { border-color:var(--correct); background:#e8f7f3; color:var(--correct); box-shadow:0 0 0 3px rgba(13,110,90,0.12); }
-  input.wi { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); animation:shake 0.32s ease; }
-  @keyframes shake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-7px)} 60%{transform:translateX(7px)} 80%{transform:translateX(-4px)} }
-
-  .btn { padding:10px 16px; border:none; border-radius:10px; font-family:'JetBrains Mono',monospace; font-size:0.68rem; font-weight:700; cursor:pointer; letter-spacing:0.08em; transition:all 0.18s; text-transform:uppercase; }
-  .btn-check { background:var(--accent); color:#fff; padding:10px 18px; white-space:nowrap; }
-  .btn-check:hover { background:var(--accent2); transform:translateY(-1px); }
-  .btn-check:disabled { opacity:0.4; cursor:not-allowed; transform:none; }
-
-  /* ── WRONG REVEAL PANEL ── */
-  .wrong-panel { display:none; margin-top:12px; padding:13px 14px; background:var(--wrong-bg); border:1.5px solid var(--wrong-border); border-radius:10px; }
-  .wrong-panel.show { display:block; }
-  .wrong-label { font-size:0.56rem; color:var(--wrong); letter-spacing:0.14em; text-transform:uppercase; font-weight:700; margin-bottom:7px; }
-  .diff-display { font-size:1.35rem; font-weight:700; letter-spacing:0.08em; margin-bottom:8px; line-height:1.3; word-break:break-all; }
-  .diff-display .ok { color:var(--accent); }
-  .diff-display .bad { color:var(--wrong); text-decoration:underline; text-decoration-color:var(--wrong); background:rgba(192,57,43,0.1); border-radius:3px; padding:0 1px; }
-  .your-attempt { font-size:0.68rem; color:var(--muted); margin-bottom:10px; }
-  .your-attempt span { color:var(--wrong); font-weight:700; }
-  .btn-next { background:var(--accent); color:#fff; width:100%; padding:10px; font-size:0.7rem; border-radius:8px; }
-  .btn-next:hover { background:var(--accent2); }
-
-  /* feedback for correct */
-  .feedback { margin-top:10px; font-size:0.74rem; font-weight:700; min-height:18px; letter-spacing:0.06em; }
-  .feedback.ok { color:var(--correct); }
-
-  /* ── BOTTOM ACTIONS ── */
-  .actions { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:4px; align-items:center; }
-  .btn-delete { background:transparent; border:2px solid var(--wrong-border); color:var(--wrong); padding:7px 12px; font-size:0.58rem; border-radius:8px; }
-  .btn-delete:hover { background:var(--wrong-bg); }
-  .btn-skip { background:transparent; border:2px solid var(--border); color:var(--muted); padding:7px 12px; font-size:0.58rem; border-radius:8px; }
-  .btn-skip:hover { border-color:var(--accent); color:var(--accent); }
-  .btn-switch-all { background:transparent; border:2px solid var(--accent); color:var(--accent); padding:7px 12px; font-size:0.58rem; border-radius:8px; margin-left:auto; }
-  .btn-switch-all:hover { background:var(--accent); color:#fff; }
-  .btn-switch-all.hidden { display:none; }
-  .word-count-info { font-size:0.56rem; color:var(--muted); text-align:right; letter-spacing:0.08em; margin-top:2px; }
-
-  /* ── CUSTOM WORD PANEL ── */
-  #customScreen { display:none; }
-  .custom-card { background:var(--card); border:2px solid var(--border); border-radius:20px; padding:30px; box-shadow:0 4px 24px rgba(13,110,90,0.07); }
-  .custom-card h3 { font-family:'Syne',sans-serif; color:var(--accent); font-size:1.3rem; margin-bottom:6px; }
-  .custom-card p { font-size:0.68rem; color:var(--muted); margin-bottom:16px; line-height:1.7; }
-  textarea {
-    width:100%; min-height:180px; background:var(--accent-light);
-    border:2px solid var(--border); border-radius:12px;
-    font-family:'JetBrains Mono',monospace; font-size:0.9rem;
-    color:var(--text); padding:14px; outline:none; resize:vertical;
-    transition:border-color 0.2s;
-  }
-  textarea:focus { border-color:var(--accent2); background:#fff; }
-  .custom-actions { display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
-  .btn-start-custom { background:var(--accent); color:#fff; padding:12px 24px; border-radius:10px; font-size:0.72rem; }
-  .btn-start-custom:hover { background:var(--accent2); }
-  .btn-clear-custom { background:transparent; border:2px solid var(--border); color:var(--muted); padding:12px 18px; border-radius:10px; font-size:0.65rem; }
-  .custom-note { font-size:0.6rem; color:var(--muted); margin-top:10px; letter-spacing:0.05em; }
-
-  /* ── DELETED WORDS MANAGER ── */
-  #deletedScreen { display:none; }
-  .deleted-card { background:var(--card); border:2px solid var(--border); border-radius:20px; padding:30px; box-shadow:0 4px 24px rgba(13,110,90,0.07); }
-  .deleted-card h3 { font-family:'Syne',sans-serif; color:var(--accent); font-size:1.3rem; margin-bottom:6px; }
-  .deleted-card p { font-size:0.68rem; color:var(--muted); margin-bottom:16px; line-height:1.7; }
-  .deleted-list { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; min-height:40px; }
-  .del-chip { display:flex; align-items:center; gap:6px; background:var(--wrong-bg); border:1.5px solid var(--wrong-border); border-radius:99px; padding:5px 12px; font-size:0.7rem; color:var(--wrong); }
-  .del-chip button { background:none; border:none; cursor:pointer; color:var(--accent); font-size:0.75rem; font-weight:700; padding:0 2px; }
-  .del-chip button:hover { color:var(--accent2); }
-  .btn-restore-all { background:var(--accent); color:#fff; padding:10px 20px; border-radius:10px; font-size:0.65rem; }
-  .btn-restore-all:hover { background:var(--accent2); }
-  .btn-clear-ls { background:transparent; border:2px solid var(--wrong-border); color:var(--wrong); padding:10px 20px; border-radius:10px; font-size:0.65rem; }
-  .btn-clear-ls:hover { background:var(--wrong-bg); }
-  .empty-deleted { font-size:0.72rem; color:var(--muted); font-style:italic; }
-
-  /* ── COMPLETION ── */
-  .completion-screen { display:none; text-align:center; padding:60px 20px; }
-  .completion-screen h2 { font-family:'Syne',sans-serif; font-size:3rem; font-weight:800; color:var(--accent); margin-bottom:8px; }
-  .completion-screen p { color:var(--muted); font-size:0.8rem; margin-bottom:28px; }
-  .btn-restart { background:var(--accent); color:#fff; padding:13px 30px; border-radius:12px; font-size:0.78rem; }
-  .btn-restart:hover { background:var(--accent2); }
-
-  /* ── TOAST ── */
-  .toast { position:fixed; bottom:26px; left:50%; transform:translateX(-50%) translateY(16px); background:#333; color:#fff; padding:9px 20px; border-radius:10px; font-size:0.7rem; opacity:0; transition:all 0.25s; pointer-events:none; white-space:nowrap; z-index:99; }
-  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spell It</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -190,22 +30,26 @@
       </div>
       <div class="badge">বাকি <strong id="remaining">0</strong></div>
     </div>
-    <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar" style="width:0%"></div>
+    </div>
 
     <div class="card" id="wordCard">
       <div class="tag-row">
         <span class="word-tag" id="modeTag">All Words</span>
-        <span class="word-num" id="wordNum">1 of 81</span>
+        <span class="word-num" id="wordNum">— of —</span>
       </div>
       <div class="bengali-hint" id="bengaliHint">লোড হচ্ছে...</div>
       <div class="meaning" id="meaningHint"></div>
       <div class="input-row">
-        <input type="text" id="spellingInput" placeholder="Type spelling here..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+        <input type="text" id="spellingInput"
+          placeholder="Type spelling here..."
+          autocomplete="off" autocorrect="off"
+          autocapitalize="off" spellcheck="false"/>
         <button class="btn btn-check" id="checkBtn" onclick="checkAnswer()">CHECK ↵</button>
       </div>
       <div class="feedback" id="feedback"></div>
 
-      <!-- Wrong reveal panel -->
       <div class="wrong-panel" id="wrongPanel">
         <div class="wrong-label">✗ Incorrect — study the correct spelling:</div>
         <div class="diff-display" id="diffDisplay"></div>
@@ -234,13 +78,16 @@
   <div id="customScreen">
     <div class="custom-card">
       <h3>Custom Word List</h3>
-      <p>Enter one word per line. Blank lines are ignored.<br>These are temporary — they reset on page refresh.<br>Bengali hints & meanings will show for any word found in the master list.</p>
-      <textarea id="customInput" placeholder="Evanescence&#10;Heterogeneous&#10;&#10;Recession&#10;Councillor&#10;Questionnaire"></textarea>
+      <p>
+        Enter one word per line. Blank lines are ignored.<br>
+        Bengali hints &amp; meanings will show for any word found in the master list.
+      </p>
+      <textarea id="customInput" placeholder="Evanescence&#10;Recession&#10;Questionnaire"></textarea>
       <div class="custom-actions">
         <button class="btn btn-start-custom" onclick="startCustomGame()">▶ Start Practice</button>
-        <button class="btn btn-clear-custom" onclick="document.getElementById('customInput').value=''">Clear</button>
+        <button class="btn btn-clear-custom">Clear</button>
       </div>
-      <div class="custom-note">💡 Use the "📚 Play All Words" button below the card to switch back anytime.</div>
+      <div class="custom-note">💡 Use "📚 Play All Words" below the card to switch back anytime.</div>
     </div>
   </div>
 
@@ -248,7 +95,7 @@
   <div id="deletedScreen">
     <div class="deleted-card">
       <h3>Deleted Words</h3>
-      <p>These words have been permanently removed from your practice list (saved in your browser). Click ↩ to restore any word, or restore all at once.</p>
+      <p>Words removed from practice (saved in your browser). Click ↩ to restore.</p>
       <div class="deleted-list" id="deletedList"></div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
         <button class="btn btn-restore-all" onclick="restoreAll()">↩ Restore All</button>
@@ -261,450 +108,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script>
-/* ═══════════════════════════════════════════════
-   MASTER WORD LIST
-═══════════════════════════════════════════════ */
-const MASTER = [
-  { word:"Lieutenant",     bengali:"লেফটেন্যান্ট",      meaning:"A military officer rank" },
-  { word:"Scurried",       bengali:"স্কারিড",           meaning:"Moved hurriedly (past tense) / ছুটে গেল" },
-  { word:"Conscientious",  bengali:"কন্‌শি-এন্‌শাস",    meaning:"Diligent / বিবেকবুদ্ধিসম্পন্ন" },
-  { word:"Surveillance",   bengali:"সার-ভেই-ল্যান্স",   meaning:"Close observation / নজরদারি" },
-  { word:"Accommodation",  bengali:"আ-কমো-ডেশন",        meaning:"A place to stay / স্থান সংকুলান" },
-  { word:"Corridor",       bengali:"করিডোর",            meaning:"A long passage in a building" },
-  { word:"Reconnaissance", bengali:"রি-কন-এ-স্যান্স",   meaning:"Military survey / জরিপ" },
-  { word:"Lascivious",     bengali:"লা-সিভিয়াস",       meaning:"Lustful / কামুক, লালসাপূর্ণ" },
-  { word:"Dichotomy",      bengali:"ডাই-কট-অমি",        meaning:"Division into two / দ্বিধাবিভক্তি" },
-  { word:"Rhythm",         bengali:"রিদম",              meaning:"Musical beat / গানের ছন্দ" },
-  { word:"Entrepreneur",   bengali:"আন্ত্রাপ্রেনার",    meaning:"Business founder / উদ্যোক্তা" },
-  { word:"Tantamount",     bengali:"ট্যান্টামাউন্ট",    meaning:"Equivalent to / সমপরিমাণ সদৃশ" },
-  { word:"Quotient",       bengali:"কোশেন্ট",           meaning:"Result of division / ভাগফল" },
-  { word:"Vertebrate",     bengali:"ভার্টিব্রেট",        meaning:"Animal with spine / মেরুদণ্ডী প্রাণী" },
-  { word:"Hypocrisy",      bengali:"হিপোক্রিসি",        meaning:"Pretending virtues / ভণ্ডামি" },
-  { word:"Tariff",         bengali:"ট্যারিফ",           meaning:"Tax on imports / শুল্ক" },
-  { word:"Sovereignty",    bengali:"সভারেনটি",          meaning:"Supreme power / সার্বভৌমত্ব" },
-  { word:"Commission",     bengali:"কমিশন",             meaning:"A group or fee / কমিশন" },
-  { word:"Incumbent",      bengali:"ইনকামবেন্ট",        meaning:"Currently in office / পদাধিকারী" },
-  { word:"Precedence",     bengali:"প্রেসিডেন্স",       meaning:"Priority over others / অগ্রাধিকার" },
-  { word:"Schizophrenic",  bengali:"স্কিৎসোফ্রেনিক",    meaning:"Relating to a mental illness / মানসিক বৈকল্য" },
-  { word:"Bureaucrat",     bengali:"বিউরোক্র্যাট",      meaning:"A government official / আমলা" },
-  { word:"Miscellaneous",  bengali:"মিসেলেনিয়াস",      meaning:"Of various types / বিবিধ" },
-  { word:"Diffidence",     bengali:"ডিফিডেন্স",         meaning:"Shyness / আত্মবিশ্বাসের অভাব" },
-  { word:"Ominous",        bengali:"অমিনাস",           meaning:"Threatening / অলক্ষুণে অশুভ" },
-  { word:"Aquarium",       bengali:"আকোয়ারিয়াম",      meaning:"A fish tank / মাছের ট্যাংক" },
-  { word:"Abbreviate",     bengali:"আব্রিভিয়েট",       meaning:"To shorten / সংক্ষিপ্ত করা" },
-  { word:"Deference",      bengali:"ডেফারেন্স",         meaning:"Respectful submission / অনুগত্য" },
-  { word:"Colossal",       bengali:"কলোসাল",           meaning:"Extremely large / বিশাল" },
-  { word:"Precinct",       bengali:"প্রিসিংক্ট",        meaning:"A defined district / নির্দিষ্ট এলাকা" },
-  { word:"Facsimile",      bengali:"ফ্যাক্সিমিলি",      meaning:"Exact copy of a document / ফ্যাক্স" },
-  { word:"Acquaintance",   bengali:"আকোয়েইনট্যান্স",   meaning:"Someone known slightly / পরিচিতজন" },
-  { word:"Embarrass",      bengali:"এম-ব্যারাস",        meaning:"To cause shame / লজ্জায় ফেলা" },
-  { word:"Reminisce",      bengali:"রেমিনিস",           meaning:"To recall the past / স্মৃতিচারণ" },
-  { word:"Vacuum",         bengali:"ভ্যাকুয়াম",        meaning:"Space with no air / শূন্যস্থান" },
-  { word:"Orthopedic",     bengali:"অর্থোপেডিক",        meaning:"Related to bones / অস্থি-সংক্রান্ত" },
-  { word:"Efflorescence",  bengali:"এফ্লরেসেন্স",       meaning:"Blooming of flowers / ফুলের ফোটা" },
-  { word:"Adventitious",   bengali:"অ্যাডভেন্টিশাস",    meaning:"Accidental / দৈবাগত অনিচ্ছাকৃত" },
-  { word:"Aberrant",       bengali:"অ্যাবেরান্ট",       meaning:"Deviating from normal / বিপথগামী" },
-  { word:"Capricious",     bengali:"ক্যাপ্রিশাস",       meaning:"Unpredictable / খেয়ালি চপল" },
-  { word:"Humorous",       bengali:"হিউমারাস",          meaning:"Funny amusing / রসাত্মক" },
-  { word:"Bureaucracy",    bengali:"বিউরোক্র্যাসি",     meaning:"Government by officials / আমলাতন্ত্র" },
-  { word:"Scintillating",  bengali:"সিন্‌টিলেটিং",     meaning:"Brilliantly clever / চকচকে" },
-  { word:"Rebellious",     bengali:"রিবেলিয়াস",        meaning:"Defying authority / বিদ্রোহী" },
-  { word:"Accommodate",    bengali:"আ-কমোডেট",         meaning:"To provide lodging / আবাসিত করা" },
-  { word:"Recession",      bengali:"রিসেশন",            meaning:"Economic decline / অর্থনৈতিক মন্দা" },
-  { word:"Fallacious",     bengali:"ফ্যালেশাস",         meaning:"Based on false reasoning / ভ্রান্তিমূলক" },
-  { word:"Supersede",      bengali:"সুপারসিড",          meaning:"To replace / স্থান অধিকার করা" },
-  { word:"Conspicuous",    bengali:"কন্সপিকিউয়াস",     meaning:"Easily visible / সুস্পষ্ট" },
-  { word:"Evanescence",    bengali:"ইভানেসেন্স",        meaning:"Fading away gradually / ধীরে মিলিয়ে যাওয়া" },
-  { word:"Dilapidated",    bengali:"ডিল্যাপিডেটেড",    meaning:"Fallen into ruin / জরাজীর্ণ" },
-  { word:"Dysentery",      bengali:"ডিসেন্টারি",       meaning:"Intestinal infection / আমাশা" },
-  { word:"Voluntary",      bengali:"ভলান্টারি",         meaning:"Done by free will / স্বেচ্ছামূলক" },
-  { word:"Irresistible",   bengali:"ইরেজিস্টিবল",       meaning:"Too strong to resist / অপ্রতিরোধ্য" },
-  { word:"Exemplary",      bengali:"এগজেমপ্লারি",       meaning:"Serving as a model / আদর্শ" },
-  { word:"Moustache",      bengali:"মুস্তাশ",           meaning:"Hair above upper lip / গোঁফ" },
-  { word:"Haemorrhage",    bengali:"হেমারেজ",           meaning:"Heavy bleeding / অতিরিক্ত রক্তক্ষরণ" },
-  { word:"Precarious",     bengali:"প্রিকেয়ারিয়াস",    meaning:"Uncertain risky / অনিশ্চিত বিপজ্জনক" },
-  { word:"Cigarette",      bengali:"সিগারেট",           meaning:"A tobacco roll / সিগারেট" },
-  { word:"Accessories",    bengali:"আকসেসোরিজ",         meaning:"Additional items / আনুষঙ্গিক জিনিস" },
-  { word:"Itinerary",      bengali:"আই-টিন-এরারি",     meaning:"Travel schedule / ভ্রমণ পরিকল্পনা" },
-  { word:"Pulitzer",       bengali:"পুলিৎজার",          meaning:"Famous journalism prize / পুলিৎজার পুরস্কার" },
-  { word:"Ascertain",      bengali:"আসার-টেইন",         meaning:"To find out for certain / নিশ্চিত করা" },
-  { word:"Receipt",        bengali:"রিসিট",             meaning:"Proof of payment / রসিদ" },
-  { word:"Archetypal",     bengali:"আর্কিটাইপাল",      meaning:"Most typical example / আদর্শ মৌলিক" },
-  { word:"Promiscuous",    bengali:"প্রমিস্কিউয়াস",    meaning:"Having many partners / চরিত্রহীন" },
-  { word:"Holocaust",      bengali:"হলোকাস্ট",          meaning:"Mass genocide / গণহত্যা" },
-  { word:"Deliberation",   bengali:"ডেলিবারেশন",        meaning:"Careful consideration / বিবেচনা" },
-  { word:"Councillor",     bengali:"কাউন্সিলর",         meaning:"Council member / পরিষদ সদস্য" },
-  { word:"Renaissance",    bengali:"রেনেসাঁ",           meaning:"Cultural revival / পুনর্জাগরণ" },
-  { word:"Millennium",     bengali:"মিলেনিয়াম",        meaning:"1000-year period / সহস্রাব্দ" },
-  { word:"Guarantee",      bengali:"গ্যারান্টি",        meaning:"A formal promise / নিশ্চয়তা" },
-  { word:"Sculptor",       bengali:"স্কালপ্টার",        meaning:"Artist who makes sculptures / ভাস্কর" },
-  { word:"Exaggerate",     bengali:"এগজ্যাজারেট",       meaning:"To overstate / অতিরঞ্জন করা" },
-  { word:"Cacophony",      bengali:"ক্যাকোফনি",         meaning:"Harsh unpleasant sound / কর্কশ শব্দ" },
-  { word:"Questionnaire",  bengali:"কোয়েশ্চেনেয়ার",   meaning:"A set of questions / প্রশ্নাবলি" },
-  { word:"Committee",      bengali:"কমিটি",             meaning:"A group with authority / কমিটি" },
-  { word:"Manoeuvre",      bengali:"ম্যানুভার",         meaning:"A skilful movement / দক্ষ কৌশলী চাল" },
-  { word:"Contiguous",     bengali:"কন্টিগিউয়াস",      meaning:"Sharing a boundary / সংলগ্ন" },
-  { word:"Curriculum",     bengali:"কারিকুলাম",         meaning:"Course of study / পাঠ্যক্রম" },
-  { word:"Triumph",        bengali:"ট্রায়াম্ফ",         meaning:"A great victory / বিজয় সাফল্য" },
-];
-
-/* ═══════════════════════════════════════════════
-   DELETED WORDS — persisted in localStorage
-═══════════════════════════════════════════════ */
-const LS_KEY = 'spellit_deleted_v2';
-
-function getDeleted() {
-  try { return JSON.parse(localStorage.getItem(LS_KEY)) || []; }
-  catch { return []; }
-}
-function saveDeleted(arr) {
-  try { localStorage.setItem(LS_KEY, JSON.stringify(arr)); } catch {}
-}
-function addToDeleted(word) {
-  const d = getDeleted();
-  if (!d.includes(word)) { d.push(word); saveDeleted(d); }
-}
-function removeFromDeleted(word) {
-  const d = getDeleted().filter(w => w !== word);
-  saveDeleted(d);
-}
-function clearDeleted() { saveDeleted([]); }
-
-/* ═══════════════════════════════════════════════
-   GAME STATE
-═══════════════════════════════════════════════ */
-let words = [];
-let currentIndex = 0;
-let correctCount = 0;
-let wrongCount = 0;
-let totalStarted = 0;
-let isCustomMode = false;
-let waitingForNext = false; // true while wrong-panel is showing
-
-function buildWordList() {
-  const deleted = getDeleted().map(w => w.toLowerCase());
-  const deduped = [];
-  const seen = new Set();
-  for (const w of MASTER) {
-    const k = w.word.toLowerCase();
-    if (!seen.has(k) && !deleted.includes(k)) {
-      seen.add(k);
-      deduped.push(w);
-    }
-  }
-  return deduped;
-}
-
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-}
-
-/* ═══════════════════════════════════════════════
-   DIFF HIGHLIGHT — feature 2
-   Shows correct spelling letter-by-letter with
-   wrong/missing letters highlighted in red
-═══════════════════════════════════════════════ */
-function buildDiff(correct, attempt) {
-  // Simple Levenshtein-based alignment for display
-  const c = correct.toLowerCase();
-  const a = attempt.toLowerCase();
-
-  // Build a visual diff showing the CORRECT word
-  // with each letter marked ok/bad based on attempt
-  let html = '';
-  for (let i = 0; i < correct.length; i++) {
-    const cl = correct[i];
-    if (i < attempt.length) {
-      if (cl.toLowerCase() === attempt[i].toLowerCase()) {
-        html += `<span class="ok">${cl}</span>`;
-      } else {
-        html += `<span class="bad">${cl}</span>`;
-      }
-    } else {
-      // missing from attempt
-      html += `<span class="bad">${cl}</span>`;
-    }
-  }
-  return html;
-}
-
-/* ═══════════════════════════════════════════════
-   UI UPDATERS
-═══════════════════════════════════════════════ */
-function cur() { return words[currentIndex % words.length]; }
-
-function updateUI() {
-  if (!words.length) { showCompletion(); return; }
-  waitingForNext = false;
-
-  const w = cur();
-  const pos = (currentIndex % words.length) + 1;
-  document.getElementById('wordNum').textContent = `${pos} of ${words.length}`;
-  document.getElementById('modeTag').textContent = isCustomMode ? 'Custom List' : 'All Words';
-  document.getElementById('bengaliHint').textContent = w.bengali;
-  document.getElementById('meaningHint').textContent = w.meaning;
-
-  const inp = document.getElementById('spellingInput');
-  inp.value = ''; inp.className = ''; inp.disabled = false;
-  document.getElementById('checkBtn').disabled = false;
-  document.getElementById('feedback').textContent = '';
-  document.getElementById('feedback').className = 'feedback';
-  document.getElementById('wordCard').className = 'card';
-  document.getElementById('wrongPanel').className = 'wrong-panel';
-  document.getElementById('bottomActions').style.opacity = '1';
-  document.getElementById('bottomActions').style.pointerEvents = 'auto';
-
-  document.getElementById('correctCount').textContent = correctCount;
-  document.getElementById('wrongCount').textContent = wrongCount;
-  document.getElementById('remaining').textContent = words.length;
-
-  const pct = totalStarted > 0 ? ((totalStarted - words.length) / totalStarted * 100) : 0;
-  document.getElementById('progressBar').style.width = pct + '%';
-  document.getElementById('wordCountInfo').textContent = `${words.length} words left in list`;
-
-  document.getElementById('switchAllBtn').classList.toggle('hidden', !isCustomMode);
-  setTimeout(() => inp.focus(), 50);
-}
-
-function showCompletion() {
-  document.getElementById('gameScreen').style.display = 'none';
-  document.getElementById('completionScreen').style.display = 'block';
-  document.getElementById('finalScore').textContent =
-    `✓ ${correctCount} correct  ✗ ${wrongCount} wrong — শাবাশ!`;
-}
-
-/* ═══════════════════════════════════════════════
-   GAME ACTIONS
-═══════════════════════════════════════════════ */
-function checkAnswer() {
-  if (!words.length || waitingForNext) return;
-  const inp = document.getElementById('spellingInput');
-  const answer = inp.value.trim();
-  if (!answer) return;
-
-  const correct = cur().word;
-
-  if (answer.toLowerCase() === correct.toLowerCase()) {
-    // ── CORRECT ──
-    inp.className = 'ci';
-    const fb = document.getElementById('feedback');
-    fb.textContent = '✓ Correct!';
-    fb.className = 'feedback ok';
-    document.getElementById('wordCard').className = 'card fc';
-    correctCount++;
-    inp.disabled = true;
-    inp.value = '';
-    document.getElementById('checkBtn').disabled = true;
-    document.getElementById('bottomActions').style.opacity = '0.4';
-    document.getElementById('bottomActions').style.pointerEvents = 'none';
-
-    const idx = currentIndex % words.length;
-    words.splice(idx, 1);
-    if (!words.length) { setTimeout(showCompletion, 800); return; }
-    currentIndex = 0; // always reset to front — no skipping possible
-    setTimeout(updateUI, 900);
-
-  } else {
-    // ── WRONG — show panel, wait for user ── feature 1 & 2
-    inp.className = 'wi';
-    document.getElementById('wordCard').className = 'card fw';
-    wrongCount++;
-    waitingForNext = true;
-    inp.disabled = true;
-    document.getElementById('checkBtn').disabled = true;
-    document.getElementById('bottomActions').style.opacity = '0.3';
-    document.getElementById('bottomActions').style.pointerEvents = 'none';
-
-    // Build diff display
-    document.getElementById('diffDisplay').innerHTML = buildDiff(correct, answer);
-    document.getElementById('yourAttempt').innerHTML =
-      `You typed: <span>${answer}</span>`;
-
-    document.getElementById('wrongPanel').className = 'wrong-panel show';
-    document.getElementById('correctCount').textContent = correctCount;
-    document.getElementById('wrongCount').textContent = wrongCount;
-  }
-}
-
-function nextAfterWrong() {
-  // Move to next word (keep current word in list so it comes back)
-  currentIndex = (currentIndex + 1) % words.length;
-  updateUI();
-}
-
-function switchToAllWords() {
-  words = buildWordList(); shuffle(words);
-  currentIndex = 0; correctCount = 0; wrongCount = 0;
-  totalStarted = words.length; isCustomMode = false;
-  document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('gameScreen').style.display = 'block';
-  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', i === 0));
-  updateUI();
-}
-
-function skipWord() {
-  if (!words.length || waitingForNext) return;
-  currentIndex = (currentIndex + 1) % words.length;
-  updateUI();
-}
-
-function deleteWord() {
-  if (!words.length || waitingForNext) return;
-  const name = cur().word;
-  addToDeleted(name);
-  words.splice(currentIndex % words.length, 1);
-  totalStarted = Math.max(totalStarted - 1, words.length);
-  showToast(`"${name}" deleted permanently ✓`);
-  if (!words.length) { showCompletion(); return; }
-  if (currentIndex >= words.length) currentIndex = 0;
-  updateUI();
-}
-
-function restartGame() {
-  words = buildWordList(); shuffle(words);
-  currentIndex = 0; correctCount = 0; wrongCount = 0;
-  totalStarted = words.length; isCustomMode = false;
-  document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('gameScreen').style.display = 'block';
-  document.getElementById('modeTag').textContent = 'All Words';
-  updateUI();
-}
-
-/* ═══════════════════════════════════════════════
-   CUSTOM MODE — feature 3
-═══════════════════════════════════════════════ */
-function startCustomGame() {
-  const raw = document.getElementById('customInput').value;
-  const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
-  if (!lines.length) { showToast('Please enter at least one word!'); return; }
-
-  // Build word objects — lookup in MASTER first, otherwise create minimal
-  const customWords = lines.map(w => {
-    const found = MASTER.find(m => m.word.toLowerCase() === w.toLowerCase());
-    return found || { word: w, bengali: '[ custom ]', meaning: 'Custom word' };
-  });
-
-  words = [...customWords];
-  shuffle(words);
-  currentIndex = 0; correctCount = 0; wrongCount = 0;
-  totalStarted = words.length; isCustomMode = true;
-
-  switchTab('game');
-  document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('gameScreen').style.display = 'block';
-  updateUI();
-}
-
-/* ═══════════════════════════════════════════════
-   DELETED WORDS MANAGER — feature 4
-═══════════════════════════════════════════════ */
-function renderDeletedScreen() {
-  const deleted = getDeleted();
-  const list = document.getElementById('deletedList');
-  if (!deleted.length) {
-    list.innerHTML = '<span class="empty-deleted">No deleted words yet.</span>';
-    return;
-  }
-  list.innerHTML = deleted.map(w =>
-    `<div class="del-chip">
-      ${w}
-      <button title="Restore" onclick="restoreWord('${w}')">↩</button>
-    </div>`
-  ).join('');
-}
-
-function restoreWord(word) {
-  removeFromDeleted(word);
-  showToast(`"${word}" restored ✓`);
-  renderDeletedScreen();
-}
-
-function restoreAll() {
-  clearDeleted();
-  showToast('All words restored ✓');
-  renderDeletedScreen();
-}
-
-function clearAllData() {
-  if (!confirm('This will clear ALL saved data (deleted words list + custom word list). Are you sure?')) return;
-  try { localStorage.clear(); } catch(e) {}
-  showToast('All localStorage data cleared ✓');
-  renderDeletedScreen();
-  // Re-attach textarea persistence since we just wiped it
-  try {
-    const saved = localStorage.getItem(CL_KEY);
-    if (!saved) document.getElementById('customInput').value = '';
-  } catch(e) {}
-}
-
-/* ═══════════════════════════════════════════════
-   TAB SWITCHING
-═══════════════════════════════════════════════ */
-function switchTab(tab) {
-  document.querySelectorAll('.tab').forEach((t,i) => {
-    t.classList.toggle('active', ['game','custom','deleted'][i] === tab);
-  });
-  document.getElementById('gameScreen').style.display    = tab === 'game'    ? 'block' : 'none';
-  document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('customScreen').style.display  = tab === 'custom'  ? 'block' : 'none';
-  document.getElementById('deletedScreen').style.display = tab === 'deleted' ? 'block' : 'none';
-  if (tab === 'deleted') renderDeletedScreen();
-}
-
-/* ═══════════════════════════════════════════════
-   TOAST
-═══════════════════════════════════════════════ */
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2400);
-}
-
-/* ═══════════════════════════════════════════════
-   KEYBOARD
-═══════════════════════════════════════════════ */
-document.addEventListener('keydown', e => {
-  if (e.key === 'Enter') {
-    if (waitingForNext) { nextAfterWrong(); }
-    else { checkAnswer(); }
-  }
-});
-
-/* ═══════════════════════════════════════════════
-   CUSTOM LIST PERSISTENCE
-═══════════════════════════════════════════════ */
-const CL_KEY = 'spellit_customlist_v1';
-const customTextarea = document.getElementById('customInput');
-
-// Restore saved list on load
-try {
-  const saved = localStorage.getItem(CL_KEY);
-  if (saved) customTextarea.value = saved;
-} catch(e) {}
-
-// Save on every keystroke
-customTextarea.addEventListener('input', () => {
-  try { localStorage.setItem(CL_KEY, customTextarea.value); } catch(e) {}
-});
-
-// Override the inline clear onclick to also wipe localStorage
-document.querySelector('.btn-clear-custom').onclick = () => {
-  customTextarea.value = '';
-  try { localStorage.removeItem(CL_KEY); } catch(e) {}
-};
-
-/* ═══════════════════════════════════════════════
-   INIT
-═══════════════════════════════════════════════ */
-words = buildWordList();
-shuffle(words);
-totalStarted = words.length;
-updateUI();
-</script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
