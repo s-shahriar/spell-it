@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   STORAGE — deleted words persisted in localStorage
+   STORAGE
 ═══════════════════════════════════════════════ */
 const LS_KEY = 'spellit_deleted_v2';
 const CL_KEY = 'spellit_customlist_v1';
@@ -23,22 +23,31 @@ function clearDeleted() { saveDeleted([]); }
 /* ═══════════════════════════════════════════════
    GAME STATE
 ═══════════════════════════════════════════════ */
-let MASTER = [];
+let BATCH1 = [];
+let BATCH2 = [];
+
 let words = [];
 let currentIndex = 0;
 let correctCount = 0;
 let wrongCount = 0;
 let totalStarted = 0;
 let isCustomMode = false;
+let currentBatch = '1';   // '1' | '2' | 'all'
 let waitingForNext = false;
 
 /* ═══════════════════════════════════════════════
    WORD LIST HELPERS
 ═══════════════════════════════════════════════ */
+function getSourceList() {
+  if (currentBatch === '1')   return BATCH1;
+  if (currentBatch === '2')   return BATCH2;
+  return [...BATCH1, ...BATCH2];
+}
+
 function buildWordList() {
   const deleted = new Set(getDeleted().map(w => w.toLowerCase()));
   const seen = new Set();
-  return MASTER.filter(w => {
+  return getSourceList().filter(w => {
     const k = w.word.toLowerCase();
     if (seen.has(k) || deleted.has(k)) return false;
     seen.add(k);
@@ -55,10 +64,34 @@ function shuffle(arr) {
 
 function cur() { return words[currentIndex]; }
 
+function batchLabel() {
+  if (isCustomMode) return 'Custom List';
+  if (currentBatch === '1')  return 'Batch 1';
+  if (currentBatch === '2')  return 'Batch 2';
+  return 'All Words';
+}
+
+/* ═══════════════════════════════════════════════
+   BATCH SELECTION
+═══════════════════════════════════════════════ */
+function selectBatch(batch) {
+  currentBatch = batch;
+  isCustomMode = false;
+  words = buildWordList();
+  shuffle(words);
+  currentIndex = 0; correctCount = 0; wrongCount = 0;
+  totalStarted = words.length;
+
+  document.querySelectorAll('.batch-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.batch === batch));
+
+  document.getElementById('completionScreen').style.display = 'none';
+  document.getElementById('gameScreen').style.display = 'block';
+  updateUI();
+}
+
 /* ═══════════════════════════════════════════════
    DIFF HIGHLIGHT
-   Shows the correct spelling letter-by-letter
-   with wrong/missing letters highlighted in red
 ═══════════════════════════════════════════════ */
 function buildDiff(correct, attempt) {
   let html = '';
@@ -81,7 +114,7 @@ function updateUI() {
 
   const w = cur();
   document.getElementById('wordNum').textContent = `${currentIndex + 1} of ${words.length}`;
-  document.getElementById('modeTag').textContent = isCustomMode ? 'Custom List' : 'All Words';
+  document.getElementById('modeTag').textContent = batchLabel();
   document.getElementById('bengaliHint').textContent = w.bengali;
   document.getElementById('meaningHint').textContent = w.meaning;
 
@@ -104,6 +137,7 @@ function updateUI() {
   document.getElementById('wordCountInfo').textContent = `${words.length} words left in list`;
 
   document.getElementById('switchAllBtn').classList.toggle('hidden', !isCustomMode);
+  document.getElementById('batchSelector').classList.toggle('hidden', isCustomMode);
   setTimeout(() => inp.focus(), 50);
 }
 
@@ -200,9 +234,10 @@ function restartGame() {
 }
 
 function switchToAllWords() {
+  isCustomMode = false;
   words = buildWordList(); shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
-  totalStarted = words.length; isCustomMode = false;
+  totalStarted = words.length;
   document.getElementById('completionScreen').style.display = 'none';
   document.getElementById('gameScreen').style.display = 'block';
   document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', i === 0));
@@ -217,8 +252,9 @@ function startCustomGame() {
   const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
   if (!lines.length) { showToast('Please enter at least one word!'); return; }
 
+  const allMaster = [...BATCH1, ...BATCH2];
   words = lines.map(w => {
-    const found = MASTER.find(m => m.word.toLowerCase() === w.toLowerCase());
+    const found = allMaster.find(m => m.word.toLowerCase() === w.toLowerCase());
     return found || { word: w, bengali: '[ custom ]', meaning: 'Custom word' };
   });
 
@@ -326,15 +362,15 @@ document.querySelector('.btn-clear-custom').addEventListener('click', () => {
 });
 
 /* ═══════════════════════════════════════════════
-   INIT — fetch word list then start game
+   INIT — fetch both batches then start
 ═══════════════════════════════════════════════ */
-fetch('words.json')
-  .then(r => {
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  })
-  .then(data => {
-    MASTER = data;
+Promise.all([
+  fetch('words.json').then(r => r.json()),
+  fetch('words-batch2.json').then(r => r.json()),
+])
+  .then(([batch1, batch2]) => {
+    BATCH1 = batch1;
+    BATCH2 = batch2;
     words = buildWordList();
     shuffle(words);
     totalStarted = words.length;
@@ -342,5 +378,5 @@ fetch('words.json')
   })
   .catch(err => {
     document.getElementById('bengaliHint').textContent = 'Failed to load words.';
-    console.error('Could not load words.json:', err);
+    console.error('Could not load word lists:', err);
   });

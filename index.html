@@ -13,7 +13,7 @@
   <h1>SPELL IT</h1>
   <p class="subtitle">বানান শেখার খেলা &nbsp;·&nbsp; Vocabulary Builder</p>
   <div class="mode-tabs">
-    <button class="tab active" onclick="switchTab('game')">📚 All Words</button>
+    <button class="tab active" onclick="switchTab('game')">📚 Practice</button>
     <button class="tab" onclick="switchTab('custom')">✏️ Custom List</button>
     <button class="tab" onclick="switchTab('deleted')">🗑 Deleted</button>
   </div>
@@ -23,6 +23,14 @@
 
   <!-- ══ GAME SCREEN ══ -->
   <div id="gameScreen">
+
+    <!-- Batch selector -->
+    <div class="batch-selector" id="batchSelector">
+      <button class="batch-btn active" data-batch="1" onclick="selectBatch('1')">Batch 1</button>
+      <button class="batch-btn" data-batch="2" onclick="selectBatch('2')">Batch 2</button>
+      <button class="batch-btn" data-batch="all" onclick="selectBatch('all')">All Words</button>
+    </div>
+
     <div class="stats-row">
       <div class="badges">
         <div class="badge">✓ <strong id="correctCount">0</strong> সঠিক</div>
@@ -36,7 +44,7 @@
 
     <div class="card" id="wordCard">
       <div class="tag-row">
-        <span class="word-tag" id="modeTag">All Words</span>
+        <span class="word-tag" id="modeTag">Batch 1</span>
         <span class="word-num" id="wordNum">— of —</span>
       </div>
       <div class="bengali-hint" id="bengaliHint">লোড হচ্ছে...</div>
@@ -61,7 +69,7 @@
     <div class="actions" id="bottomActions">
       <button class="btn btn-delete" onclick="deleteWord()">🗑 Delete (too easy)</button>
       <button class="btn btn-skip" onclick="skipWord()">⟶ Skip</button>
-      <button class="btn btn-switch-all hidden" id="switchAllBtn" onclick="switchToAllWords()">📚 Play All Words</button>
+      <button class="btn btn-switch-all hidden" id="switchAllBtn" onclick="switchToAllWords()">← Back to Game</button>
     </div>
     <div class="word-count-info" id="wordCountInfo"></div>
   </div>
@@ -80,14 +88,14 @@
       <h3>Custom Word List</h3>
       <p>
         Enter one word per line. Blank lines are ignored.<br>
-        Bengali hints &amp; meanings will show for any word found in the master list.
+        Bengali hints &amp; meanings will show for any word found in Batch 1 or Batch 2.
       </p>
       <textarea id="customInput" placeholder="Evanescence&#10;Recession&#10;Questionnaire"></textarea>
       <div class="custom-actions">
         <button class="btn btn-start-custom" onclick="startCustomGame()">▶ Start Practice</button>
         <button class="btn btn-clear-custom">Clear</button>
       </div>
-      <div class="custom-note">💡 Use "📚 Play All Words" below the card to switch back anytime.</div>
+      <div class="custom-note">💡 Use "← Back to Game" below the card to switch back anytime.</div>
     </div>
   </div>
 
