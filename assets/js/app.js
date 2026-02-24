@@ -32,16 +32,21 @@ let correctCount = 0;
 let wrongCount = 0;
 let totalStarted = 0;
 let isCustomMode = false;
-let currentBatch = '1';   // '1' | '2' | 'all'
+let currentBatch = '1';        // '1' | '2' | 'all'
+let currentDifficulty = 'all'; // 'all' | 'hard' | 'medium'
 let waitingForNext = false;
 
 /* ═══════════════════════════════════════════════
    WORD LIST HELPERS
 ═══════════════════════════════════════════════ */
 function getSourceList() {
-  if (currentBatch === '1')   return BATCH1;
-  if (currentBatch === '2')   return BATCH2;
-  return [...BATCH1, ...BATCH2];
+  let list;
+  if (currentBatch === '1')      list = BATCH1;
+  else if (currentBatch === '2') list = BATCH2;
+  else                           list = [...BATCH1, ...BATCH2];
+
+  if (currentDifficulty === 'all') return list;
+  return list.filter(w => w.difficulty === currentDifficulty);
 }
 
 function buildWordList() {
@@ -66,9 +71,10 @@ function cur() { return words[currentIndex]; }
 
 function batchLabel() {
   if (isCustomMode) return 'Custom List';
-  if (currentBatch === '1')  return 'Batch 1';
-  if (currentBatch === '2')  return 'Batch 2';
-  return 'All Words';
+  const diff = currentDifficulty !== 'all' ? ` · ${currentDifficulty.toUpperCase()}` : '';
+  if (currentBatch === '1')  return `Batch 1${diff}`;
+  if (currentBatch === '2')  return `Batch 2${diff}`;
+  return `All Words${diff}`;
 }
 
 /* ═══════════════════════════════════════════════
@@ -84,6 +90,25 @@ function selectBatch(batch) {
 
   document.querySelectorAll('.batch-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.batch === batch));
+
+  document.getElementById('completionScreen').style.display = 'none';
+  document.getElementById('gameScreen').style.display = 'block';
+  updateUI();
+}
+
+/* ═══════════════════════════════════════════════
+   DIFFICULTY SELECTION
+═══════════════════════════════════════════════ */
+function selectDifficulty(diff) {
+  currentDifficulty = diff;
+  isCustomMode = false;
+  words = buildWordList();
+  shuffle(words);
+  currentIndex = 0; correctCount = 0; wrongCount = 0;
+  totalStarted = words.length;
+
+  document.querySelectorAll('.diff-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.diff === diff));
 
   document.getElementById('completionScreen').style.display = 'none';
   document.getElementById('gameScreen').style.display = 'block';
@@ -138,6 +163,7 @@ function updateUI() {
 
   document.getElementById('switchAllBtn').classList.toggle('hidden', !isCustomMode);
   document.getElementById('batchSelector').classList.toggle('hidden', isCustomMode);
+  document.getElementById('diffSelector').classList.toggle('hidden', isCustomMode);
   setTimeout(() => inp.focus(), 50);
 }
 

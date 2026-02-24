@@ -24,6 +24,13 @@
   <!-- ══ GAME SCREEN ══ -->
   <div id="gameScreen">
 
+    <!-- Difficulty selector -->
+    <div class="diff-selector" id="diffSelector">
+      <button class="diff-btn active" data-diff="all" onclick="selectDifficulty('all')">All</button>
+      <button class="diff-btn" data-diff="hard" onclick="selectDifficulty('hard')">Hard</button>
+      <button class="diff-btn" data-diff="medium" onclick="selectDifficulty('medium')">Medium</button>
+    </div>
+
     <!-- Batch selector -->
     <div class="batch-selector" id="batchSelector">
       <button class="batch-btn active" data-batch="1" onclick="selectBatch('1')">Batch 1</button>

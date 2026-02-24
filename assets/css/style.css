@@ -40,6 +40,24 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem,7vw,3.4rem); font-
 .tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 .tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
 
+/* ── DIFFICULTY SELECTOR ── */
+.diff-selector { display: flex; gap: 6px; margin-bottom: 6px; justify-content: center; flex-wrap: wrap; }
+.diff-selector.hidden { display: none; }
+.diff-btn {
+  padding: 5px 14px; border-radius: 99px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.52rem, 2vw, 0.62rem);
+  font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  cursor: pointer; border: 2px solid var(--border);
+  background: transparent; color: var(--muted); transition: all 0.18s;
+}
+.diff-btn[data-diff="all"].active    { background: var(--accent);  color: #fff; border-color: var(--accent); }
+.diff-btn[data-diff="all"]:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+.diff-btn[data-diff="hard"].active   { background: #c0392b; color: #fff; border-color: #c0392b; }
+.diff-btn[data-diff="hard"]:hover:not(.active)   { border-color: #c0392b; color: #c0392b; }
+.diff-btn[data-diff="medium"].active { background: #d97706; color: #fff; border-color: #d97706; }
+.diff-btn[data-diff="medium"]:hover:not(.active) { border-color: #d97706; color: #d97706; }
+
 /* ── BATCH SELECTOR ── */
 .batch-selector { display: flex; gap: 6px; margin-bottom: 10px; justify-content: center; flex-wrap: wrap; }
 .batch-selector.hidden { display: none; }
@@ -182,6 +200,9 @@ textarea:focus { border-color: var(--accent2); background: #fff; }
 
   .mode-tabs { gap: 4px; }
   .tab { padding: 5px 9px; font-size: 0.5rem; }
+
+  .diff-selector { gap: 4px; }
+  .diff-btn { padding: 4px 10px; font-size: 0.5rem; }
 
   .batch-selector { gap: 4px; }
   .batch-btn { padding: 4px 10px; font-size: 0.5rem; }
