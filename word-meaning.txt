@@ -770,6 +770,11 @@
     "difficulty": "hard"
   },
   {
+    "word": "Cereals",
+    "meaning": "খাদ্যশস্য",
+    "difficulty": "medium"
+  },
+  {
     "word": "Char",
     "meaning": "পুড়িয়ে কালো করা; কয়লায় পরিণত করা",
     "difficulty": "medium"
@@ -960,6 +965,11 @@
     "difficulty": "medium"
   },
   {
+    "word": "Conduit",
+    "meaning": "নল; প্রণালি; মাধ্যম",
+    "difficulty": "medium"
+  },
+  {
     "word": "Confound",
     "meaning": "বিভ্রান্ত করা বা হতবুদ্ধি করা",
     "difficulty": "hard"
@@ -1048,6 +1058,11 @@
     "word": "Convalescence",
     "meaning": "সুস্থতালাভের প্রক্রিয়া",
     "difficulty": "hard"
+  },
+  {
+    "word": "Convene",
+    "meaning": "সভা আহ্বান করা; একত্রিত করা",
+    "difficulty": "medium"
   },
   {
     "word": "Converge",
@@ -1175,6 +1190,11 @@
     "difficulty": "medium"
   },
   {
+    "word": "Debarment",
+    "meaning": "নিষেধাজ্ঞা; বাধা দেওয়া",
+    "difficulty": "hard"
+  },
+  {
     "word": "Debase",
     "meaning": "মানহানি করা; নিচে নামানো",
     "difficulty": "medium"
@@ -1250,6 +1270,11 @@
     "difficulty": "hard"
   },
   {
+    "word": "Demonstrative",
+    "meaning": "আবেগপ্রবণ; প্রদর্শনমূলক",
+    "difficulty": "hard"
+  },
+  {
     "word": "Demur",
     "meaning": "আপত্তি করা",
     "difficulty": "medium"
@@ -1257,6 +1282,11 @@
   {
     "word": "Denigrate",
     "meaning": "ছোট করা বা সম্মানহানি করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Denomination",
+    "meaning": "মূল্যমান; বিভাগ; শ্রেণী",
     "difficulty": "hard"
   },
   {
@@ -1465,6 +1495,11 @@
     "difficulty": "hard"
   },
   {
+    "word": "Dismay",
+    "meaning": "হতাশা; আতঙ্ক",
+    "difficulty": "medium"
+  },
+  {
     "word": "Dismiss",
     "meaning": "বরখাস্ত করা বা প্রত্যাখ্যান করা",
     "difficulty": "medium"
@@ -1497,6 +1532,11 @@
   {
     "word": "Dissension",
     "meaning": "মতভেদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dissipated",
+    "meaning": "বিক্ষিপ্ত; অমিতাচারী",
     "difficulty": "hard"
   },
   {
@@ -1692,6 +1732,11 @@
   {
     "word": "Embellish",
     "meaning": "সাজানো বা অলংকৃত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Embezzlement",
+    "meaning": "তহবিল আত্মসাৎ",
     "difficulty": "hard"
   },
   {
@@ -2105,6 +2150,11 @@
     "difficulty": "medium"
   },
   {
+    "word": "Frisky",
+    "meaning": "প্রাণচঞ্চল; চটপটে",
+    "difficulty": "medium"
+  },
+  {
     "word": "Frivolous",
     "meaning": "তুচ্ছ; হালকা",
     "difficulty": "hard"
@@ -2265,6 +2315,11 @@
     "difficulty": "hard"
   },
   {
+    "word": "Haggler",
+    "meaning": "দরদামকারী ব্যক্তি",
+    "difficulty": "medium"
+  },
+  {
     "word": "Halcyon",
     "meaning": "শান্তিপূর্ণ; সুখময়",
     "difficulty": "medium"
@@ -2307,6 +2362,11 @@
   {
     "word": "Heresy",
     "meaning": "প্রচলিত মতের বিরুদ্ধ বিশ্বাস",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hex",
+    "meaning": "দুর্ভাগ্যসূচক বিষয়; অভিশাপ দেওয়া",
     "difficulty": "medium"
   },
   {
@@ -2565,6 +2625,11 @@
     "difficulty": "hard"
   },
   {
+    "word": "Indigent",
+    "meaning": "দরিদ্র; অভাবী",
+    "difficulty": "hard"
+  },
+  {
     "word": "Indignation",
     "meaning": "ক্ষোভ",
     "difficulty": "hard"
@@ -2815,6 +2880,11 @@
     "difficulty": "medium"
   },
   {
+    "word": "Laggard",
+    "meaning": "পিছিয়ে পড়া ব্যক্তি",
+    "difficulty": "medium"
+  },
+  {
     "word": "Lascivious",
     "meaning": "কামুক, লালসাপূর্ণ",
     "difficulty": "hard"
@@ -3057,6 +3127,16 @@
   {
     "word": "Mendacious",
     "meaning": "মিথ্যাবাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mercenary",
+    "meaning": "অর্থলোভী; ভাড়াটে সৈনিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Merchandise",
+    "meaning": "পণ্যদ্রব্য; বাণিজ্যিক পণ্য",
     "difficulty": "hard"
   },
   {
@@ -3330,6 +3410,11 @@
     "difficulty": "medium"
   },
   {
+    "word": "Ore",
+    "meaning": "আকরিক; কাঁচা খনিজ পদার্থ",
+    "difficulty": "medium"
+  },
+  {
     "word": "Ornery",
     "meaning": "বশে আনা কঠিন; রগচটা",
     "difficulty": "medium"
@@ -3422,6 +3507,11 @@
   {
     "word": "Pantheist",
     "meaning": "সর্বেশ্বরবাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pantomime",
+    "meaning": "হাবভাব দেখিয়ে অভিনয়",
     "difficulty": "hard"
   },
   {
@@ -3617,6 +3707,11 @@
   {
     "word": "Pilferage",
     "meaning": "চুরি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pittance",
+    "meaning": "সামান্য বেতন; অল্প পারিশ্রমিক",
     "difficulty": "hard"
   },
   {
@@ -4105,6 +4200,11 @@
     "difficulty": "medium"
   },
   {
+    "word": "Resilience",
+    "meaning": "স্থিতিস্থাপকতা; দৃঢ়তা",
+    "difficulty": "hard"
+  },
+  {
     "word": "Resolution",
     "meaning": "সংকল্প বা সমাধান",
     "difficulty": "hard"
@@ -4192,6 +4292,16 @@
   {
     "word": "Sanction",
     "meaning": "অনুমোদন বা নিষেধাজ্ঞা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sanctity",
+    "meaning": "পবিত্রতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sanctuary",
+    "meaning": "অভয়াশ্রম; আশ্রয়স্থল",
     "difficulty": "hard"
   },
   {
@@ -4323,6 +4433,11 @@
     "word": "Serration",
     "meaning": "করাতের দাঁতের মতো কাটা; দাঁতযুক্ত প্রান্ত",
     "difficulty": "hard"
+  },
+  {
+    "word": "Servile",
+    "meaning": "দাসোচিত; নতজানু",
+    "difficulty": "medium"
   },
   {
     "word": "Sever",
@@ -4480,6 +4595,11 @@
     "difficulty": "medium"
   },
   {
+    "word": "Stanza",
+    "meaning": "স্তবক; কবিতার অনুচ্ছেদ",
+    "difficulty": "medium"
+  },
+  {
     "word": "Stenophobia",
     "meaning": "সংকীর্ণ স্থানে আতঙ্ক",
     "difficulty": "hard"
@@ -4507,6 +4627,11 @@
   {
     "word": "Stipulate",
     "meaning": "শর্ত আরোপ করা বা নির্দিষ্ট করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Stockade",
+    "meaning": "খুঁটি দিয়ে তৈরি বেষ্টনী",
     "difficulty": "hard"
   },
   {
@@ -4715,6 +4840,11 @@
     "difficulty": "hard"
   },
   {
+    "word": "Thespian",
+    "meaning": "অভিনেতা; নাট্যকলার সাথে সম্পর্কিত",
+    "difficulty": "hard"
+  },
+  {
     "word": "Thrifty",
     "meaning": "মিতব্যয়ী",
     "difficulty": "medium"
@@ -4792,6 +4922,11 @@
   {
     "word": "Truism",
     "meaning": "স্বতঃসিদ্ধ সত্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Turbid",
+    "meaning": "ঘোলাটে; অস্বচ্ছ",
     "difficulty": "medium"
   },
   {
