@@ -191,6 +191,153 @@ textarea:focus { border-color: var(--accent2); background: #fff; }
 .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(16px); background: #333; color: #fff; padding: 9px 18px; border-radius: 10px; font-size: clamp(0.62rem, 2.5vw, 0.7rem); opacity: 0; transition: all 0.25s; pointer-events: none; white-space: nowrap; z-index: 99; max-width: calc(100vw - 32px); text-align: center; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+/* ══════════════════════════════════════════════════════
+   WORD MEANING GAME — Purple / Violet Theme
+══════════════════════════════════════════════════════ */
+
+/* Tab accent for Word Meaning */
+.tab-wm.active { background: #6030c8; border-color: #6030c8; }
+.tab-wm:hover:not(.active) { border-color: #6030c8; color: #6030c8; }
+
+/* Header adapts to Word Meaning mode */
+body.wm-mode h1 { color: #6030c8; }
+body.wm-mode .subtitle { color: #8b7ab8; }
+body.wm-mode { background-color: #f0eeff; background-image: radial-gradient(circle at 10% 20%, rgba(96,48,200,0.07) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(139,92,246,0.06) 0%, transparent 50%); }
+
+#wmScreen { display: none; }
+
+/* ── WM DIFFICULTY SELECTOR ── */
+.wm-diff-selector { display: flex; gap: 6px; margin-bottom: 6px; justify-content: center; flex-wrap: wrap; }
+.wm-diff-btn {
+  padding: 5px 14px; border-radius: 99px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.52rem, 2vw, 0.62rem);
+  font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  cursor: pointer; border: 2px solid #d4c8f5;
+  background: transparent; color: #8b7ab8; transition: all 0.18s;
+}
+.wm-diff-btn[data-diff="all"].active    { background: #6030c8; color: #fff; border-color: #6030c8; }
+.wm-diff-btn[data-diff="all"]:hover:not(.active) { border-color: #6030c8; color: #6030c8; }
+.wm-diff-btn[data-diff="hard"].active   { background: #c0392b; color: #fff; border-color: #c0392b; }
+.wm-diff-btn[data-diff="hard"]:hover:not(.active) { border-color: #c0392b; color: #c0392b; }
+.wm-diff-btn[data-diff="medium"].active { background: #d97706; color: #fff; border-color: #d97706; }
+.wm-diff-btn[data-diff="medium"]:hover:not(.active) { border-color: #d97706; color: #d97706; }
+
+/* ── WM LETTER SELECTOR ── */
+.wm-letter-selector {
+  display: flex; gap: 4px; margin-bottom: 10px;
+  justify-content: center; flex-wrap: wrap;
+}
+.wm-letter-btn {
+  padding: 4px 10px; border-radius: 99px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.48rem, 1.8vw, 0.58rem);
+  font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; border: 2px solid #d4c8f5;
+  background: transparent; color: #8b7ab8; transition: all 0.18s;
+}
+.wm-letter-btn.active { background: #8b5cf6; color: #fff; border-color: #8b5cf6; }
+.wm-letter-btn:hover:not(.active) { border-color: #8b5cf6; color: #8b5cf6; }
+
+/* ── WM STATS ── */
+.wm-stats-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 4px; }
+.wm-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.wm-badge { font-size: clamp(0.55rem, 2vw, 0.62rem); letter-spacing: 0.06em; color: #8b7ab8; text-transform: uppercase; }
+.wm-badge strong { font-size: clamp(0.8rem, 3vw, 0.88rem); font-weight: 700; color: #6030c8; }
+.wm-badge.wm-wb strong { color: var(--wrong); }
+.wm-progress-wrap { background: #d4c8f5; border-radius: 99px; height: 4px; margin-bottom: 10px; overflow: hidden; }
+.wm-progress-bar { height: 100%; background: linear-gradient(90deg, #6030c8, #8b5cf6); border-radius: 99px; transition: width 0.5s cubic-bezier(.4,0,.2,1); }
+
+/* ── WM CARD ── */
+.wm-card {
+  background: #fff; border: 2px solid #d4c8f5;
+  border-radius: 16px; padding: 20px 16px 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 24px rgba(96,48,200,0.09);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.wm-tag-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.wm-word-tag { background: #ede8ff; color: #6030c8; font-size: clamp(0.48rem, 2vw, 0.55rem); letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 8px; border-radius: 99px; font-weight: 700; white-space: nowrap; }
+.wm-word-num { font-size: clamp(0.48rem, 2vw, 0.55rem); color: #8b7ab8; letter-spacing: 0.06em; }
+
+.wm-question-label {
+  font-size: clamp(0.55rem, 2vw, 0.63rem); color: #8b7ab8;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 8px;
+}
+.wm-english-word {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 6vw, 2.6rem);
+  font-weight: 800; color: #6030c8;
+  line-height: 1.15; margin-bottom: 20px;
+  letter-spacing: -0.01em; word-break: break-word;
+}
+
+/* ── WM CHOICES ── */
+.wm-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.wm-choice-btn {
+  background: #f5f0ff; border: 2px solid #d4c8f5;
+  border-radius: 12px; padding: 12px 10px;
+  font-family: 'Tiro Bangla', serif;
+  font-size: clamp(0.82rem, 2.8vw, 1rem);
+  color: #1a0f2e; cursor: pointer; text-align: center;
+  line-height: 1.5; transition: all 0.18s; word-break: break-word;
+}
+.wm-choice-btn:hover:not(:disabled) {
+  border-color: #8b5cf6; background: #ede8ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(96,48,200,0.15);
+}
+.wm-choice-btn:disabled { cursor: not-allowed; transform: none; }
+.wm-choice-btn.correct {
+  background: #e8f7ee; border-color: #22a060;
+  color: #0d6e3e; font-weight: 700;
+  box-shadow: 0 4px 14px rgba(34,160,96,0.18);
+}
+.wm-choice-btn.wrong {
+  background: #fdf0ee; border-color: #c0392b;
+  color: #c0392b; font-weight: 700;
+}
+
+/* ── WM FEEDBACK ── */
+.wm-feedback {
+  font-size: clamp(0.68rem, 2.5vw, 0.78rem);
+  font-weight: 700; min-height: 20px;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+}
+.wm-feedback.ok { color: #22a060; }
+.wm-feedback.wrong { color: var(--wrong); }
+
+/* ── WM NEXT BUTTON ── */
+.wm-next-btn {
+  display: none;
+  width: 100%; padding: 11px; border: none;
+  border-radius: 10px; background: #6030c8; color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.62rem, 2.5vw, 0.72rem);
+  font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  transition: all 0.18s;
+}
+.wm-next-btn:hover { background: #8b5cf6; transform: translateY(-1px); }
+
+.wm-word-count-info { font-size: clamp(0.48rem, 2vw, 0.56rem); color: #8b7ab8; text-align: right; letter-spacing: 0.06em; margin-top: 2px; }
+
+/* ── WM COMPLETION ── */
+.wm-completion {
+  display: none; text-align: center; padding: 40px 16px;
+}
+.wm-completion h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 8vw, 3rem); font-weight: 800; color: #6030c8; margin-bottom: 8px; }
+.wm-completion p { color: #8b7ab8; font-size: clamp(0.7rem, 2.5vw, 0.8rem); margin-bottom: 28px; }
+.wm-btn-restart { background: #6030c8; color: #fff; padding: 12px 26px; border-radius: 12px; border: none; font-family: 'JetBrains Mono', monospace; font-size: clamp(0.68rem, 2.5vw, 0.78rem); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.18s; }
+.wm-btn-restart:hover { background: #8b5cf6; }
+
 /* ── 340px BREAKPOINT ── */
 @media (max-width: 380px) {
   body { padding: 12px 10px 36px; }
@@ -234,4 +381,12 @@ textarea:focus { border-color: var(--accent2); background: #fff; }
 
   .completion-screen { padding: 30px 12px; }
   .completion-screen h2 { font-size: 2rem; }
+
+  /* WM mobile */
+  .wm-diff-btn { padding: 4px 10px; font-size: 0.5rem; }
+  .wm-letter-btn { padding: 3px 7px; font-size: 0.46rem; }
+  .wm-choices { grid-template-columns: 1fr; gap: 8px; }
+  .wm-choice-btn { font-size: 0.85rem; padding: 11px 10px; }
+  .wm-english-word { font-size: 1.6rem; }
+  .wm-card { padding: 14px 12px 14px; }
 }

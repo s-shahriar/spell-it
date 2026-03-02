@@ -1,24 +1,7 @@
 /* ═══════════════════════════════════════════════
    STORAGE
 ═══════════════════════════════════════════════ */
-const LS_KEY = 'spellit_deleted_v2';
 const CL_KEY = 'spellit_customlist_v1';
-
-function getDeleted() {
-  try { return JSON.parse(localStorage.getItem(LS_KEY)) || []; }
-  catch { return []; }
-}
-function saveDeleted(arr) {
-  try { localStorage.setItem(LS_KEY, JSON.stringify(arr)); } catch {}
-}
-function addToDeleted(word) {
-  const d = getDeleted();
-  if (!d.includes(word)) { d.push(word); saveDeleted(d); }
-}
-function removeFromDeleted(word) {
-  saveDeleted(getDeleted().filter(w => w !== word));
-}
-function clearDeleted() { saveDeleted([]); }
 
 /* ═══════════════════════════════════════════════
    GAME STATE
@@ -50,11 +33,10 @@ function getSourceList() {
 }
 
 function buildWordList() {
-  const deleted = new Set(getDeleted().map(w => w.toLowerCase()));
   const seen = new Set();
   return getSourceList().filter(w => {
     const k = w.word.toLowerCase();
-    if (seen.has(k) || deleted.has(k)) return false;
+    if (seen.has(k)) return false;
     seen.add(k);
     return true;
   });
@@ -177,7 +159,7 @@ function showCompletion() {
 function lockUI(opacity) {
   const inp = document.getElementById('spellingInput');
   inp.disabled = true;
-  inp.value = '';
+  // intentionally NOT clearing inp.value — user can see their correct spelling during the delay
   document.getElementById('checkBtn').disabled = true;
   document.getElementById('bottomActions').style.opacity = opacity;
   document.getElementById('bottomActions').style.pointerEvents = 'none';
@@ -238,17 +220,6 @@ function skipWord() {
   updateUI();
 }
 
-function deleteWord() {
-  if (!words.length || waitingForNext) return;
-  const name = cur().word;
-  addToDeleted(name);
-  words.splice(currentIndex, 1);
-  totalStarted = Math.max(totalStarted - 1, words.length);
-  showToast(`"${name}" deleted permanently ✓`);
-  if (!words.length) { showCompletion(); return; }
-  if (currentIndex >= words.length) currentIndex = 0;
-  updateUI();
-}
 
 function restartGame() {
   words = buildWordList(); shuffle(words);
@@ -294,60 +265,209 @@ function startCustomGame() {
   updateUI();
 }
 
-/* ═══════════════════════════════════════════════
-   DELETED WORDS MANAGER
-═══════════════════════════════════════════════ */
-function renderDeletedScreen() {
-  const deleted = getDeleted();
-  const list = document.getElementById('deletedList');
-  if (!deleted.length) {
-    list.innerHTML = '<span class="empty-deleted">No deleted words yet.</span>';
-    return;
-  }
-  list.innerHTML = deleted.map(w => {
-    const chip = document.createElement('div');
-    chip.className = 'del-chip';
-    chip.textContent = w;
-    const btn = document.createElement('button');
-    btn.title = 'Restore';
-    btn.textContent = '↩';
-    btn.addEventListener('click', () => restoreWord(w));
-    chip.appendChild(btn);
-    return chip.outerHTML;
-  }).join('');
-}
-
-function restoreWord(word) {
-  removeFromDeleted(word);
-  showToast(`"${word}" restored ✓`);
-  renderDeletedScreen();
-}
-
-function restoreAll() {
-  clearDeleted();
-  showToast('All words restored ✓');
-  renderDeletedScreen();
-}
-
-function clearAllData() {
-  if (!confirm('This will clear ALL saved data (deleted words + custom list). Are you sure?')) return;
-  try { localStorage.clear(); } catch {}
-  showToast('All data cleared ✓');
-  renderDeletedScreen();
-  document.getElementById('customInput').value = '';
-}
 
 /* ═══════════════════════════════════════════════
    TAB SWITCHING
 ═══════════════════════════════════════════════ */
 function switchTab(tab) {
-  const tabs = ['game', 'custom', 'deleted'];
+  const tabs = ['game', 'custom', 'wordmeaning'];
   document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', tabs[i] === tab));
-  document.getElementById('gameScreen').style.display    = tab === 'game'    ? 'block' : 'none';
+  document.getElementById('gameScreen').style.display       = tab === 'game'        ? 'block' : 'none';
   document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('customScreen').style.display  = tab === 'custom'  ? 'block' : 'none';
-  document.getElementById('deletedScreen').style.display = tab === 'deleted' ? 'block' : 'none';
-  if (tab === 'deleted') renderDeletedScreen();
+  document.getElementById('customScreen').style.display     = tab === 'custom'      ? 'block' : 'none';
+  document.getElementById('wmScreen').style.display         = tab === 'wordmeaning' ? 'block' : 'none';
+
+  const isWM = tab === 'wordmeaning';
+  document.body.classList.toggle('wm-mode', isWM);
+  document.querySelector('h1').textContent = isWM ? 'WORD MEANING' : 'SPELL IT';
+  document.querySelector('.subtitle').innerHTML = isWM
+    ? 'শব্দের অর্থ জানো &nbsp;·&nbsp; Word Meaning Quiz'
+    : 'বানান শেখার খেলা &nbsp;·&nbsp; Vocabulary Builder';
+}
+
+/* ═══════════════════════════════════════════════
+   WORD MEANING GAME
+═══════════════════════════════════════════════ */
+let WM_WORDS = [];
+let wmWords = [];
+let wmIndex = 0;
+let wmCorrect = 0;
+let wmWrong = 0;
+let wmTotalStarted = 0;
+let wmDifficulty = 'all';
+let wmLetter = 'all';
+let wmWaiting = false;
+
+function wmGetSourceList() {
+  let list = WM_WORDS;
+  if (wmDifficulty !== 'all') list = list.filter(w => w.difficulty === wmDifficulty);
+  if (wmLetter !== 'all')     list = list.filter(w => w.word[0].toUpperCase() === wmLetter);
+  return list;
+}
+
+function wmBuildLetterSelector() {
+  const sourceByDiff = wmDifficulty === 'all'
+    ? WM_WORDS
+    : WM_WORDS.filter(w => w.difficulty === wmDifficulty);
+
+  const letters = new Set(sourceByDiff.map(w => w.word[0].toUpperCase()));
+  const sorted = Array.from(letters).sort();
+
+  // If current letter no longer available, reset
+  if (wmLetter !== 'all' && !letters.has(wmLetter)) wmLetter = 'all';
+
+  const container = document.getElementById('wmLetterSelector');
+  let html = `<button class="wm-letter-btn${wmLetter === 'all' ? ' active' : ''}" data-letter="all" onclick="wmSelectLetter('all')">All</button>`;
+  sorted.forEach(l => {
+    html += `<button class="wm-letter-btn${wmLetter === l ? ' active' : ''}" data-letter="${l}" onclick="wmSelectLetter('${l}')">${l}</button>`;
+  });
+  container.innerHTML = html;
+}
+
+function wmModeLabel() {
+  const diff = wmDifficulty !== 'all' ? ` · ${wmDifficulty.toUpperCase()}` : '';
+  const letter = wmLetter !== 'all' ? ` · ${wmLetter}` : '';
+  return `Word Meaning${diff}${letter}`;
+}
+
+function wmSelectDifficulty(diff) {
+  wmDifficulty = diff;
+  document.querySelectorAll('.wm-diff-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.diff === diff));
+  wmBuildLetterSelector();
+  wmStartGame();
+}
+
+function wmSelectLetter(letter) {
+  wmLetter = letter;
+  wmBuildLetterSelector();
+  wmStartGame();
+}
+
+function wmStartGame() {
+  wmWords = [...wmGetSourceList()];
+  for (let i = wmWords.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [wmWords[i], wmWords[j]] = [wmWords[j], wmWords[i]];
+  }
+  wmIndex = 0; wmCorrect = 0; wmWrong = 0;
+  wmTotalStarted = wmWords.length; wmWaiting = false;
+  document.getElementById('wmCompletionScreen').style.display = 'none';
+  document.getElementById('wmGameArea').style.display = 'block';
+  wmUpdateUI();
+}
+
+function wmGetWrongOptions(correctWord, correctMeaning) {
+  // Exclude same word AND same meaning to avoid duplicate/ambiguous choices
+  const pool = WM_WORDS.filter(w =>
+    w.word.toLowerCase() !== correctWord.toLowerCase() &&
+    w.meaning !== correctMeaning
+  );
+  // Fisher-Yates shuffle on the pool
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  // Pick 3 with unique meanings
+  const seen = new Set();
+  const result = [];
+  for (const w of pool) {
+    if (!seen.has(w.meaning)) {
+      seen.add(w.meaning);
+      result.push(w.meaning);
+      if (result.length === 3) break;
+    }
+  }
+  return result;
+}
+
+function wmUpdateUI() {
+  if (!wmWords.length) { wmShowCompletion(); return; }
+  wmWaiting = false;
+
+  const w = wmWords[wmIndex];
+  document.getElementById('wmWordNum').textContent  = `${wmIndex + 1} of ${wmWords.length}`;
+  document.getElementById('wmModeTag').textContent  = wmModeLabel();
+  document.getElementById('wmWord').textContent     = w.word;
+  document.getElementById('wmCorrectCount').textContent = wmCorrect;
+  document.getElementById('wmWrongCount').textContent   = wmWrong;
+  document.getElementById('wmRemaining').textContent    = wmWords.length;
+  document.getElementById('wmWordCountInfo').textContent = `${wmWords.length} words left`;
+
+  const pct = wmTotalStarted > 0 ? ((wmTotalStarted - wmWords.length) / wmTotalStarted * 100) : 0;
+  document.getElementById('wmProgressBar').style.width = pct + '%';
+
+  // Build 4 options: 1 correct + 3 wrong (all unique meanings)
+  const wrongOpts = wmGetWrongOptions(w.word, w.meaning);
+  const allOpts = [w.meaning, ...wrongOpts];
+  // Fisher-Yates shuffle the 4 options
+  for (let i = allOpts.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allOpts[i], allOpts[j]] = [allOpts[j], allOpts[i]];
+  }
+
+  const btns = document.querySelectorAll('.wm-choice-btn');
+  btns.forEach((btn, i) => {
+    btn.textContent = allOpts[i];
+    btn.dataset.correct = (allOpts[i] === w.meaning) ? 'true' : 'false';
+    btn.className = 'wm-choice-btn';
+    btn.style.display = '';
+    btn.disabled = false;
+  });
+
+  const fb = document.getElementById('wmFeedback');
+  fb.textContent = ''; fb.className = 'wm-feedback';
+  document.getElementById('wmNextBtn').style.display = 'none';
+  document.getElementById('wmCard').style.borderColor = '';
+  document.getElementById('wmCard').style.boxShadow = '';
+}
+
+function wmSelectAnswer(btn) {
+  if (wmWaiting) return;
+  const isCorrect = btn.dataset.correct === 'true';
+
+  // Disable all buttons & highlight
+  document.querySelectorAll('.wm-choice-btn').forEach(b => {
+    b.disabled = true;
+    if (b.dataset.correct === 'true')   b.className = 'wm-choice-btn correct';
+    else if (b === btn && !isCorrect)   b.className = 'wm-choice-btn wrong';
+  });
+
+  const fb = document.getElementById('wmFeedback');
+
+  if (isCorrect) {
+    wmCorrect++;
+    fb.textContent = '✓ সঠিক!'; fb.className = 'wm-feedback ok';
+    document.getElementById('wmCorrectCount').textContent = wmCorrect;
+    wmWords.splice(wmIndex, 1);
+    if (!wmWords.length) { setTimeout(wmShowCompletion, 1000); return; }
+    if (wmIndex >= wmWords.length) wmIndex = 0;
+    setTimeout(wmUpdateUI, 1000);
+  } else {
+    wmWrong++;
+    fb.textContent = '✗ ভুল! সঠিক উত্তর দেখুন।'; fb.className = 'wm-feedback wrong';
+    document.getElementById('wmWrongCount').textContent = wmWrong;
+    wmWaiting = true;
+    document.getElementById('wmNextBtn').style.display = 'block';
+  }
+}
+
+function wmNext() {
+  wmIndex = (wmIndex + 1) % wmWords.length;
+  wmUpdateUI();
+}
+
+function wmShowCompletion() {
+  document.getElementById('wmGameArea').style.display = 'none';
+  document.getElementById('wmCompletionScreen').style.display = 'block';
+  document.getElementById('wmFinalScore').textContent =
+    `✓ ${wmCorrect} সঠিক  ✗ ${wmWrong} ভুল — শাবাশ!`;
+}
+
+function wmRestartGame() {
+  document.getElementById('wmCompletionScreen').style.display = 'none';
+  document.getElementById('wmGameArea').style.display = 'block';
+  wmStartGame();
 }
 
 /* ═══════════════════════════════════════════════
@@ -365,6 +485,7 @@ function showToast(msg) {
 ═══════════════════════════════════════════════ */
 document.addEventListener('keydown', e => {
   if (e.key !== 'Enter') return;
+  if (document.getElementById('gameScreen').style.display === 'none') return;
   waitingForNext ? nextAfterWrong() : checkAnswer();
 });
 
@@ -388,21 +509,15 @@ document.querySelector('.btn-clear-custom').addEventListener('click', () => {
 });
 
 /* ═══════════════════════════════════════════════
-   INIT — fetch both batches then start
+   INIT — data loaded via <script> tags (no fetch)
 ═══════════════════════════════════════════════ */
-Promise.all([
-  fetch('words.json').then(r => r.json()),
-  fetch('words-batch2.json').then(r => r.json()),
-])
-  .then(([batch1, batch2]) => {
-    BATCH1 = batch1;
-    BATCH2 = batch2;
-    words = buildWordList();
-    shuffle(words);
-    totalStarted = words.length;
-    updateUI();
-  })
-  .catch(err => {
-    document.getElementById('bengaliHint').textContent = 'Failed to load words.';
-    console.error('Could not load word lists:', err);
-  });
+BATCH1 = SPELL_BATCH1;
+BATCH2 = SPELL_BATCH2;
+words = buildWordList();
+shuffle(words);
+totalStarted = words.length;
+updateUI();
+
+WM_WORDS = WM_WORDS_DATA;
+wmBuildLetterSelector();
+wmStartGame();

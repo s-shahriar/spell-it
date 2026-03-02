@@ -13,9 +13,9 @@
   <h1>SPELL IT</h1>
   <p class="subtitle">বানান শেখার খেলা &nbsp;·&nbsp; Vocabulary Builder</p>
   <div class="mode-tabs">
-    <button class="tab active" onclick="switchTab('game')">📚 Practice</button>
+    <button class="tab active" onclick="switchTab('game')">📚 Spell It</button>
     <button class="tab" onclick="switchTab('custom')">✏️ Custom List</button>
-    <button class="tab" onclick="switchTab('deleted')">🗑 Deleted</button>
+    <button class="tab tab-wm" onclick="switchTab('wordmeaning')">🧠 Word Meaning</button>
   </div>
 </div>
 
@@ -74,7 +74,6 @@
     </div>
 
     <div class="actions" id="bottomActions">
-      <button class="btn btn-delete" onclick="deleteWord()">🗑 Delete (too easy)</button>
       <button class="btn btn-skip" onclick="skipWord()">⟶ Skip</button>
       <button class="btn btn-switch-all hidden" id="switchAllBtn" onclick="switchToAllWords()">← Back to Game</button>
     </div>
@@ -106,23 +105,73 @@
     </div>
   </div>
 
-  <!-- ══ DELETED WORDS SCREEN ══ -->
-  <div id="deletedScreen">
-    <div class="deleted-card">
-      <h3>Deleted Words</h3>
-      <p>Words removed from practice (saved in your browser). Click ↩ to restore.</p>
-      <div class="deleted-list" id="deletedList"></div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <button class="btn btn-restore-all" onclick="restoreAll()">↩ Restore All</button>
-        <button class="btn btn-clear-ls" onclick="clearAllData()">🗑 Clear All Data</button>
-      </div>
+
+
+  <!-- ══ WORD MEANING SCREEN ══ -->
+  <div id="wmScreen">
+
+    <!-- Difficulty selector -->
+    <div class="wm-diff-selector" id="wmDiffSelector">
+      <button class="wm-diff-btn active" data-diff="all" onclick="wmSelectDifficulty('all')">All</button>
+      <button class="wm-diff-btn" data-diff="hard" onclick="wmSelectDifficulty('hard')">Hard</button>
+      <button class="wm-diff-btn" data-diff="medium" onclick="wmSelectDifficulty('medium')">Medium</button>
     </div>
-  </div>
+
+    <!-- Letter selector (dynamically populated) -->
+    <div class="wm-letter-selector" id="wmLetterSelector"></div>
+
+    <!-- Game area -->
+    <div id="wmGameArea">
+      <div class="wm-stats-row">
+        <div class="wm-badges">
+          <div class="wm-badge">✓ <strong id="wmCorrectCount">0</strong> সঠিক</div>
+          <div class="wm-badge wm-wb">✗ <strong id="wmWrongCount">0</strong> ভুল</div>
+        </div>
+        <div class="wm-badge">বাকি <strong id="wmRemaining">0</strong></div>
+      </div>
+      <div class="wm-progress-wrap">
+        <div class="wm-progress-bar" id="wmProgressBar" style="width:0%"></div>
+      </div>
+
+      <div class="wm-card" id="wmCard">
+        <div class="wm-tag-row">
+          <span class="wm-word-tag" id="wmModeTag">All Words</span>
+          <span class="wm-word-num" id="wmWordNum">— of —</span>
+        </div>
+        <div class="wm-question-label">এই শব্দের বাংলা অর্থ কী?</div>
+        <div class="wm-english-word" id="wmWord">Loading...</div>
+
+        <div class="wm-choices" id="wmChoices">
+          <button class="wm-choice-btn" onclick="wmSelectAnswer(this)"></button>
+          <button class="wm-choice-btn" onclick="wmSelectAnswer(this)"></button>
+          <button class="wm-choice-btn" onclick="wmSelectAnswer(this)"></button>
+          <button class="wm-choice-btn" onclick="wmSelectAnswer(this)"></button>
+        </div>
+
+        <div class="wm-feedback" id="wmFeedback"></div>
+        <button class="wm-next-btn" id="wmNextBtn" onclick="wmNext()">পরের শব্দ →</button>
+      </div>
+
+      <div class="wm-word-count-info" id="wmWordCountInfo"></div>
+    </div>
+
+    <!-- Completion screen -->
+    <div class="wm-completion" id="wmCompletionScreen">
+      <div style="font-size:3.5rem;margin-bottom:10px">🎉</div>
+      <h2>সব শেষ!</h2>
+      <p id="wmFinalScore"></p>
+      <button class="wm-btn-restart" onclick="wmRestartGame()">আবার খেলি →</button>
+    </div>
+
+  </div><!-- /wmScreen -->
 
 </div><!-- /game-container -->
 
 <div class="toast" id="toast"></div>
 
+<script src="assets/js/words-batch1.js"></script>
+<script src="assets/js/words-batch2.js"></script>
+<script src="assets/js/word-meaning-data.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

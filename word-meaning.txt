@@ -1,0 +1,5067 @@
+[
+  {
+    "word": "Abate",
+    "meaning": "কমানো বা হ্রাস পাওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Abbreviate",
+    "meaning": "সংক্ষিপ্ত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Abduct",
+    "meaning": "অপহরণ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Aberrant",
+    "meaning": "বিপথগামী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Abeyance",
+    "meaning": "সাময়িক স্থগিতাবস্থা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Abhorrence",
+    "meaning": "তীব্র ঘৃণা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Abject",
+    "meaning": "শোচনীয়; হীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Abjure",
+    "meaning": "শপথপূর্বক পরিত্যাগ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Aborigines",
+    "meaning": "আদিবাসীরা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Abortive",
+    "meaning": "ব্যর্থ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Abridge",
+    "meaning": "সংক্ষিপ্ত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Abrogate",
+    "meaning": "বাতিল করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Abscond",
+    "meaning": "গোপনে পালিয়ে যাওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Abstemious",
+    "meaning": "মিতাহারী বা সংযমী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Accede",
+    "meaning": "সম্মত হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Accessories",
+    "meaning": "আনুষঙ্গিক জিনিস",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Acclimatize",
+    "meaning": "নতুন আবহাওয়ায় অভিযোজিত হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Accommodate",
+    "meaning": "আবাসিত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Accommodation",
+    "meaning": "স্থান সংকুলান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Accretion",
+    "meaning": "বৃদ্ধি; সঞ্চয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Achievement",
+    "meaning": "অর্জন সাফল্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Acquaintance",
+    "meaning": "পরিচিতজন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Acquiesce",
+    "meaning": "অনিচ্ছায় মেনে নেওয়া; সম্মত হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Acrobat",
+    "meaning": "কসরতকারী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Admonish",
+    "meaning": "মৃদুভাবে তিরস্কার করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Adolescence",
+    "meaning": "কৈশোর বয়ঃসন্ধিকাল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Adulterate",
+    "meaning": "ভেজাল মেশানো বা অশুদ্ধ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Adventitious",
+    "meaning": "দৈবাগত অনিচ্ছাকৃত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Aesthetic",
+    "meaning": "নান্দনিক বা সৌন্দর্যবোধ সম্পর্কিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Affable",
+    "meaning": "মিশুক; বন্ধুত্বপূর্ণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Affidavit",
+    "meaning": "শপথপত্র",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Affluent",
+    "meaning": "বৈভবশালী; বিত্তবান; প্রাচুর্যময়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Agenda",
+    "meaning": "কর্মসূচি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Aggrandize",
+    "meaning": "বৃদ্ধি করা; ক্ষমতা বাড়ানো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Aggravate",
+    "meaning": "আরও খারাপ করা; চটানো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Aggregate",
+    "meaning": "সমষ্টি বা সংগ্রহ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Agoraphobia",
+    "meaning": "জনাকীর্ণ স্থানের ভয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Alacrity",
+    "meaning": "তৎপরতা বা ব্যগ্রতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Allegiance",
+    "meaning": "আনুগত্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Allegory",
+    "meaning": "রূপকথা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Alleviate",
+    "meaning": "উপশম করা বা লাঘব করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Alliance",
+    "meaning": "জোট; সংঘ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Alliteration",
+    "meaning": "অনুপ্রাস",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Amalgamate",
+    "meaning": "একত্রিত করা বা মিশ্রিত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Amass",
+    "meaning": "সংগ্রহ করা; জমা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ambidextrous",
+    "meaning": "উভহস্ত দক্ষ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ambiguous",
+    "meaning": "অস্পষ্ট বা দ্ব্যর্থক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ambisinister",
+    "meaning": "দুই হাতেই আনাড়ি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ambivalence",
+    "meaning": "দ্বিধা বা দ্বৈত মনোভাব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ameliorate",
+    "meaning": "উন্নত করা বা ভালো করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Amphibian",
+    "meaning": "উভচর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Anachronism",
+    "meaning": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Analogous",
+    "meaning": "সাদৃশ্যপূর্ণ বা তুলনীয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Anarchy",
+    "meaning": "নৈরাজ্য বা বিশৃঙ্খলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Androphobia",
+    "meaning": "পুরুষভীতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Anecdote",
+    "meaning": "অনুকাহিনী; উপাখ্যান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Annihilation",
+    "meaning": "সম্পূর্ণ ধ্বংস",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Anodyne",
+    "meaning": "যন্ত্রণা উপশমকারী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Anomalous",
+    "meaning": "অস্বাভাবিক বা নিয়মবহির্ভূত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Anthropophobia",
+    "meaning": "মানুষ বা সমাজ ভীতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Antipathy",
+    "meaning": "বিদ্বেষ বা ঘৃণা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Antiquated",
+    "meaning": "অপ্রচলিত; সেকেলে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Apartheid",
+    "meaning": "বৈষম্যমূলক নীতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Apathy",
+    "meaning": "উদাসীনতা বা নির্লিপ্ততা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Aphorism",
+    "meaning": "সংক্ষিপ্ত জ্ঞানগর্ভ বাণী; প্রবচন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Apostate",
+    "meaning": "ধর্মত্যাগী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Appall",
+    "meaning": "আতঙ্কিত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Appease",
+    "meaning": "শান্ত করা বা তুষ্ট করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Appraise",
+    "meaning": "মূল্যায়ন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Apprehension",
+    "meaning": "আশঙ্কা উদ্বেগ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Apprise",
+    "meaning": "অবহিত করা বা জানানো",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Approbation",
+    "meaning": "অনুমোদন বা প্রশংসা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Appropriate",
+    "meaning": "উপযুক্ত বা যথাযথ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Aquarium",
+    "meaning": "মাছের ট্যাংক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Arbitrator",
+    "meaning": "মধ্যস্থতাকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Archetypal",
+    "meaning": "আদর্শ মৌলিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Arduous",
+    "meaning": "কষ্টসাধ্য বা কঠিন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Armistice",
+    "meaning": "যুদ্ধবিরতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Arraign",
+    "meaning": "আদালতে অভিযুক্ত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Articulate",
+    "meaning": "স্পষ্টভাষী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Artless",
+    "meaning": "সরল বা নিষ্কপট",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ascertain",
+    "meaning": "নিশ্চিত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ascetic",
+    "meaning": "তপস্বী বা কঠোর সংযমী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ashen",
+    "meaning": "পাংশুটে; ছাই-রঙা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Assent",
+    "meaning": "সম্মতি; অনুমোদন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Assert",
+    "meaning": "দৃঢ়ভাবে বলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Assiduous",
+    "meaning": "অধ্যবসায়ী বা পরিশ্রমী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Assuage",
+    "meaning": "প্রশমিত করা বা উপশম করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Astraphobia",
+    "meaning": "বিদ্যুৎ চমকানো বা বজ্রপাতের ভয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Attenuate",
+    "meaning": "দুর্বল করা বা হ্রাস করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Audacious",
+    "meaning": "সাহসী বা দুঃসাহসী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Augury",
+    "meaning": "পূর্বলক্ষণ; শুভ বা অশুভ সংকেত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Austere",
+    "meaning": "কঠোর বা সাদাসিধে",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Authoritative",
+    "meaning": "কর্তৃত্বপূর্ণ বিশ্বাসযোগ্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Autophobia",
+    "meaning": "একা থাকার ভয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Avarice",
+    "meaning": "লোভ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Avaricious",
+    "meaning": "লোভী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Aver",
+    "meaning": "দৃঢ়ভাবে বলা বা জোর দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Aversion",
+    "meaning": "বিদ্বেষ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ballad",
+    "meaning": "গাথা; লোকগীত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Banal",
+    "meaning": "সাধারণ বা নীরস",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Banish",
+    "meaning": "নির্বাসন দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Barophobia",
+    "meaning": "অভিকর্ষ বা চাপের ভয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Barter",
+    "meaning": "বিনিময় করা; পণ্য বিনিময়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Beaver",
+    "meaning": "পরিশ্রমী জলচর লোমশ প্রাণী (বিবর)",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Beckon",
+    "meaning": "ইশারা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Belie",
+    "meaning": "মিথ্যা প্রমাণ করা বা বিপরীত ইঙ্গিত দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Beneficent",
+    "meaning": "দানশীল বা উপকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Benign",
+    "meaning": "সদয়; শান্ত; অনুকূল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Besiege",
+    "meaning": "অবরোধ করা; ঘেরাও করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bigot",
+    "meaning": "গোঁড়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Blight",
+    "meaning": "ক্ষয় করা; নষ্ট করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Boggle",
+    "meaning": "হতচকিত হওয়া; ইতস্তত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Boisterous",
+    "meaning": "উচ্ছৃঙ্খল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Bolster",
+    "meaning": "সমর্থন করা বা শক্তিশালী করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bolt",
+    "meaning": "দ্রুত পালানো; খিল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bombastic",
+    "meaning": "জমকালো কিন্তু অন্তঃসারশূন্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Bona-fide",
+    "meaning": "প্রকৃ ত; আন্তরিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Boorish",
+    "meaning": "অভদ্র বা রুক্ষ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bootleg",
+    "meaning": "চোরাই",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bounty",
+    "meaning": "পুরস্কার; প্রাচুর্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bouquet",
+    "meaning": "ফুলের তোড়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Bourgeois",
+    "meaning": "মধ্যবিত্ত শ্রেণি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Braggard",
+    "meaning": "বড়াইকারী; দম্ভকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Brevity",
+    "meaning": "সংক্ষিপ্ততা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Brigand",
+    "meaning": "ডাকাত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Brochure",
+    "meaning": "বিজ্ঞাপনপত্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Brusque",
+    "meaning": "রূঢ়; অমার্জিত আচরণের",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Buoyant",
+    "meaning": "উৎফুল্ল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bureaucracy",
+    "meaning": "আমলাতন্ত্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Bureaucrat",
+    "meaning": "আমলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Burgeon",
+    "meaning": "দ্রুত বৃদ্ধি পাওয়া বা বিকশিত হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Burnish",
+    "meaning": "ঘষে চকচকে করা বা উন্নত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Buttress",
+    "meaning": "সমর্থন করা বা শক্তিশালী করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Byre",
+    "meaning": "গোয়াল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Cacography",
+    "meaning": "বাজে হস্তলিপি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Cacophonous",
+    "meaning": "কর্কশ বা বিশৃঙ্খল শব্দযুক্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Cacophony",
+    "meaning": "কর্কশ শব্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Caesarean",
+    "meaning": "অস্ত্রোপচারে প্রসব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Callous",
+    "meaning": "নির্দয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Camouflage",
+    "meaning": "ছদ্মবেশ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Capricious",
+    "meaning": "খেয়ালি চপল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Carnivorous",
+    "meaning": "মাংসভোজী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Carper",
+    "meaning": "সমালোচনাকারী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Cartel",
+    "meaning": "উৎপাদন ও মূল্য নিয়ন্ত্রণকারী ব্যবসায়ীদের জোট",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Castigation",
+    "meaning": "কঠোর সমালোচনা বা তিরস্কার",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Catalyst",
+    "meaning": "অনুঘটক বা প্রেরণাদাতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Cater",
+    "meaning": "খাদ্য সরবরাহ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Caucus",
+    "meaning": "রাজনৈতিক দলের সাংগঠনিক কমিটি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Caustic",
+    "meaning": "তীক্ষ্ণ বা ক্ষয়কারী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Celerity",
+    "meaning": "দ্রুততা; তৎপরতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Centenary",
+    "meaning": "শতবার্ষিকী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Centrifugal",
+    "meaning": "কেন্দ্রবিমুখী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Centurion",
+    "meaning": "সেনা কমান্ডার (১০০ জনের দলের প্রধান)",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Char",
+    "meaning": "পুড়িয়ে কালো করা; কয়লায় পরিণত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Charade",
+    "meaning": "ভণ্ডামি; প্রহসন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Chauffeur",
+    "meaning": "পেশাদার গাড়িচালক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Chicanery",
+    "meaning": "ছলচাতুরী বা প্রতারণা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Chide",
+    "meaning": "নিন্দা করা; তিরস্কার করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Chromatography",
+    "meaning": "মিশ্রণ পৃথককরণ পদ্ধতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Chronicler",
+    "meaning": "ইতিহাস লেখক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Chronobiology",
+    "meaning": "কালজৈববিদ্যা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Chronomancy",
+    "meaning": "সময় গণনা বা ভবিষ্যৎবাণী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Chronophobia",
+    "meaning": "সময়ের ভয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Chronothermal",
+    "meaning": "সময় ও তাপমাত্রার সম্পর্ক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Churlishness",
+    "meaning": "অভদ্রতা; রুক্ষ আচরণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Cigarette",
+    "meaning": "সিগারেট",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Circumlocution",
+    "meaning": "ঘুরিয়ে কথা বলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Clairvoyant",
+    "meaning": "অতিপ্রাকৃ তিক ক্ষমতায় ভবিষ্যৎ দর্শনকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Clamoring",
+    "meaning": "হইচই করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Clamorous",
+    "meaning": "শোরগোলপূর্ণ; হৈচৈপূর্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Clandestine",
+    "meaning": "গুপ্ত; লুকানো; অবৈধভাবে গোপন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Coagulate",
+    "meaning": "জমাট বাঁধা বা ঘন হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Coda",
+    "meaning": "উপসংহার বা সমাপ্তি অংশ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Coddle",
+    "meaning": "অতি আদর করা; আহ্লাদ দিয়ে মানুষ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Coffee",
+    "meaning": "জনপ্রিয় গরম পানীয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Cogent",
+    "meaning": "যৌক্তিক ও বিশ্বাসযোগ্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Colloquium",
+    "meaning": "সেমিনার বা আলোচনা সভা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Colossal",
+    "meaning": "বিশাল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Commensurate",
+    "meaning": "সমানুপাতিক বা সমান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Commission",
+    "meaning": "কমিশন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Committee",
+    "meaning": "কমিটি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Compendium",
+    "meaning": "সংক্ষিপ্ত সংগ্রহ বা সারসংকলন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Complacent",
+    "meaning": "আত্মতুষ্ট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Complaisant",
+    "meaning": "বাধ্য বা অনুগত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Compliant",
+    "meaning": "বাধ্য বা আজ্ঞাকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Concave",
+    "meaning": "অবতল; ভিতরের দিকে বক্রতাযুক্ত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Concede",
+    "meaning": "মেনে নেওয়া; স্বীকার করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Conciliatory",
+    "meaning": "সমঝোতামূলক বা শান্তিপ্রিয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Concord",
+    "meaning": "মতৈক্য; মিল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Condemnation",
+    "meaning": "নিন্দা; দোষারোপ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Condone",
+    "meaning": "ক্ষমা করা বা উপেক্ষা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Confound",
+    "meaning": "বিভ্রান্ত করা বা হতবুদ্ধি করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Congeal",
+    "meaning": "জমাট বাঁধা; শক্ত হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Congregate",
+    "meaning": "একত্রিত হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Congregation",
+    "meaning": "সমাবেশ; মণ্ডলী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Connoisseur",
+    "meaning": "বিশেষজ্ঞ বা রসজ্ঞ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Consanguinity",
+    "meaning": "রক্তের সম্পর্ক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Conscientious",
+    "meaning": "বিবেকবুদ্ধিসম্পন্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Consensus",
+    "meaning": "সাধারণ ঐকমত্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Conspicuous",
+    "meaning": "সুস্পষ্ট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Constellation",
+    "meaning": "নক্ষত্রপুঞ্জ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Consternation",
+    "meaning": "হতবিহ্বলতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Contemporary",
+    "meaning": "সমসাময়িক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Contention",
+    "meaning": "বিতর্ক বা মতভেদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Contentious",
+    "meaning": "বিতর্কিত বা বিবাদমূলক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Contiguous",
+    "meaning": "সংলগ্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Contrite",
+    "meaning": "অনুতপ্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Conundrum",
+    "meaning": "ধাঁধা বা কঠিন সমস্যা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Convalescence",
+    "meaning": "সুস্থতালাভের প্রক্রিয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Converge",
+    "meaning": "একত্রিত হওয়া বা মিলিত হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Convoke",
+    "meaning": "সভা আহ্বান করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Convoluted",
+    "meaning": "জটিল বা বক্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Corporeal",
+    "meaning": "দৈহিক; শারীরিক; জাগতিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Corpulent",
+    "meaning": "স্থূলকায়; ভারী শরীর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Corridor",
+    "meaning": "A long passage in a building",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Councillor",
+    "meaning": "পরিষদ সদস্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Counterfeit",
+    "meaning": "জাল নকল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Covenant",
+    "meaning": "চুক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Covey",
+    "meaning": "তিতির পাখির ছানার ঝাঁক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Crass",
+    "meaning": "মূর্খ; সংবেদনহীন; রুচিহীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Craven",
+    "meaning": "ভীরু বা কাপুরুষ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Crease",
+    "meaning": "ভাঁজ; ভাঁজের দাগ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Credulity",
+    "meaning": "বিশ্বাসপ্রবণতা; অতিসহজে বিশ্বাসের প্রবণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Credulous",
+    "meaning": "সরল বিশ্বাসী; বিশ্বাসপ্রবণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Crossbred",
+    "meaning": "সংকর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Crumb",
+    "meaning": "টুকরো; গুঁ ড়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Cupidity",
+    "meaning": "লিপ্সা; অতিলোভ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Curator",
+    "meaning": "সংরক্ষক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Curriculum",
+    "meaning": "পাঠ্যক্রম",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Cynic",
+    "meaning": "নিন্দুক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Cynical",
+    "meaning": "নিন্দাবাদী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dandy",
+    "meaning": "ফ্যাশনসচেতন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dank",
+    "meaning": "স্যাঁতসেঁতে",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Daunt",
+    "meaning": "ভীত করা বা নিরুৎসাহিত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Debase",
+    "meaning": "মানহানি করা; নিচে নামানো",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Debonair",
+    "meaning": "মার্জিত; ভদ্র ও প্রফুল্ল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Decadent",
+    "meaning": "অধঃপতিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Deceit",
+    "meaning": "প্রতারণা ছলনা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Deciduous",
+    "meaning": "পর্ণমোচী; প্রতি বছর পাতা ঝরে যায় এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Decorum",
+    "meaning": "শিষ্টাচার বা শালীনতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Default",
+    "meaning": "খেলাপি হওয়া বা ব্যর্থ হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Deference",
+    "meaning": "অনুগত্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Defiance",
+    "meaning": "বিদ্রোহ; অবজ্ঞা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Deliberation",
+    "meaning": "বিবেচনা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Delineate",
+    "meaning": "বর্ণনা করা বা চিত্রিত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Delinquent",
+    "meaning": "অপরাধী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Delude",
+    "meaning": "প্রতারণা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Demagogue",
+    "meaning": "জনতাবাদী নেতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Demobilize",
+    "meaning": "সেনাদল ভেঙে দেওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Demur",
+    "meaning": "আপত্তি করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Denigrate",
+    "meaning": "ছোট করা বা সম্মানহানি করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Denture",
+    "meaning": "কৃ ত্রিম দাঁতের পঙক্তি; নকল দাঁত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Deponent",
+    "meaning": "সাক্ষী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Derelict",
+    "meaning": "পরিত্যক্ত; দায়িত্বহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Deride",
+    "meaning": "উপহাস করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Derision",
+    "meaning": "উপহাস; ঠাট্টা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Derivative",
+    "meaning": "অনুকরণমূলক বা গৌণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Desecrate",
+    "meaning": "অপবিত্র করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Desiccate",
+    "meaning": "শুকিয়ে ফেলা বা রসশূন্য করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Despotism",
+    "meaning": "স্বৈরতন্ত্র; একনায়কতন্ত্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Destitute",
+    "meaning": "নিঃস্ব; অসহায়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Desultory",
+    "meaning": "অসংলগ্ন বা এলোমেলো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Deterrent",
+    "meaning": "প্রতিরোধক বা নিবারক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Devolve",
+    "meaning": "কাজ বা দায়িত্ব হস্তান্তর করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dexterity",
+    "meaning": "দক্ষতা; নিপুণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Diachronic",
+    "meaning": "কালানুক্রমিক পরিবর্তন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Diarrhoea",
+    "meaning": "পাতলা পায়খানা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Diatribe",
+    "meaning": "তীব্র ও তিক্ত সমালোচনা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dichotomy",
+    "meaning": "দ্বিধাবিভক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Diffidence",
+    "meaning": "আত্মবিশ্বাসের অভাব",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Diffuse",
+    "meaning": "ছড়িয়ে দেওয়া বা বিস্তৃত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Digression",
+    "meaning": "প্রসঙ্গান্তর বা বিষয়চ্যুতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dilapidated",
+    "meaning": "জরাজীর্ণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dilute",
+    "meaning": "পাতলা করা; লঘু করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Diminish",
+    "meaning": "কমানো; হ্রাস পাওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dinosaur",
+    "meaning": "প্রাগৈতিহাসিক সরীসৃপ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dirge",
+    "meaning": "শোকগীতি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Disabuse",
+    "meaning": "ভ্রান্তি দূর করা বা সংশোধন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Discerning",
+    "meaning": "বিচক্ষণ বা বোধসম্পন্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disconsolate",
+    "meaning": "গভীরভাবে দুঃখিত; অসান্ত্বনাযোগ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Discordant",
+    "meaning": "অসামঞ্জস্যপূর্ণ বা বেসুরো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Discourse",
+    "meaning": "বক্তৃ তা; ভাষণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Discredit",
+    "meaning": "অসম্মান করা বা বিশ্বাসযোগ্যতা নষ্ট করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Discrepancy",
+    "meaning": "অমিল বা পার্থক্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Discrete",
+    "meaning": "পৃথক বা আলাদা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Discretion",
+    "meaning": "বিচারবুদ্ধি; নিজ সিদ্ধান্তে কাজ করার স্বাধীনতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disdain",
+    "meaning": "ঘৃণা; তাচ্ছিল্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Disease",
+    "meaning": "রোগ অসুস্থতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Disingenuous",
+    "meaning": "অসৎ বা প্রতারণাপূর্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disinter",
+    "meaning": "কবর থেকে তোলা; উদ্ঘাটন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disinterested",
+    "meaning": "নিরপেক্ষ বা স্বার্থহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disjointed",
+    "meaning": "অসংলগ্ন বা বিচ্ছিন্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dismiss",
+    "meaning": "বরখাস্ত করা বা প্রত্যাখ্যান করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dismount",
+    "meaning": "অবতরণ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disparage",
+    "meaning": "অবমাননা করা বা তুচ্ছ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disparate",
+    "meaning": "ভিন্নধর্মী বা অসদৃশ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dissemble",
+    "meaning": "আসল অনুভূতি বা উদ্দেশ্য গোপন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Disseminate",
+    "meaning": "ছড়িয়ে দেওয়া বা প্রচার করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dissension",
+    "meaning": "মতভেদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dissolution",
+    "meaning": "বিলোপ বা বিচ্ছেদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dissonance",
+    "meaning": "অসামঞ্জস্য বা বেসুরো শব্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Distend",
+    "meaning": "ফুলে যাওয়া বা প্রসারিত হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Distill",
+    "meaning": "পাতন করা বা নির্যাস বের করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Diverge",
+    "meaning": "বিচ্ছিন্ন হওয়া বা আলাদা হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Divest",
+    "meaning": "বিলুপ্ত করা বা ছিনিয়ে নেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Docile",
+    "meaning": "বাধ্য; নম্র",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Document",
+    "meaning": "নথিভুক্ত করা বা লিপিবদ্ধ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dogmatic",
+    "meaning": "গোঁড়া বা মতান্ধ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dormancy",
+    "meaning": "সুপ্তাবস্থা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Dormant",
+    "meaning": "সুপ্ত বা নিষ্ক্রিয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dotage",
+    "meaning": "বার্ধক্যের দুর্বলতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dote",
+    "meaning": "অত্যধিক অনুরাগ প্রকাশ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Droll",
+    "meaning": "মজাদার; হাস্যকর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dromomania",
+    "meaning": "ভ্রমণের রোগ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ductile",
+    "meaning": "নমনীয়; সহজে গড়া যায়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dupe",
+    "meaning": "প্রতারিত করা বা ঠকানো",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dwindle",
+    "meaning": "ক্রমশ হ্রাস পাওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dysentery",
+    "meaning": "আমাশা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ebullient",
+    "meaning": "উৎফুল্ল বা উচ্ছ্বসিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Eccentric",
+    "meaning": "অদ্ভুত; খামখেয়ালী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Eclectic",
+    "meaning": "বিভিন্ন উৎস থেকে নির্বাচিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Economize",
+    "meaning": "মিতব্যয়ী হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Efface",
+    "meaning": "মুছে ফেলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Efficacy",
+    "meaning": "কার্যকারিতা বা ক্ষমতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Efflorescence",
+    "meaning": "ফুলের ফোটা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Effrontery",
+    "meaning": "নির্লজ্জতা বা ঔদ্ধত্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Effusive",
+    "meaning": "উচ্ছ্বাসপ্রবণ; অতিমাত্রায় আবেগী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Egregious",
+    "meaning": "অত্যন্ত শোচনীয়; গুরুতর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Electorate",
+    "meaning": "ভোটদাতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Elegy",
+    "meaning": "শোকগাথা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Elicit",
+    "meaning": "বের করে আনা (তথ্য বা প্রতিক্রিয়া)",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Eloquent",
+    "meaning": "বাগ্মী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Elucidate",
+    "meaning": "স্পষ্ট করা; ব্যাখ্যা করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Elysium",
+    "meaning": "স্বর্গ; পরম সুখের স্থান",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Emaciated",
+    "meaning": "হালকা-পাতলা ও দুর্বল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Emancipate",
+    "meaning": "মুক্ত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Embarrass",
+    "meaning": "লজ্জায় ফেলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Embellish",
+    "meaning": "সাজানো বা অলংকৃত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Emeritus",
+    "meaning": "অবসরপ্রাপ্ত (সম্মানসূচক)",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Empirical",
+    "meaning": "বাস্তব অভিজ্ঞতানির্ভর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Emulate",
+    "meaning": "অনুকরণ করা বা অনুসরণ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Encomium",
+    "meaning": "উচ্চ প্রশংসা; স্তুতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Encyclopedia",
+    "meaning": "বিশ্বকোষ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Endemic",
+    "meaning": "স্থানীয় বা দেশজ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Endowment",
+    "meaning": "দান; বৃত্তি; প্রদত্ত তহবিল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Enervate",
+    "meaning": "দুর্বল বা শক্তিহীন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Engender",
+    "meaning": "জন্ম দেওয়া বা কারণ হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Enhance",
+    "meaning": "বৃদ্ধি করা বা উন্নত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Enigma",
+    "meaning": "রহস্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Enmity",
+    "meaning": "শত্রুতা বিদ্বেষ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ennui",
+    "meaning": "একঘেয়েমি; বিষণ্নতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Entomologist",
+    "meaning": "কীটতত্ত্ববিদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Entomology",
+    "meaning": "কীটতত্ত্ব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Entrepreneur",
+    "meaning": "উদ্যোক্তা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Enunciate",
+    "meaning": "স্পষ্টভাবে উচ্চারণ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Envoy",
+    "meaning": "দূত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Epee",
+    "meaning": "ফেন্সিংয়ে ব্যবহৃত তলোয়ার বিশেষ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ephemeral",
+    "meaning": "ক্ষণস্থায়ী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Epicurean",
+    "meaning": "ভোগবাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Epistemology",
+    "meaning": "জ্ঞানতত্ত্ব; জ্ঞানের উৎস বিষয়ক দর্শন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Equanimity",
+    "meaning": "মনের স্থিরতা বা শান্ত ভাব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Equity",
+    "meaning": "ন্যায্যতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Equivocate",
+    "meaning": "দ্ব্যর্থক বা অস্পষ্ট কথা বলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Erratic",
+    "meaning": "অনিয়মিত; খামখেয়ালি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Erudite",
+    "meaning": "পণ্ডিত বা জ্ঞানী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Esoteric",
+    "meaning": "রহস্যময় বা অল্প লোক জানে এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Etiquette",
+    "meaning": "সামাজিক শিষ্টাচার",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Eulogistic",
+    "meaning": "প্রশংসামূলক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Eulogy",
+    "meaning": "প্রশংসা বা স্তুতি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Euphemism",
+    "meaning": "শোভন বা কোমল উক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Euphonious",
+    "meaning": "সুমধুর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Euphoria",
+    "meaning": "অতিআনন্দ; মঙ্গল ও আনন্দজনক অবস্থা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Evanescence",
+    "meaning": "ধীরে মিলিয়ে যাওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Evasive",
+    "meaning": "এড়িয়ে চলা; ফাঁকি দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Exacerbate",
+    "meaning": "আরও খারাপ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Exaggerate",
+    "meaning": "অতিরঞ্জন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Exculpate",
+    "meaning": "অভিযোগ থেকে মুক্তি দেওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Exemplary",
+    "meaning": "আদর্শ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Exigency",
+    "meaning": "জরুরি অবস্থা বা জরুরি প্রয়োজন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Exonerate",
+    "meaning": "দায়মুক্ত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Expedite",
+    "meaning": "ত্বরান্বিত করা; দ্রুত সম্পন্ন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Expound",
+    "meaning": "বিস্তারিত ব্যাখ্যা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Extempore",
+    "meaning": "তাৎক্ষণিক; অপ্রস্তুতিতে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Extol",
+    "meaning": "প্রশংসা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Extraneous",
+    "meaning": "অপ্রাসঙ্গিক; বাইরের",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Extrapolation",
+    "meaning": "অনুমান বা ধারণা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Extravagant",
+    "meaning": "অপব্যয়ী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Extroversion",
+    "meaning": "বহির্মুখী স্বভাব",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Exuberate",
+    "meaning": "উৎফুল্ল থাকা; উদ্দীপ্ত হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Exult",
+    "meaning": "অতিশয় আনন্দ করা; উল্লসিত হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Facetious",
+    "meaning": "রসিক বা ইয়ার্কিপূর্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Facilitate",
+    "meaning": "সহজ করা বা সুবিধা করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Facsimile",
+    "meaning": "ফ্যাক্স",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fallacious",
+    "meaning": "ভ্রান্তিমূলক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fanatical",
+    "meaning": "অতিমাত্রায় গোঁড়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fanaticism",
+    "meaning": "গোঁড়ামি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fastidious",
+    "meaning": "খুঁতখুঁতে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fatalist",
+    "meaning": "ভাগ্যবাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fatuous",
+    "meaning": "বোকা বা নির্বোধ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fawning",
+    "meaning": "তোষামোদপূর্ণ বা চাটুকারিতাপূর্ণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Felicitous",
+    "meaning": "উপযুক্ত বা মনোরম",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Feral",
+    "meaning": "বন্য; পোষ মানানো যায়নি এমন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fervor",
+    "meaning": "প্রবল আবেগ বা উৎসাহ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fetter",
+    "meaning": "পায়ের শিকল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fidelity",
+    "meaning": "বিশ্বস্ততা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Flag",
+    "meaning": "দুর্বল হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Flagitious",
+    "meaning": "জঘন্য; অতি দুষ্কর্মী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Flamboyance",
+    "meaning": "আকর্ষণীয় জাঁকালো ভাব",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fledgling",
+    "meaning": "অনভিজ্ঞ বা নবীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Flinch",
+    "meaning": "ভয়ে বা কষ্টে পিছিয়ে আসা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Flout",
+    "meaning": "অবজ্ঞা করা (আইন)",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Foment",
+    "meaning": "উসকানি দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Forestall",
+    "meaning": "আগেই প্রতিরোধ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Forsaken",
+    "meaning": "পরিত্যক্ত; অবহেলিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fortified",
+    "meaning": "সুরক্ষিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fortuitous",
+    "meaning": "আকস্মিক; দৈবিক; অপ্রত্যাশিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Frailty",
+    "meaning": "দুর্বলতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Frenetic",
+    "meaning": "ক্ষিপ্ত; উন্মত্ত; উত্তেজিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fresco",
+    "meaning": "ভেজা পলস্তারার উপর দেওয়ালচিত্র",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fringe",
+    "meaning": "প্রান্ত; ঝালর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Frivolous",
+    "meaning": "তুচ্ছ; হালকা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Frontier",
+    "meaning": "জনবসতিপূর্ণ এলাকার শেষসীমা; প্রান্ত অঞ্চল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Frugality",
+    "meaning": "মিতব্যয়িতা বা কৃপণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Fulfillment",
+    "meaning": "পরিতৃপ্তি সম্পাদন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fulsome",
+    "meaning": "অত্যধিক; অতিরিক্ত প্রশংসাপূর্ণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Futile",
+    "meaning": "নিরর্থক বা বৃথা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gainsay",
+    "meaning": "অস্বীকার করা বা বিরোধিতা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gall",
+    "meaning": "সাহস; স্পর্ধা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gamophobia",
+    "meaning": "বিয়ের ভয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Garrulous",
+    "meaning": "বাচাল বা অতিরিক্ত কথা বলে এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Gauche",
+    "meaning": "সামাজিকভাবে অপ্রতিভ; কৌশলহীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Genesis",
+    "meaning": "উৎপত্তি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Geriatrician",
+    "meaning": "বৃদ্ধাবস্থার চিকিৎসক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Germane",
+    "meaning": "প্রাসঙ্গিক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Girder",
+    "meaning": "ইস্পাতের কাঠামো",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Glib",
+    "meaning": "অনায়াসে কথা বলতে পারে এমন; চটকদার বাগ্মী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Glum",
+    "meaning": "মনমরা; বিষণ্ণ; ম্রিয়মাণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Goad",
+    "meaning": "উত্তেজিত করা বা খোঁচা দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gouge",
+    "meaning": "খোদাই করা বা আঁচড় দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gourmet",
+    "meaning": "ভোজনরসিক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Granary",
+    "meaning": "শস্যভান্ডার",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Grandiloquent",
+    "meaning": "জমকালো বা আড়ম্বরপূর্ণ (ভাষা)",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Grate",
+    "meaning": "ঘষা; বিরক্ত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gratify",
+    "meaning": "তুষ্ট করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gregarious",
+    "meaning": "মেলামেশাপ্রিয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Grovel",
+    "meaning": "নিজেকে ছোট করা; আত্মমর্যাদাহীন আচরণ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Grumble",
+    "meaning": "বিড়বিড় করা; অভিযোগ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Guarantee",
+    "meaning": "নিশ্চয়তা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Guileless",
+    "meaning": "সরল বা ছলনা জানে না এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Gullible",
+    "meaning": "সহজে বিশ্বাস করে এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Gynophobia",
+    "meaning": "নারীভীতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Haemorrhage",
+    "meaning": "অতিরিক্ত রক্তক্ষরণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Halcyon",
+    "meaning": "শান্তিপূর্ণ; সুখময়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hamlet",
+    "meaning": "ছোট গ্রাম",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Handy",
+    "meaning": "সুবিধাজনক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Harangue",
+    "meaning": "তিরস্কারপূর্ণ দীর্ঘ বক্তৃতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Harbinger",
+    "meaning": "অগ্রদূত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Hearken",
+    "meaning": "মনোযোগ দিয়ে শোনা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Heckle",
+    "meaning": "প্রশ্নবাণে জর্জরিত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Herbivorous",
+    "meaning": "তৃণভোজী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Heresy",
+    "meaning": "প্রচলিত মতের বিরুদ্ধ বিশ্বাস",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hey-day",
+    "meaning": "সোনালি সময়; স্বর্ণযুগ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Highbrow",
+    "meaning": "উচ্চমেধাসম্পন্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Hippopotamus",
+    "meaning": "জলহস্তী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hoard",
+    "meaning": "গোপনে মজুত করা; লুকানো সঞ্চয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Holocaust",
+    "meaning": "গণহত্যা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Homogenous",
+    "meaning": "সমজাতীয় বা একরকম",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Homonym",
+    "meaning": "সমোচ্চারিত শব্দ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hospice",
+    "meaning": "মুমূর্ষু রোগীদের সেবাকেন্দ্র",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Humorous",
+    "meaning": "রসাত্মক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hyperbole",
+    "meaning": "অতিরঞ্জন বা অত্যুক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Hypocrisy",
+    "meaning": "ভণ্ডামি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Hypothetical",
+    "meaning": "অনুমানমূলক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Iconoclast",
+    "meaning": "প্রথাবিরোধী ব্যক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Identified",
+    "meaning": "চিহ্নিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Idolatry",
+    "meaning": "মূর্তিপূজা বা অন্ধ ভক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Idyll",
+    "meaning": "আনন্দময় দৃশ্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ignominy",
+    "meaning": "কলঙ্ক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Illegible",
+    "meaning": "অপাঠ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Immaculate",
+    "meaning": "নিষ্কলঙ্ক; দোষমুক্ত; নিখুঁত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Immutable",
+    "meaning": "অপরিবর্তনীয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Impair",
+    "meaning": "ক্ষতিগ্রস্ত করা বা দুর্বল করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Impassive",
+    "meaning": "নির্বিকার বা ভাবলেশহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Impeach",
+    "meaning": "অভিযোগ উত্থাপন করা; পদচ্যুত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Impede",
+    "meaning": "বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Impending",
+    "meaning": "আসন্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Impermeable",
+    "meaning": "অভেদ্য বা অপ্রবেশ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Imperturbable",
+    "meaning": "শান্ত বা অবিচল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Impervious",
+    "meaning": "অভেদ্য বা প্রভাবিত হয় না এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Impinge",
+    "meaning": "প্রভাব ফেলা; অতিক্রম করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Implacable",
+    "meaning": "নির্দয় বা যাকে শান্ত করা যায় না",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Implicit",
+    "meaning": "অন্তর্নিহিত বা অব্যক্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Implode",
+    "meaning": "ভিতরের দিকে ফেটে যাওয়া বা ধসে পড়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Imprecision",
+    "meaning": "অনির্ভুলতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Improbable",
+    "meaning": "অসম্ভব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Impute",
+    "meaning": "দোষারোপ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Inadvertent",
+    "meaning": "অনিচ্ছাকৃত অসাবধানবশত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Inadvertently",
+    "meaning": "অসাবধানতাবশত বা অনিচ্ছাকৃতভাবে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Incapacitate",
+    "meaning": "অক্ষম করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Inchoate",
+    "meaning": "অসম্পূর্ণ বা প্রাথমিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Incipient",
+    "meaning": "সদ্য শুরু হওয়া; উদীয়মান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Incite",
+    "meaning": "উসকে দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Inclination",
+    "meaning": "ঝোঁক; প্রবণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Incomprehensible",
+    "meaning": "দুর্বোধ্য; অবোধ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Incongruity",
+    "meaning": "অসঙ্গতি বা বৈপরীত্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Inconsequential",
+    "meaning": "গুরুত্বহীন বা তুচ্ছ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Incorporate",
+    "meaning": "অন্তর্ভুক্ত করা বা সংযুক্ত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Incumbent",
+    "meaning": "পদাধিকারী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Indelible",
+    "meaning": "অমোচনীয়; মুছে ফেলা যায় না এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Indeterminate",
+    "meaning": "অনিশ্চিত বা অনির্দিষ্ট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Indictment",
+    "meaning": "অভিযোগ; চার্জশিট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Indigence",
+    "meaning": "দারিদ্র্য বা অভাব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Indignation",
+    "meaning": "ক্ষোভ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Indolent",
+    "meaning": "অলস বা কর্মবিমুখ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Indulgence",
+    "meaning": "অসংযম; প্রশ্রয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Inert",
+    "meaning": "নিষ্ক্রিয় বা জড়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Inexcusable",
+    "meaning": "ক্ষমার অযোগ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Inexorable",
+    "meaning": "অপরিবর্তনীয়; অটল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Infallible",
+    "meaning": "অভ্রান্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Infernal",
+    "meaning": "নারকীয়; পৈশাচিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ingenious",
+    "meaning": "উদ্ভাবনী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ingenuous",
+    "meaning": "সরল বা অকপট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Inherent",
+    "meaning": "অন্তর্নিহিত বা স্বাভাবিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Innocuous",
+    "meaning": "নিরীহ বা ক্ষতি করে না এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Innuendo",
+    "meaning": "পরোক্ষ ইঙ্গিত; অপ্রত্যক্ষ কটাক্ষ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Insensible",
+    "meaning": "অসংবেদনশীল বা অজ্ঞান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Insinuate",
+    "meaning": "ইঙ্গিত করা বা পরোক্ষভাবে বলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Insipid",
+    "meaning": "বিরস বা স্বাদহীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Insolent",
+    "meaning": "উদ্ধত; ধৃষ্ট; অসম্মানজনক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Insouciant",
+    "meaning": "নিশ্চিন্ত উদাসীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Insularity",
+    "meaning": "সংকীর্ণতা বা বিচ্ছিন্নতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Insurgent",
+    "meaning": "বিদ্রোহী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Intercede",
+    "meaning": "মধ্যস্থতা করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Interlocution",
+    "meaning": "কথোপকথন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Intermittent",
+    "meaning": "মাঝে মাঝে; বিরতিহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Interregnum",
+    "meaning": "শাসনশূন্যতাকাল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Intractable",
+    "meaning": "অবাধ্য বা নিয়ন্ত্রণ করা কঠিন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Intransigence",
+    "meaning": "জেদ বা নমনীয়তার অভাব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Intrepid",
+    "meaning": "নির্ভীক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Introspection",
+    "meaning": "অন্তর্দৃষ্টি; নিজের চিন্তা পরীক্ষা করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Inundate",
+    "meaning": "প্লাবিত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Inured",
+    "meaning": "অভ্যস্ত বা কঠোর করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Invective",
+    "meaning": "তিরস্কার বা কটু ভাষা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Irascible",
+    "meaning": "খিটখিটে বা সহজে রেগে যায় এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Irksome",
+    "meaning": "বিরক্তিকর; ক্লেশকর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Irresistible",
+    "meaning": "অপ্রতিরোধ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Irresolute",
+    "meaning": "অস্থিরচিত্ত বা দ্বিধাগ্রস্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Isochronous",
+    "meaning": "সমকালবর্তী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Isthmus",
+    "meaning": "যোজক ভূমি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Itinerary",
+    "meaning": "ভ্রমণ পরিকল্পনা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Jargon",
+    "meaning": "পেশাদার ভাষা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Jaunt",
+    "meaning": "আনন্দভ্রমণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Jingoism",
+    "meaning": "উগ্র জাতীয়তাবাদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Jubilation",
+    "meaning": "বিজয়ানন্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Jurisdiction",
+    "meaning": "এলাকাভিত্তিক কর্তৃত্ব",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Kiln",
+    "meaning": "পোড়ানোর ভাঁটা; ইটভাটি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Kinsfolk",
+    "meaning": "আত্মীয়স্বজন; রক্তের সম্পর্কে র লোকজন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Kleptomania",
+    "meaning": "চুরির রোগ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Knotty",
+    "meaning": "জটিল; কঠিন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Labyrinth",
+    "meaning": "গোলকধাঁধা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Lachrymose",
+    "meaning": "কান্নাপ্রবণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Laconic",
+    "meaning": "স্বল্পভাষী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Lascivious",
+    "meaning": "কামুক, লালসাপূর্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Lassitude",
+    "meaning": "অবসাদ বা ক্লান্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Latent",
+    "meaning": "সুপ্ত বা অপ্রকাশিত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Laud",
+    "meaning": "প্রশংসা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Laudatory",
+    "meaning": "প্রশংসাসূচক; প্রশংসামূলক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Laxative",
+    "meaning": "জোলাপ; রেচক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Laxity",
+    "meaning": "শিথিলতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Leaven",
+    "meaning": "খামির; ইস্ট",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Legacy",
+    "meaning": "উত্তরাধিকার",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Legible",
+    "meaning": "স্পষ্ট; সহজে পাঠযোগ্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Legislation",
+    "meaning": "আইন প্রণয়ন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Leonine",
+    "meaning": "সিংহ সদৃশ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Lethargic",
+    "meaning": "অলস বা নিস্তেজ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Levee",
+    "meaning": "নদীবাঁধ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Levity",
+    "meaning": "লঘুত্ব বা চপলতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Liaison",
+    "meaning": "যোগাযোগ সংযোগ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Licentious",
+    "meaning": "লাম্পট্যপূর্ণ; অশ্লীল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Lieutenant",
+    "meaning": "A military officer rank",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Lifebuoy",
+    "meaning": "জীবন রক্ষাকারী ভাসমান বস্তু",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Limpid",
+    "meaning": "স্বচ্ছ; পরিষ্কার",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Lingua franca",
+    "meaning": "সাধারণ ভাষা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Lionize",
+    "meaning": "কাউকে বিখ্যাত ব্যক্তিরূপে গণ্য করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Listless",
+    "meaning": "উৎসাহহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Log",
+    "meaning": "লিপিবদ্ধ করা বা দিনলিপি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Logomania",
+    "meaning": "বাচালতার রোগ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Loner",
+    "meaning": "একাকী; নিভৃ তচারী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Longiloquence",
+    "meaning": "দীর্ঘ বক্তৃ তা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Loquacious",
+    "meaning": "বাচাল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Louche",
+    "meaning": "সন্দেহজনক চরিত্রের",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Lucid",
+    "meaning": "স্বচ্ছ বা সহজে বোঝা যায় এমন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Lugubrious",
+    "meaning": "শোকাকুল; বিষণ্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Lumber",
+    "meaning": "ভারী পদক্ষেপে ধীরে চলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Luminous",
+    "meaning": "উজ্জ্বল বা আলো ছড়ায় এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Lustrous",
+    "meaning": "উজ্জ্বল; চকচকে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Macabre",
+    "meaning": "মৃত্যু বা ভয়ঙ্কর বিষয় সংক্রান্ত; ভৌতিক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Machiavellian",
+    "meaning": "অসাধু রাজনৈতিক উপায়ে চলা; ধূর্ত ও নীতিহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Magnanimity",
+    "meaning": "মহানুভবতা বা উদারতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Malcontent",
+    "meaning": "অসন্তুষ্ট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Malingerer",
+    "meaning": "ভান করা রোগী বা কাজ এড়ানো ব্যক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Malleable",
+    "meaning": "নমনীয় বা সহজে আকার দেওয়া যায় এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Manifestation",
+    "meaning": "প্রদর্শন; প্রকাশ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Manoeuvre",
+    "meaning": "দক্ষ কৌশলী চাল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mattress",
+    "meaning": "গদি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Maverick",
+    "meaning": "প্রথাবিরোধী বা স্বাধীনচেতা ব্যক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Meek",
+    "meaning": "নম্র ও ধৈর্যশীল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Melancholy",
+    "meaning": "বিষাদ; মনমরা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Melee",
+    "meaning": "দাঙ্গা; হাতাহাতি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Mellifluous",
+    "meaning": "মধুর; সুমিষ্ট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mendacious",
+    "meaning": "মিথ্যাবাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mesa",
+    "meaning": "মালভূমি; উঁচু সমতল ভূমি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Metamorphosis",
+    "meaning": "রূপান্তর বা পরিবর্তন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Meticulous",
+    "meaning": "অতিসতর্ক বা খুঁতখুঁতে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Millennium",
+    "meaning": "সহস্রাব্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Millionaire",
+    "meaning": "কোটিপতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Minuscule",
+    "meaning": "অতি ক্ষুদ্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Misanthrope",
+    "meaning": "মানববিদ্বেষী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Miscellaneous",
+    "meaning": "বিবিধ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Miserliness",
+    "meaning": "কৃ পণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Misspell",
+    "meaning": "ভুল বানান করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mitigate",
+    "meaning": "প্রশমিত করা বা তীব্রতা কমানো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Moat",
+    "meaning": "পরিখা; দুর্গখাল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Modicum",
+    "meaning": "অল্প; পরিমিত পরিমাণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Mollify",
+    "meaning": "শান্ত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Momentous",
+    "meaning": "গুরুত্বপূর্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Monastery",
+    "meaning": "মঠ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Monumental",
+    "meaning": "বিশাল; স্মরণীয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Morbid",
+    "meaning": "পীড়িত; ব্যাধিগ্রস্ত; অস্বাস্থ্যকরভাবে মৃত্যুচিন্তাগ্রস্ত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Morose",
+    "meaning": "বিষণ্ণ বা খিটখিটে",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Mortuary",
+    "meaning": "শবাগার; মৃতদেহ সংরক্ষণের স্থান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Moustache",
+    "meaning": "গোঁফ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mundane",
+    "meaning": "পার্থিব বা সাধারণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Myopic",
+    "meaning": "ক্ষুদ্রদৃষ্টি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Narcissism",
+    "meaning": "আত্মপ্রেম",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Narrative",
+    "meaning": "বর্ণনা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Nascent",
+    "meaning": "উদীয়মান",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Negate",
+    "meaning": "অস্বীকার করা বা বাতিল করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Neologism",
+    "meaning": "নূতন শব্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Neophyte",
+    "meaning": "নবীন বা অনভিজ্ঞ ব্যক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Nimble",
+    "meaning": "চটপটে; তৎপর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Nondescript",
+    "meaning": "সহজে শ্রেণিভুক্ত করা যায় না এমন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Notion",
+    "meaning": "ধারণা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Novice",
+    "meaning": "নবীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Numismatist",
+    "meaning": "মুদ্রাসংগ্রাহক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Nyctophobia",
+    "meaning": "অন্ধকারের ভয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Obdurate",
+    "meaning": "একগুঁয়ে বা কঠোর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Obfuscate",
+    "meaning": "অস্পষ্ট করা; বিভ্রান্ত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Obituary",
+    "meaning": "মৃত্যু সংবাদ; শোকসংবাদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Obscure",
+    "meaning": "অস্পষ্ট; অখ্যাত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Obsequious",
+    "meaning": "চাটুকার বা অতিরিক্ত অনুগত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Obstreperous",
+    "meaning": "উচ্ছৃঙ্খল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Obtuse",
+    "meaning": "ভোঁতা; বোকা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Obviate",
+    "meaning": "দূর করা বা প্রতিরোধ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Occlude",
+    "meaning": "বন্ধ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Odious",
+    "meaning": "ঘৃণ্য; ঘৃণাযোগ্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Officious",
+    "meaning": "অতি উৎসাহী বা হস্তক্ষেপকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ominous",
+    "meaning": "অলক্ষুণে অশুভ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Omniloquence",
+    "meaning": "সব বিষয়ে কথা বলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Omnipotent",
+    "meaning": "সর্বশক্তিমান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Onerous",
+    "meaning": "কষ্টসাধ্য বা দুর্বহ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Onomatopoeia",
+    "meaning": "ধ্বন্যাত্মক শব্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Opulence",
+    "meaning": "ঐশ্বর্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Opulent",
+    "meaning": "ধনী; বিত্তবান; প্রাচুর্যময়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Orchard",
+    "meaning": "ফলবাগান",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ornery",
+    "meaning": "বশে আনা কঠিন; রগচটা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ornithologist",
+    "meaning": "পক্ষিবিদ; পাখি বিশেষজ্ঞ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ornithology",
+    "meaning": "পক্ষীবিদ্যা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Orthopedic",
+    "meaning": "অস্থি-সংক্রান্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Orwellian",
+    "meaning": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Oscillate",
+    "meaning": "দোলায়মান হওয়া বা পরিবর্তিত হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ostentation",
+    "meaning": "জাঁকজমক; আড়ম্বর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ostentatious",
+    "meaning": "লোক দেখানো বা জাঁকজমকপূর্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Overt",
+    "meaning": "প্রত্যক্ষ; প্রকাশ্য; খোলামেলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Oyster",
+    "meaning": "ঝিনুক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Palatable",
+    "meaning": "সুস্বাদু",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Palate",
+    "meaning": "তালু রুচিবোধ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Paleontology",
+    "meaning": "জীবাশ্ম বিজ্ঞান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Palisade",
+    "meaning": "বেড়া; খুঁটি দিয়ে তৈরি প্রতিরক্ষা কাঠামো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pallid",
+    "meaning": "ফ্যাকাশে; মলিন; পাংশুবর্ণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pamphlet",
+    "meaning": "পুস্তিকা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Panache",
+    "meaning": "আড়ম্বর; স্বকীয় ভঙ্গি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Panegyric",
+    "meaning": "স্তুতিবচন; উচ্চ প্রশংসামূলক বক্তৃ তা বা রচনা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pantheist",
+    "meaning": "সর্বেশ্বরবাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Parable",
+    "meaning": "নীতিগল্প",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Paragon",
+    "meaning": "আদর্শ বা নিখুঁত উদাহরণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Parsimony",
+    "meaning": "কৃ পণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Partisan",
+    "meaning": "পক্ষপাতদুষ্ট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Partridge",
+    "meaning": "তিতিরজাতীয় পাখি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pathological",
+    "meaning": "রোগসংক্রান্ত বা অস্বাভাবিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Patriarch",
+    "meaning": "গৃহপতি; গোষ্ঠীপ্রধান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Patrimony",
+    "meaning": "পৈতৃক সম্পত্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Paucity",
+    "meaning": "স্বল্পতা বা অভাব",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Peculation",
+    "meaning": "সরকারি বা অন্যের অর্থ আত্মসাৎ; তহবিল তছরুপ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pecuniary",
+    "meaning": "অর্থসংক্রান্ত; আর্থিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pedantic",
+    "meaning": "পাণ্ডিত্য জাহিরকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Peddler",
+    "meaning": "ফেরিওয়ালা; হকার",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pedestal",
+    "meaning": "স্তম্ভের ভিত্তি; মূর্তির বেদি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Penchant",
+    "meaning": "ঝোঁক বা তীব্র পছন্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Penury",
+    "meaning": "চরম দারিদ্র্য বা অভাব",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Perceptive",
+    "meaning": "উপলব্ধির ক্ষমতাসম্পন্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perennial",
+    "meaning": "বহুবর্ষজীবী বা চিরস্থায়ী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perfidious",
+    "meaning": "বিশ্বাসঘাতক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perfidy",
+    "meaning": "বিশ্বাসঘাতকতা; বিশ্বাসভঙ্গ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Perforation",
+    "meaning": "ছিদ্র; গর্ত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perfunctory",
+    "meaning": "দায়সারা বা যত্নহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Peril",
+    "meaning": "বিপদ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Perjury",
+    "meaning": "মিথ্যা শপথ; মিথ্যা সাক্ষ্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Permeable",
+    "meaning": "ভেদ্য বা প্রবেশযোগ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pernicious",
+    "meaning": "ক্ষতিকর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perpetual",
+    "meaning": "চিরস্থায়ী; অবিরাম",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perplexed",
+    "meaning": "বিভ্রান্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perseverance",
+    "meaning": "অধ্যবসায় দৃঢ়তা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pertinent",
+    "meaning": "প্রাসঙ্গিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perturb",
+    "meaning": "উত্তেজিত করা; বিঘ্ন সৃষ্টি করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pervasive",
+    "meaning": "ব্যাপক বা সর্বব্যাপী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Petrology",
+    "meaning": "শিলাতত্ত্ব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Petulant",
+    "meaning": "খিটখিটে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Philanderer",
+    "meaning": "গুরুত্বহীনভাবে প্রেম করে এমন ব্যক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Philistine",
+    "meaning": "সংস্কৃ তিবিমুখ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Phlegmatic",
+    "meaning": "শান্ত বা আবেগহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Piety",
+    "meaning": "ধর্মপরায়ণতা বা ভক্তি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pilferage",
+    "meaning": "চুরি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Placate",
+    "meaning": "শান্ত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Plaintiff",
+    "meaning": "বাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Plasticity",
+    "meaning": "নমনীয়তা বা পরিবর্তনশীলতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Platitude",
+    "meaning": "মামুলি বা গতানুগতিক উক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Plebiscite",
+    "meaning": "গণভোট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pleonasm",
+    "meaning": "অতিরিক্ত শব্দপ্রয়োগ; পুনরুক্তি দোষ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Plethora",
+    "meaning": "আধিক্য বা প্রাচুর্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pliable",
+    "meaning": "সহজে বাঁকানো যায়; নমনীয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Plummet",
+    "meaning": "দ্রুত পতন বা নিমজ্জন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Plutocracy",
+    "meaning": "ধনতন্ত্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Poignant",
+    "meaning": "তীক্ষ্ণ; মর্মভেদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Polyandry",
+    "meaning": "বহুপতিত্ব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Polyglot",
+    "meaning": "বহুভাষী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pompously",
+    "meaning": "জাঁকজমকভাবে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ponder",
+    "meaning": "গভীরভাবে ভাবা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Porous",
+    "meaning": "ছিদ্রযুক্ত বা শোষক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Posterior",
+    "meaning": "পশ্চাৎভাগ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pragmatic",
+    "meaning": "বাস্তববাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pragmatist",
+    "meaning": "বাস্তববাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Preamble",
+    "meaning": "ভূমিকা বা প্রারম্ভিক বক্তব্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Precarious",
+    "meaning": "অনিশ্চিত বিপজ্জনক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Precedence",
+    "meaning": "অগ্রাধিকার",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Precinct",
+    "meaning": "নির্দিষ্ট এলাকা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Precipitate",
+    "meaning": "ত্বরান্বিত করা বা হঠকারী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Precursor",
+    "meaning": "অগ্রদূত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Presumptuous",
+    "meaning": "অহংকারী বা দুঃসাহসী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Prevaricate",
+    "meaning": "সত্যের অপলাপ করা বা এড়িয়ে যাওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pristine",
+    "meaning": "আদিম বা বিশুদ্ধ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Probity",
+    "meaning": "সততা বা সাধুতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Problematic",
+    "meaning": "সমস্যাযুক্ত বা জটিল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Proclamation",
+    "meaning": "সরকারি ঘোষণা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Prodigal",
+    "meaning": "অপব্যয়ী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Profound",
+    "meaning": "গভীর বা তাৎপর্যপূর্ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Profuse",
+    "meaning": "প্রচুর; অতিমাত্রায়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Prohibitive",
+    "meaning": "নিষেধাত্মক বা অত্যধিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Proliferate",
+    "meaning": "দ্রুতগতিতে সংখ্যা বৃদ্ধি পাওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Prolific",
+    "meaning": "প্রচুর উৎপাদনশীল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Promiscuous",
+    "meaning": "চরিত্রহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Propel",
+    "meaning": "এগিয়ে দেওয়া; চালিত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Propensity",
+    "meaning": "স্বাভাবিক প্রবণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Propitiate",
+    "meaning": "সন্তুষ্ট করা (দেবতা বা ব্যক্তিকে)",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Propitious",
+    "meaning": "অনুকূল; শুভ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Propriety",
+    "meaning": "ভদ্রতা বা সামাজিক শিষ্টাচার",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Prosaic",
+    "meaning": "গদ্যময়; গতানুগতিক; বিরস",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Proscribe",
+    "meaning": "নিষিদ্ধ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Protracted",
+    "meaning": "দীর্ঘায়িত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Protrude",
+    "meaning": "বাইরে প্রসারিত হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Provident",
+    "meaning": "ভবিষ্যৎ চিন্তাশীল; সাবধানী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Prudent",
+    "meaning": "বিচক্ষণ; সতর্ক ; ভবিষ্যৎ চিন্তাশীল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pulitzer",
+    "meaning": "পুলিৎজার পুরস্কার",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pungent",
+    "meaning": "তীব্র (গন্ধ বা স্বাদ)",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Qualified",
+    "meaning": "যোগ্য বা শর্তসাপেক্ষ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Quandary",
+    "meaning": "দ্বিধা; সংকট",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Quash",
+    "meaning": "বাতিল করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Queer",
+    "meaning": "অদ্ভুত; বিচিত্র",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Quell",
+    "meaning": "দমন করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Querulousness",
+    "meaning": "অভিযোগপ্রবণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Questionnaire",
+    "meaning": "প্রশ্নাবলি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Quibble",
+    "meaning": "ছোটখাটো বিষয়ে তর্ক করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Quiescent",
+    "meaning": "নিষ্ক্রিয় বা শান্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Quotient",
+    "meaning": "ভাগফল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Radiant",
+    "meaning": "উজ্জ্বল; দীপ্তিমান",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ramification",
+    "meaning": "পরিণতি; শাখা-প্রশাখা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Rarefied",
+    "meaning": "বিরল বা পাতলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Raucous",
+    "meaning": "কর্ক শ; কোলাহলপূর্ণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Rebellious",
+    "meaning": "বিদ্রোহী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Rebuff",
+    "meaning": "রূঢ়ভাবে প্রত্যাখ্যান করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Rebut",
+    "meaning": "খণ্ডন করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Recalcitrant",
+    "meaning": "অবাধ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Recant",
+    "meaning": "মত বা বিশ্বাস প্রত্যাহার করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Recapitulation",
+    "meaning": "পুনরাবৃত্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Receipt",
+    "meaning": "রসিদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Recession",
+    "meaning": "অর্থনৈতিক মন্দা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Recluse",
+    "meaning": "নির্জনবাসী বা একাকী ব্যক্তি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Recondite",
+    "meaning": "দুর্বোধ্য বা গভীর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reconnaissance",
+    "meaning": "জরিপ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Recoup",
+    "meaning": "পুষিয়ে নেওয়া; ক্ষতিপূরণ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Refractory",
+    "meaning": "অবাধ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Refulgent",
+    "meaning": "দীপ্তিমান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Refutation",
+    "meaning": "খণ্ডন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Refute",
+    "meaning": "খণ্ডন করা বা ভুল প্রমাণ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Regicide",
+    "meaning": "রাজহত্যা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Relegate",
+    "meaning": "পদাবনতি ঘটানো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reminisce",
+    "meaning": "স্মৃতিচারণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Remnants",
+    "meaning": "অবশিষ্টাংশ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Renaissance",
+    "meaning": "পুনর্জাগরণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Renegade",
+    "meaning": "বিশ্বাসঘাতক; দলত্যাগী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Repetition",
+    "meaning": "পুনরাবৃত্তি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Repress",
+    "meaning": "দমিয়ে রাখা; চেপে রাখা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Reprisal",
+    "meaning": "প্রতিশোধ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reproach",
+    "meaning": "তিরস্কার করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reprobate",
+    "meaning": "দুশ্চরিত্র ব্যক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reproof",
+    "meaning": "ভর্ৎসনা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Repudiate",
+    "meaning": "অস্বীকার করা বা ত্যাগ করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Repulse",
+    "meaning": "প্রতিরোধ করা; বিতাড়িত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Requiem",
+    "meaning": "মৃত ব্যক্তির আত্মার জন্য নিবেদিত প্রার্থনাসংগীত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Rescind",
+    "meaning": "বাতিল করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Resolution",
+    "meaning": "সংকল্প বা সমাধান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Resolve",
+    "meaning": "সমাধান করা বা দৃঢ় সংকল্প",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Resplendent",
+    "meaning": "দেদীপ্যমান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Resuscitation",
+    "meaning": "পুনরুজ্জীবন; নতুন জীবনদান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reticent",
+    "meaning": "স্বল্পভাষী বা চুপচাপ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reverent",
+    "meaning": "শ্রদ্ধাশীল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Revile",
+    "meaning": "গালি দেওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Rhetoric",
+    "meaning": "বাগ্মিতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Rhythm",
+    "meaning": "গানের ছন্দ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sacrilege",
+    "meaning": "পবিত্রতা নষ্ট করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sacrilegious",
+    "meaning": "পবিত্র বস্তুর অবমাননা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sagacious",
+    "meaning": "বিচক্ষণ; জ্ঞানী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sagacity",
+    "meaning": "বিচক্ষণতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sage",
+    "meaning": "জ্ঞানী বা প্রজ্ঞাবান",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Salacious",
+    "meaning": "অশ্লীল; কামোত্তেজক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Salubrious",
+    "meaning": "স্বাস্থ্যকর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sanatorium",
+    "meaning": "সুস্থতার আশ্রম",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sanction",
+    "meaning": "অনুমোদন বা নিষেধাজ্ঞা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sangfroid",
+    "meaning": "শান্তচিত্ততা; ঠান্ডা মাথা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sanguine",
+    "meaning": "আশাবাদী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Satiate",
+    "meaning": "পরিতৃপ্ত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Satirical",
+    "meaning": "বিদ্রূপাত্মক; ব্যঙ্গাত্মক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Satirize",
+    "meaning": "বিদ্রূপাত্মকভাবে বর্ণনা করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Saturate",
+    "meaning": "সম্পৃক্ত করা বা ভিজিয়ে দেওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Savant",
+    "meaning": "বিজ্ঞ ব্যক্তি; পণ্ডিত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Savor",
+    "meaning": "স্বাদ নেওয়া বা উপভোগ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Scabbard",
+    "meaning": "তলোয়ারের খাপ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Scanty",
+    "meaning": "অল্প",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Schizophrenic",
+    "meaning": "মানসিক বৈকল্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Scintillating",
+    "meaning": "চকচকে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Scoop",
+    "meaning": "হাতা; দর্বি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Scorn",
+    "meaning": "অশ্রদ্ধা; ঘৃণা; তাচ্ছিল্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Scrupulous",
+    "meaning": "বিচক্ষণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sculptor",
+    "meaning": "ভাস্কর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Scurried",
+    "meaning": "ছুটে গেল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Scuttle",
+    "meaning": "দ্রুত পালানো",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Secretariat",
+    "meaning": "সচিবালয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Secrete",
+    "meaning": "ক্ষরণ করা বা লুকিয়ে রাখা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Seer",
+    "meaning": "ভবিষ্যৎ বক্তা; দ্রষ্টা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Sententious",
+    "meaning": "জ্ঞানগর্ভ ; উপদেশমূলক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Serenade",
+    "meaning": "রাত্রির গান",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sermon",
+    "meaning": "ধর্মোপদেশ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Serpentology",
+    "meaning": "সর্পবিদ্যা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Serration",
+    "meaning": "করাতের দাঁতের মতো কাটা; দাঁতযুক্ত প্রান্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sever",
+    "meaning": "বিচ্ছিন্ন করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Shard",
+    "meaning": "টুকরা বা খণ্ড",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Sinecure",
+    "meaning": "কর্মভারহীন পদ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Singe",
+    "meaning": "আংশিকভাবে পোড়ানো; ঝলসানো",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Sinuous",
+    "meaning": "আঁকাবাঁকা; সর্পিল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Skedaddle",
+    "meaning": "দ্রুত পালানো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Skeptic",
+    "meaning": "সংশয়বাদী বা অবিশ্বাসী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Skimp",
+    "meaning": "কৃ পণতা করা; সংক্ষেপ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Skipper",
+    "meaning": "জাহাজের ক্যাপ্টেন; দলনায়ক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Slapstick",
+    "meaning": "প্রহসন; হালকা ধরনের কমেডি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Slump",
+    "meaning": "বাণিজ্যিক মন্দাভাব",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Slur",
+    "meaning": "অপবাদ; অস্পষ্ট উচ্চারণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Snob",
+    "meaning": "শ্রেণিগর্বী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Soiree",
+    "meaning": "সন্ধ্যাকালীন সামাজিক অনুষ্ঠান",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Solidify",
+    "meaning": "কঠিন করা বা হওয়া",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Soliloquy",
+    "meaning": "স্বগতোক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Somatic",
+    "meaning": "শারীরিক; দেহসংক্রান্ত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Somber",
+    "meaning": "অন্ধকারাচ্ছন্ন; বিষণ্ণ; গুরুগম্ভীর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Somniloquence",
+    "meaning": "ঘুমে কথা বলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Somniloquy",
+    "meaning": "ঘুমের মধ্যে কথা বলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Soporific",
+    "meaning": "ঘুমপাড়ানি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sordid",
+    "meaning": "নোংরা; ঘৃণ্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Sovereignty",
+    "meaning": "সার্বভৌমত্ব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Specious",
+    "meaning": "আপাতদৃষ্টিতে সত্য কিন্তু মিথ্যা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Spectrum",
+    "meaning": "বর্ণালী বা পরিসর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sporadic",
+    "meaning": "বিক্ষিপ্ত বা অনিয়মিত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Spurious",
+    "meaning": "নকল; জাল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Squalid",
+    "meaning": "নোংরা; দারিদ্র্যপীড়িত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Squalor",
+    "meaning": "নোংরা অবস্থা; দুর্দশা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Stalemate",
+    "meaning": "অচলাবস্থা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Stanch",
+    "meaning": "রোধ করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Stenophobia",
+    "meaning": "সংকীর্ণ স্থানে আতঙ্ক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Stentorian",
+    "meaning": "বজ্রকণ্ঠ; উচ্চস্বর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Stickler",
+    "meaning": "কঠোর নিয়ম মেনে চলা ব্যক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Stigma",
+    "meaning": "কলঙ্ক বা দাগ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Stint",
+    "meaning": "সীমিত সময় বা কৃপণতা করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Stipulate",
+    "meaning": "শর্ত আরোপ করা বা নির্দিষ্ট করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Stolid",
+    "meaning": "ভাবলেশহীন বা আবেগহীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Stringent",
+    "meaning": "কঠোর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Strut",
+    "meaning": "গর্বভরে হাঁটা বা দম্ভ দেখানো",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Stub",
+    "meaning": "টুকরো; খণ্ড",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Stupendous",
+    "meaning": "বিস্ময়কর",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Suave",
+    "meaning": "মসৃণ; আপাতমধুর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Subpoena",
+    "meaning": "আদালতের সমন বা তলব করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Subservient",
+    "meaning": "সম্পূর্ণ বাধ্য; অধীনতাপ্রবণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Subside",
+    "meaning": "প্রশমিত হওয়া বা কমে যাওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Substantiate",
+    "meaning": "প্রমাণ করা বা সমর্থন করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Subterfuge",
+    "meaning": "ছলচাতুরি; ধোঁকা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Subterranean",
+    "meaning": "ভূগর্ভস্থ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Succession",
+    "meaning": "ক্রমানুসারে উত্তরাধিকার",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Succumb",
+    "meaning": "মেনে নেওয়া; পরাজিত হওয়া",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Suffrage",
+    "meaning": "ভোটাধিকার",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sumptuous",
+    "meaning": "ব্যয়বহুল; জাঁকালো",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Supercilious",
+    "meaning": "দাম্ভিক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Superfluity",
+    "meaning": "বাহুল্য; আতিশয্য; অতিরিক্ততা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Supersede",
+    "meaning": "স্থান অধিকার করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Superstitious",
+    "meaning": "কুসংস্কারাচ্ছন্ন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Supine",
+    "meaning": "চিৎ হয়ে শোয়া; নিষ্ক্রিয়",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Supplicate",
+    "meaning": "অনুনয় বিনয় করা; কাকুতি মিনতি করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Supposition",
+    "meaning": "অনুমান বা ধারণা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Surveillance",
+    "meaning": "নজরদারি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Swat",
+    "meaning": "আঘাত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Symphony",
+    "meaning": "ঐকতানসংগীত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Tacit",
+    "meaning": "মৌন বা অব্যক্ত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Taciturn",
+    "meaning": "স্বল্পভাষী; চুপচাপ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Taint",
+    "meaning": "কলঙ্কিত করা; দূষিত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tangential",
+    "meaning": "প্রাসঙ্গিক নয় এমন বা স্পর্শক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Tantamount",
+    "meaning": "সমপরিমাণ সদৃশ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tardy",
+    "meaning": "দেরি; ধীর",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tariff",
+    "meaning": "শুল্ক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tenacious",
+    "meaning": "অদম্য; দৃঢ়প্রতিজ্ঞ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Tenterhooks",
+    "meaning": "উদ্বেগ; উৎকণ্ঠা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Tenuous",
+    "meaning": "পাতলা বা দুর্বল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tepid",
+    "meaning": "কুসুম গরম; অনুৎসাহী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Terrestrial",
+    "meaning": "পার্থিব",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Terse",
+    "meaning": "সংক্ষিপ্ত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tertiary",
+    "meaning": "তৃতীয় পর্যায়ের",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Theocracy",
+    "meaning": "ধর্মতন্ত্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Thrifty",
+    "meaning": "মিতব্যয়ী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Timid",
+    "meaning": "ভীরু",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Timorous",
+    "meaning": "ভীরু; ভয়-ভয় স্বভাবের",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Tirade",
+    "meaning": "তীব্র সমালোচনামূলক দীর্ঘ বক্তৃতা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Topiary",
+    "meaning": "গাছ ছেঁ টে নকশা তৈরি",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Torpor",
+    "meaning": "অলসতা বা নিষ্ক্রিয়তা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tortuous",
+    "meaning": "জটিল বা আঁকাবাঁকা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Toupee",
+    "meaning": "পরচুলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Tourniquet",
+    "meaning": "রক্তপড়া বন্ধের চিকিৎসা প্রক্রিয়া; পট্টি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Trachoma",
+    "meaning": "চোখের সংক্রামক রোগ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Tractable",
+    "meaning": "সহজে নিয়ন্ত্রণযোগ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Transcribe",
+    "meaning": "অনুলিপি করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Transgression",
+    "meaning": "লঙ্ঘন বা অপরাধ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Triumph",
+    "meaning": "বিজয় সাফল্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Truculence",
+    "meaning": "আক্রমণাত্মকতা বা নিষ্ঠুরতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Truism",
+    "meaning": "স্বতঃসিদ্ধ সত্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Turmoil",
+    "meaning": "বিশৃঙ্খলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Typography",
+    "meaning": "মুদ্রণশিল্প",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ulterior",
+    "meaning": "লুকানো; গোপন উদ্দেশ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Unanimous",
+    "meaning": "সর্বসম্মত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Understatement",
+    "meaning": "অল্পোক্তি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Unkempt",
+    "meaning": "অগোছালো; অপরিচ্ছন্ন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Unruly",
+    "meaning": "অবাধ্য; উচ্ছৃঙ্খল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Unscrupulous",
+    "meaning": "নীতিহীন; বিবেকহীন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Untenable",
+    "meaning": "অসমর্থনযোগ্য",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Unwitting",
+    "meaning": "অজ্ঞাতসারে",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Upbraid",
+    "meaning": "ভর্ৎসনা করা; তিরস্কার করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Upshot",
+    "meaning": "ফলাফল; পরিণাম",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Urbane",
+    "meaning": "ভদ্র; রুচিসম্মত",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Uxoricide",
+    "meaning": "স্ত্রীহত্যা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vacillate",
+    "meaning": "দ্বিধা করা বা ইতস্তত করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vacillation",
+    "meaning": "দ্বিধা; দোদুল্যমানতা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vacuum",
+    "meaning": "শূন্যস্থান",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Valorous",
+    "meaning": "সাহসী",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vapid",
+    "meaning": "নীরস; স্বাদহীন; প্রাণহীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Venerate",
+    "meaning": "শ্রদ্ধা করা বা পূজা করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ventriloquism",
+    "meaning": "মুখ না নাড়িয়ে কথা বলা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Veracious",
+    "meaning": "সত্যবাদী বা নির্ভুল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Veracity",
+    "meaning": "সত্যতা; সততা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Verbose",
+    "meaning": "বাচাল বা শব্দবহুল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vertebrate",
+    "meaning": "মেরুদণ্ডী প্রাণী",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Verve",
+    "meaning": "উৎসাহ; প্রাণশক্তি; তেজ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vex",
+    "meaning": "বিরক্ত করা; উত্যক্ত করা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Viable",
+    "meaning": "কার্যকর বা সম্ভাব্য",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vicarious",
+    "meaning": "প্রাতিনিধিক; পরোক্ষভাবে অনুভূত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vicissitude",
+    "meaning": "ভাগ্যের উত্থান-পতন",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vigilant",
+    "meaning": "সতর্ক",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vigour",
+    "meaning": "তেজ; শক্তি; উদ্যম",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vindictive",
+    "meaning": "প্রতিশোধপরায়ণ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Virago",
+    "meaning": "দুর্দান্ত মহিলা",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Virulent",
+    "meaning": "বিষাক্ত; তীব্র",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Visceral",
+    "meaning": "আন্ত্রিক; শারীরিক; গভীরভাবে অনুভূত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Viscous",
+    "meaning": "আঠালো বা ঘন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vituperate",
+    "meaning": "গালিগালাজপূর্ণ কটূক্তি করা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vituperative",
+    "meaning": "নিন্দাপূর্ণ বা কটুক্তিযুক্ত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Volatile",
+    "meaning": "অস্থিতিশীল বা পরিবর্তনশীল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Voluntary",
+    "meaning": "স্বেচ্ছামূলক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Voluptuous",
+    "meaning": "কামনাময় সুডোল",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Wan",
+    "meaning": "বিবর্ণ; ফ্যাকাশে; অনুজ্জ্বল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Wanderlust",
+    "meaning": "ভ্রমণ-আকাঙ্ক্ষা",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Wanton",
+    "meaning": "উচ্ছৃঙ্খল; লাগামহীন",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Wardrobe",
+    "meaning": "পোশাক রাখার আলমারি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Wary",
+    "meaning": "সতর্ক বা সন্দেহপ্রবণ",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Welter",
+    "meaning": "বিশৃঙ্খলা বা গোলমাল",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Whimsical",
+    "meaning": "খেয়ালী বা অদ্ভুত",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Whip",
+    "meaning": "চাবুক",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Windfall",
+    "meaning": "অপ্রত্যাশিত লাভ",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Xenophobia",
+    "meaning": "বিদেশীভীতি",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Yielding",
+    "meaning": "নমনীয়",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Zealot",
+    "meaning": "ধর্মান্ধ বা উগ্র সমর্থক",
+    "difficulty": "medium"
+  }
+]
