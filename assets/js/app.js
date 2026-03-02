@@ -1,7 +1,8 @@
 /* ═══════════════════════════════════════════════
    STORAGE
 ═══════════════════════════════════════════════ */
-const CL_KEY = 'spellit_customlist_v1';
+const CL_KEY    = 'spellit_customlist_v1';
+const WM_CL_KEY = 'wm_customlist_v1';
 
 /* ═══════════════════════════════════════════════
    GAME STATE
@@ -297,6 +298,7 @@ let wmTotalStarted = 0;
 let wmDifficulty = 'all';
 let wmLetter = 'all';
 let wmWaiting = false;
+let wmIsCustomMode = false;
 
 function wmGetSourceList() {
   let list = WM_WORDS;
@@ -325,6 +327,7 @@ function wmBuildLetterSelector() {
 }
 
 function wmModeLabel() {
+  if (wmIsCustomMode) return 'Custom List';
   const diff = wmDifficulty !== 'all' ? ` · ${wmDifficulty.toUpperCase()}` : '';
   const letter = wmLetter !== 'all' ? ` · ${wmLetter}` : '';
   return `Word Meaning${diff}${letter}`;
@@ -420,6 +423,12 @@ function wmUpdateUI() {
   document.getElementById('wmNextBtn').style.display = 'none';
   document.getElementById('wmCard').style.borderColor = '';
   document.getElementById('wmCard').style.boxShadow = '';
+
+  // Show/hide filters and back button based on mode
+  const showFilters = !wmIsCustomMode;
+  document.getElementById('wmDiffSelector').style.display   = showFilters ? '' : 'none';
+  document.getElementById('wmLetterSelector').style.display = showFilters ? '' : 'none';
+  document.getElementById('wmBackBtn').classList.toggle('hidden', !wmIsCustomMode);
 }
 
 function wmSelectAnswer(btn) {
@@ -467,6 +476,59 @@ function wmShowCompletion() {
 function wmRestartGame() {
   document.getElementById('wmCompletionScreen').style.display = 'none';
   document.getElementById('wmGameArea').style.display = 'block';
+  if (wmIsCustomMode) {
+    wmStartCustomGame();
+  } else {
+    wmStartGame();
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   WORD MEANING — CUSTOM LIST
+═══════════════════════════════════════════════ */
+function wmSwitchSubTab(tab) {
+  document.querySelectorAll('.wm-subtab').forEach((btn, i) =>
+    btn.classList.toggle('active', ['practice', 'custom'][i] === tab));
+  const isPractice = tab === 'practice';
+  document.getElementById('wmGameArea').style.display    = isPractice ? 'block' : 'none';
+  document.getElementById('wmCompletionScreen').style.display = 'none';
+  document.getElementById('wmCustomArea').style.display  = isPractice ? 'none' : 'block';
+  // Diff/letter selectors only visible on practice tab in non-custom mode
+  if (isPractice) {
+    document.getElementById('wmDiffSelector').style.display   = wmIsCustomMode ? 'none' : '';
+    document.getElementById('wmLetterSelector').style.display = wmIsCustomMode ? 'none' : '';
+  }
+}
+
+function wmStartCustomGame() {
+  const raw = document.getElementById('wmCustomInput').value;
+  const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+  if (!lines.length) { showToast('Please enter at least one word!'); return; }
+
+  const matched = lines
+    .map(line => WM_WORDS.find(w => w.word.toLowerCase() === line.toLowerCase()))
+    .filter(Boolean);
+
+  if (!matched.length) { showToast('No words found in the dictionary!'); return; }
+
+  wmWords = matched;
+  for (let i = wmWords.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [wmWords[i], wmWords[j]] = [wmWords[j], wmWords[i]];
+  }
+  wmIndex = 0; wmCorrect = 0; wmWrong = 0;
+  wmTotalStarted = wmWords.length; wmWaiting = false;
+  wmIsCustomMode = true;
+
+  wmSwitchSubTab('practice');
+  document.getElementById('wmCompletionScreen').style.display = 'none';
+  document.getElementById('wmGameArea').style.display = 'block';
+  wmUpdateUI();
+}
+
+function wmSwitchToNormal() {
+  wmIsCustomMode = false;
+  wmSwitchSubTab('practice');
   wmStartGame();
 }
 
@@ -506,6 +568,22 @@ customTextarea.addEventListener('input', () => {
 document.querySelector('.btn-clear-custom').addEventListener('click', () => {
   customTextarea.value = '';
   try { localStorage.removeItem(CL_KEY); } catch {}
+});
+
+// Word Meaning custom list persistence
+const wmCustomTextarea = document.getElementById('wmCustomInput');
+try {
+  const saved = localStorage.getItem(WM_CL_KEY);
+  if (saved) wmCustomTextarea.value = saved;
+} catch {}
+
+wmCustomTextarea.addEventListener('input', () => {
+  try { localStorage.setItem(WM_CL_KEY, wmCustomTextarea.value); } catch {}
+});
+
+document.getElementById('wmClearCustomBtn').addEventListener('click', () => {
+  wmCustomTextarea.value = '';
+  try { localStorage.removeItem(WM_CL_KEY); } catch {}
 });
 
 /* ═══════════════════════════════════════════════

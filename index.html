@@ -110,6 +110,12 @@
   <!-- ══ WORD MEANING SCREEN ══ -->
   <div id="wmScreen">
 
+    <!-- Sub-tabs -->
+    <div class="wm-subtabs">
+      <button class="wm-subtab active" onclick="wmSwitchSubTab('practice')">▶ Practice</button>
+      <button class="wm-subtab" onclick="wmSwitchSubTab('custom')">✏️ Custom List</button>
+    </div>
+
     <!-- Difficulty selector -->
     <div class="wm-diff-selector" id="wmDiffSelector">
       <button class="wm-diff-btn active" data-diff="all" onclick="wmSelectDifficulty('all')">All</button>
@@ -153,6 +159,24 @@
       </div>
 
       <div class="wm-word-count-info" id="wmWordCountInfo"></div>
+      <div class="wm-back-row">
+        <button class="wm-btn-back hidden" id="wmBackBtn" onclick="wmSwitchToNormal()">← Back to Word Meaning</button>
+      </div>
+    </div>
+
+    <!-- Custom list area -->
+    <div id="wmCustomArea">
+      <div class="wm-custom-card">
+        <h3>Custom Word List</h3>
+        <p>Enter one word per line. Words are looked up in the Word Meaning dictionary.<br>
+        Unrecognised words are skipped.</p>
+        <textarea id="wmCustomInput" placeholder="Surveillance&#10;Entrepreneur&#10;Reconnaissance"></textarea>
+        <div class="wm-custom-actions">
+          <button class="wm-btn-start-custom" onclick="wmStartCustomGame()">▶ Start Quiz</button>
+          <button class="wm-btn-clear-custom" id="wmClearCustomBtn">Clear</button>
+        </div>
+        <div class="wm-custom-note">💡 Use "← Back to Word Meaning" under the card to switch back anytime.</div>
+      </div>
     </div>
 
     <!-- Completion screen -->

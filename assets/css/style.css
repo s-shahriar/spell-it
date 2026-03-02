@@ -206,6 +206,63 @@ body.wm-mode { background-color: #f0eeff; background-image: radial-gradient(circ
 
 #wmScreen { display: none; }
 
+/* ── WM SUB-TABS ── */
+.wm-subtabs { display: flex; gap: 6px; margin-bottom: 10px; justify-content: center; flex-wrap: wrap; }
+.wm-subtab {
+  padding: 6px 14px; border-radius: 99px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.52rem, 2vw, 0.62rem);
+  font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  cursor: pointer; border: 2px solid #d4c8f5;
+  background: transparent; color: #8b7ab8; transition: all 0.18s;
+}
+.wm-subtab.active { background: #6030c8; color: #fff; border-color: #6030c8; }
+.wm-subtab:hover:not(.active) { border-color: #6030c8; color: #6030c8; }
+
+/* ── WM CUSTOM AREA ── */
+#wmCustomArea { display: none; }
+.wm-custom-card {
+  background: #fff; border: 2px solid #d4c8f5;
+  border-radius: 16px; padding: 20px 16px;
+  box-shadow: 0 4px 24px rgba(96,48,200,0.09);
+}
+.wm-custom-card h3 { font-family: 'Syne', sans-serif; color: #6030c8; font-size: clamp(1rem, 4vw, 1.3rem); margin-bottom: 6px; }
+.wm-custom-card p { font-size: clamp(0.6rem, 2.2vw, 0.68rem); color: #8b7ab8; margin-bottom: 16px; line-height: 1.7; }
+.wm-custom-card textarea {
+  width: 100%; min-height: 160px; background: #f5f0ff;
+  border: 2px solid #d4c8f5; border-radius: 12px;
+  font-family: 'JetBrains Mono', monospace; font-size: clamp(0.8rem, 3vw, 0.9rem);
+  color: #1a0f2e; padding: 12px; outline: none; resize: vertical;
+  transition: border-color 0.2s;
+}
+.wm-custom-card textarea:focus { border-color: #8b5cf6; background: #fff; }
+.wm-custom-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.wm-btn-start-custom {
+  background: #6030c8; color: #fff; padding: 11px 20px; border-radius: 10px; border: none;
+  font-family: 'JetBrains Mono', monospace; font-size: clamp(0.62rem, 2.5vw, 0.72rem);
+  font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.18s;
+}
+.wm-btn-start-custom:hover { background: #8b5cf6; }
+.wm-btn-clear-custom {
+  background: transparent; border: 2px solid #d4c8f5; color: #8b7ab8;
+  padding: 11px 16px; border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace; font-size: clamp(0.58rem, 2.2vw, 0.65rem);
+  font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.18s;
+}
+.wm-btn-clear-custom:hover { border-color: #8b5cf6; color: #6030c8; }
+.wm-custom-note { font-size: clamp(0.52rem, 2vw, 0.6rem); color: #8b7ab8; margin-top: 10px; letter-spacing: 0.05em; }
+
+/* ── WM BACK BUTTON ── */
+.wm-back-row { margin-top: 4px; }
+.wm-btn-back {
+  background: transparent; border: 2px solid #d4c8f5; color: #8b7ab8;
+  padding: 6px 12px; border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: clamp(0.5rem, 2vw, 0.58rem);
+  font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.18s;
+}
+.wm-btn-back:hover { border-color: #6030c8; color: #6030c8; }
+.wm-btn-back.hidden { display: none; }
+
 /* ── WM DIFFICULTY SELECTOR ── */
 .wm-diff-selector { display: flex; gap: 6px; margin-bottom: 6px; justify-content: center; flex-wrap: wrap; }
 .wm-diff-btn {
