@@ -236,9 +236,8 @@ function switchToAllWords() {
   words = buildWordList(); shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length;
-  document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('gameScreen').style.display = 'block';
   document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', i === 0));
+  siSwitchSubTab('practice');
   updateUI();
 }
 
@@ -260,9 +259,7 @@ function startCustomGame() {
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length; isCustomMode = true;
 
-  switchTab('game');
-  document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('gameScreen').style.display = 'block';
+  siSwitchSubTab('practice');
   updateUI();
 }
 
@@ -271,11 +268,10 @@ function startCustomGame() {
    TAB SWITCHING
 ═══════════════════════════════════════════════ */
 function switchTab(tab) {
-  const tabs = ['game', 'custom', 'wordmeaning'];
+  const tabs = ['game', 'wordmeaning'];
   document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', tabs[i] === tab));
-  document.getElementById('gameScreen').style.display       = tab === 'game'        ? 'block' : 'none';
+  document.getElementById('siSection').style.display        = tab === 'game'        ? 'block' : 'none';
   document.getElementById('completionScreen').style.display = 'none';
-  document.getElementById('customScreen').style.display     = tab === 'custom'      ? 'block' : 'none';
   document.getElementById('wmScreen').style.display         = tab === 'wordmeaning' ? 'block' : 'none';
 
   const isWM = tab === 'wordmeaning';
@@ -284,6 +280,15 @@ function switchTab(tab) {
   document.querySelector('.subtitle').innerHTML = isWM
     ? 'শব্দের অর্থ জানো &nbsp;·&nbsp; Word Meaning Quiz'
     : 'বানান শেখার খেলা &nbsp;·&nbsp; Vocabulary Builder';
+}
+
+function siSwitchSubTab(tab) {
+  document.querySelectorAll('.si-subtab').forEach((btn, i) =>
+    btn.classList.toggle('active', ['practice', 'custom'][i] === tab));
+  const isPractice = tab === 'practice';
+  document.getElementById('gameScreen').style.display   = isPractice ? 'block' : 'none';
+  document.getElementById('completionScreen').style.display = 'none';
+  document.getElementById('customScreen').style.display = isPractice ? 'none'  : 'block';
 }
 
 /* ═══════════════════════════════════════════════
@@ -423,6 +428,8 @@ function wmUpdateUI() {
   document.getElementById('wmNextBtn').style.display = 'none';
   document.getElementById('wmCard').style.borderColor = '';
   document.getElementById('wmCard').style.boxShadow = '';
+  document.getElementById('wmActions').style.opacity = '1';
+  document.getElementById('wmActions').style.pointerEvents = 'auto';
 
   // Show/hide filters and back button based on mode
   const showFilters = !wmIsCustomMode;
@@ -458,10 +465,18 @@ function wmSelectAnswer(btn) {
     document.getElementById('wmWrongCount').textContent = wmWrong;
     wmWaiting = true;
     document.getElementById('wmNextBtn').style.display = 'block';
+    document.getElementById('wmActions').style.opacity = '0.3';
+    document.getElementById('wmActions').style.pointerEvents = 'none';
   }
 }
 
 function wmNext() {
+  wmIndex = (wmIndex + 1) % wmWords.length;
+  wmUpdateUI();
+}
+
+function wmSkip() {
+  if (!wmWords.length || wmWaiting) return;
   wmIndex = (wmIndex + 1) % wmWords.length;
   wmUpdateUI();
 }

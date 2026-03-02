@@ -14,12 +14,20 @@
   <p class="subtitle">বানান শেখার খেলা &nbsp;·&nbsp; Vocabulary Builder</p>
   <div class="mode-tabs">
     <button class="tab active" onclick="switchTab('game')">📚 Spell It</button>
-    <button class="tab" onclick="switchTab('custom')">✏️ Custom List</button>
     <button class="tab tab-wm" onclick="switchTab('wordmeaning')">🧠 Word Meaning</button>
   </div>
 </div>
 
 <div class="game-container">
+
+  <!-- ══ SPELL IT SECTION ══ -->
+  <div id="siSection">
+
+  <!-- Spell It sub-tabs -->
+  <div class="si-subtabs">
+    <button class="si-subtab active" onclick="siSwitchSubTab('practice')">▶ Practice</button>
+    <button class="si-subtab" onclick="siSwitchSubTab('custom')">✏️ Custom List</button>
+  </div>
 
   <!-- ══ GAME SCREEN ══ -->
   <div id="gameScreen">
@@ -105,7 +113,7 @@
     </div>
   </div>
 
-
+  </div><!-- /siSection -->
 
   <!-- ══ WORD MEANING SCREEN ══ -->
   <div id="wmScreen">
@@ -158,10 +166,11 @@
         <button class="wm-next-btn" id="wmNextBtn" onclick="wmNext()">পরের শব্দ →</button>
       </div>
 
-      <div class="wm-word-count-info" id="wmWordCountInfo"></div>
-      <div class="wm-back-row">
+      <div class="wm-actions" id="wmActions">
+        <button class="wm-btn-skip" onclick="wmSkip()">⟶ Skip</button>
         <button class="wm-btn-back hidden" id="wmBackBtn" onclick="wmSwitchToNormal()">← Back to Word Meaning</button>
       </div>
+      <div class="wm-word-count-info" id="wmWordCountInfo"></div>
     </div>
 
     <!-- Custom list area -->
