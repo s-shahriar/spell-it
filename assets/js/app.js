@@ -1,8 +1,10 @@
 /* ═══════════════════════════════════════════════
    STORAGE
 ═══════════════════════════════════════════════ */
-const CL_KEY    = 'spellit_customlist_v1';
-const WM_CL_KEY = 'wm_customlist_v1';
+const CL_KEY      = 'spellit_customlist_v1';
+const WM_CL_KEY   = 'wm_customlist_v1';
+const SI_SAVE_KEY = 'spellit_save_v1';
+const WM_SAVE_KEY = 'wm_save_v1';
 
 /* ═══════════════════════════════════════════════
    GAME STATE
@@ -61,6 +63,70 @@ function batchLabel() {
 }
 
 /* ═══════════════════════════════════════════════
+   SESSION SAVE / RESUME — SPELL IT
+═══════════════════════════════════════════════ */
+function siSaveGame() {
+  if (!words.length) return;
+  try {
+    localStorage.setItem(SI_SAVE_KEY, JSON.stringify({
+      words, currentIndex, correctCount, wrongCount, totalStarted,
+      currentBatch, currentDifficulty, isCustomMode
+    }));
+  } catch {}
+}
+
+function siClearSave() {
+  try { localStorage.removeItem(SI_SAVE_KEY); } catch {}
+}
+
+function siCheckResume() {
+  try {
+    const raw = localStorage.getItem(SI_SAVE_KEY);
+    if (!raw) return;
+    const save = JSON.parse(raw);
+    if (!save?.words?.length) { siClearSave(); return; }
+    document.getElementById('siResumeInfo').textContent =
+      `Paused — ${save.words.length} words left · ✓ ${save.correctCount} · ✗ ${save.wrongCount}`;
+    document.getElementById('siResumeBanner').style.display = 'flex';
+  } catch {}
+}
+
+function siDoResume() {
+  try {
+    const save = JSON.parse(localStorage.getItem(SI_SAVE_KEY));
+    if (!save?.words?.length) { siStartFresh(); return; }
+    words          = save.words;
+    currentIndex   = save.currentIndex;
+    correctCount   = save.correctCount;
+    wrongCount     = save.wrongCount;
+    totalStarted   = save.totalStarted;
+    currentBatch   = save.currentBatch;
+    currentDifficulty = save.currentDifficulty;
+    isCustomMode   = save.isCustomMode;
+    document.querySelectorAll('.diff-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.diff === currentDifficulty));
+    document.querySelectorAll('.batch-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.batch === currentBatch));
+    document.getElementById('siResumeBanner').style.display = 'none';
+    updateUI();
+  } catch { siStartFresh(); }
+}
+
+function siStartFresh() {
+  siClearSave();
+  document.getElementById('siResumeBanner').style.display = 'none';
+  currentBatch = '1'; currentDifficulty = 'all'; isCustomMode = false;
+  words = buildWordList(); shuffle(words);
+  currentIndex = 0; correctCount = 0; wrongCount = 0;
+  totalStarted = words.length;
+  document.querySelectorAll('.diff-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.diff === 'all'));
+  document.querySelectorAll('.batch-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.batch === '1'));
+  updateUI();
+}
+
+/* ═══════════════════════════════════════════════
    BATCH SELECTION
 ═══════════════════════════════════════════════ */
 function selectBatch(batch) {
@@ -70,10 +136,12 @@ function selectBatch(batch) {
   shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length;
+  siClearSave();
 
   document.querySelectorAll('.batch-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.batch === batch));
 
+  document.getElementById('siResumeBanner').style.display = 'none';
   document.getElementById('completionScreen').style.display = 'none';
   document.getElementById('gameScreen').style.display = 'block';
   updateUI();
@@ -89,10 +157,12 @@ function selectDifficulty(diff) {
   shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length;
+  siClearSave();
 
   document.querySelectorAll('.diff-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.diff === diff));
 
+  document.getElementById('siResumeBanner').style.display = 'none';
   document.getElementById('completionScreen').style.display = 'none';
   document.getElementById('gameScreen').style.display = 'block';
   updateUI();
@@ -151,6 +221,7 @@ function updateUI() {
 }
 
 function showCompletion() {
+  siClearSave();
   document.getElementById('gameScreen').style.display = 'none';
   document.getElementById('completionScreen').style.display = 'block';
   document.getElementById('finalScore').textContent =
@@ -187,6 +258,7 @@ function checkAnswer() {
     lockUI('0.4');
 
     words.splice(currentIndex, 1);
+    siSaveGame();
     if (!words.length) { setTimeout(showCompletion, 800); return; }
     if (currentIndex >= words.length) currentIndex = 0;
     setTimeout(updateUI, 900);
@@ -207,22 +279,25 @@ function checkAnswer() {
     document.getElementById('wrongPanel').className = 'wrong-panel show';
     document.getElementById('correctCount').textContent = correctCount;
     document.getElementById('wrongCount').textContent = wrongCount;
+    siSaveGame();
   }
 }
 
 function nextAfterWrong() {
   currentIndex = (currentIndex + 1) % words.length;
+  siSaveGame();
   updateUI();
 }
 
 function skipWord() {
   if (!words.length || waitingForNext) return;
   currentIndex = (currentIndex + 1) % words.length;
+  siSaveGame();
   updateUI();
 }
 
-
 function restartGame() {
+  siClearSave();
   words = buildWordList(); shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length; isCustomMode = false;
@@ -236,6 +311,7 @@ function switchToAllWords() {
   words = buildWordList(); shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length;
+  siClearSave();
   document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', i === 0));
   siSwitchSubTab('practice');
   updateUI();
@@ -258,6 +334,7 @@ function startCustomGame() {
   shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length; isCustomMode = true;
+  siClearSave();
 
   siSwitchSubTab('practice');
   updateUI();
@@ -343,12 +420,16 @@ function wmSelectDifficulty(diff) {
   document.querySelectorAll('.wm-diff-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.diff === diff));
   wmBuildLetterSelector();
+  wmClearSave();
+  document.getElementById('wmResumeBanner').style.display = 'none';
   wmStartGame();
 }
 
 function wmSelectLetter(letter) {
   wmLetter = letter;
   wmBuildLetterSelector();
+  wmClearSave();
+  document.getElementById('wmResumeBanner').style.display = 'none';
   wmStartGame();
 }
 
@@ -456,6 +537,7 @@ function wmSelectAnswer(btn) {
     fb.textContent = '✓ সঠিক!'; fb.className = 'wm-feedback ok';
     document.getElementById('wmCorrectCount').textContent = wmCorrect;
     wmWords.splice(wmIndex, 1);
+    wmSaveGame();
     if (!wmWords.length) { setTimeout(wmShowCompletion, 1000); return; }
     if (wmIndex >= wmWords.length) wmIndex = 0;
     setTimeout(wmUpdateUI, 1000);
@@ -467,21 +549,25 @@ function wmSelectAnswer(btn) {
     document.getElementById('wmNextBtn').style.display = 'block';
     document.getElementById('wmActions').style.opacity = '0.3';
     document.getElementById('wmActions').style.pointerEvents = 'none';
+    wmSaveGame();
   }
 }
 
 function wmNext() {
   wmIndex = (wmIndex + 1) % wmWords.length;
+  wmSaveGame();
   wmUpdateUI();
 }
 
 function wmSkip() {
   if (!wmWords.length || wmWaiting) return;
   wmIndex = (wmIndex + 1) % wmWords.length;
+  wmSaveGame();
   wmUpdateUI();
 }
 
 function wmShowCompletion() {
+  wmClearSave();
   document.getElementById('wmGameArea').style.display = 'none';
   document.getElementById('wmCompletionScreen').style.display = 'block';
   document.getElementById('wmFinalScore').textContent =
@@ -489,6 +575,7 @@ function wmShowCompletion() {
 }
 
 function wmRestartGame() {
+  wmClearSave();
   document.getElementById('wmCompletionScreen').style.display = 'none';
   document.getElementById('wmGameArea').style.display = 'block';
   if (wmIsCustomMode) {
@@ -496,6 +583,69 @@ function wmRestartGame() {
   } else {
     wmStartGame();
   }
+}
+
+/* ═══════════════════════════════════════════════
+   SESSION SAVE / RESUME — WORD MEANING
+═══════════════════════════════════════════════ */
+function wmSaveGame() {
+  if (!wmWords.length) return;
+  try {
+    localStorage.setItem(WM_SAVE_KEY, JSON.stringify({
+      wmWords, wmIndex, wmCorrect, wmWrong, wmTotalStarted,
+      wmDifficulty, wmLetter, wmIsCustomMode
+    }));
+  } catch {}
+}
+
+function wmClearSave() {
+  try { localStorage.removeItem(WM_SAVE_KEY); } catch {}
+}
+
+function wmCheckResume() {
+  try {
+    const raw = localStorage.getItem(WM_SAVE_KEY);
+    if (!raw) return;
+    const save = JSON.parse(raw);
+    if (!save?.wmWords?.length) { wmClearSave(); return; }
+    document.getElementById('wmResumeInfo').textContent =
+      `Paused — ${save.wmWords.length} words left · ✓ ${save.wmCorrect} · ✗ ${save.wmWrong}`;
+    document.getElementById('wmResumeBanner').style.display = 'flex';
+  } catch {}
+}
+
+function wmDoResume() {
+  try {
+    const save = JSON.parse(localStorage.getItem(WM_SAVE_KEY));
+    if (!save?.wmWords?.length) { wmStartFresh(); return; }
+    wmWords        = save.wmWords;
+    wmIndex        = save.wmIndex;
+    wmCorrect      = save.wmCorrect;
+    wmWrong        = save.wmWrong;
+    wmTotalStarted = save.wmTotalStarted;
+    wmDifficulty   = save.wmDifficulty;
+    wmLetter       = save.wmLetter;
+    wmIsCustomMode = save.wmIsCustomMode;
+    document.querySelectorAll('.wm-diff-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.diff === wmDifficulty));
+    wmBuildLetterSelector();
+    document.getElementById('wmResumeBanner').style.display = 'none';
+    document.getElementById('wmCompletionScreen').style.display = 'none';
+    document.getElementById('wmGameArea').style.display = 'block';
+    wmUpdateUI();
+  } catch { wmStartFresh(); }
+}
+
+function wmStartFresh() {
+  wmClearSave();
+  document.getElementById('wmResumeBanner').style.display = 'none';
+  wmIsCustomMode = false;
+  wmDifficulty = 'all';
+  wmLetter = 'all';
+  document.querySelectorAll('.wm-diff-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.diff === 'all'));
+  wmBuildLetterSelector();
+  wmStartGame();
 }
 
 /* ═══════════════════════════════════════════════
@@ -534,6 +684,7 @@ function wmStartCustomGame() {
   wmIndex = 0; wmCorrect = 0; wmWrong = 0;
   wmTotalStarted = wmWords.length; wmWaiting = false;
   wmIsCustomMode = true;
+  wmClearSave();
 
   wmSwitchSubTab('practice');
   document.getElementById('wmCompletionScreen').style.display = 'none';
@@ -545,6 +696,17 @@ function wmSwitchToNormal() {
   wmIsCustomMode = false;
   wmSwitchSubTab('practice');
   wmStartGame();
+}
+
+/* ═══════════════════════════════════════════════
+   MASTER RESET
+═══════════════════════════════════════════════ */
+function masterReset() {
+  if (!confirm('Reset everything?\n\nThis clears all saved progress and custom word lists for both games.')) return;
+  [SI_SAVE_KEY, WM_SAVE_KEY, CL_KEY, WM_CL_KEY].forEach(k => {
+    try { localStorage.removeItem(k); } catch {}
+  });
+  location.reload();
 }
 
 /* ═══════════════════════════════════════════════
@@ -610,7 +772,9 @@ words = buildWordList();
 shuffle(words);
 totalStarted = words.length;
 updateUI();
+siCheckResume();
 
 WM_WORDS = WM_WORDS_DATA;
 wmBuildLetterSelector();
 wmStartGame();
+wmCheckResume();

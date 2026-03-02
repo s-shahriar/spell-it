@@ -46,6 +46,15 @@
       <button class="batch-btn" data-batch="all" onclick="selectBatch('all')">All Words</button>
     </div>
 
+    <!-- Resume banner (shown when a saved session exists) -->
+    <div class="si-resume-banner" id="siResumeBanner" style="display:none">
+      <span class="resume-info" id="siResumeInfo"></span>
+      <div class="resume-btns">
+        <button class="btn-resume-yes" onclick="siDoResume()">Resume ↩</button>
+        <button class="btn-resume-no" onclick="siStartFresh()">Start Fresh</button>
+      </div>
+    </div>
+
     <div class="stats-row">
       <div class="badges">
         <div class="badge">✓ <strong id="correctCount">0</strong> সঠিক</div>
@@ -136,6 +145,15 @@
 
     <!-- Game area -->
     <div id="wmGameArea">
+      <!-- WM Resume banner -->
+      <div class="wm-resume-banner" id="wmResumeBanner" style="display:none">
+        <span class="wm-resume-info" id="wmResumeInfo"></span>
+        <div class="wm-resume-btns">
+          <button class="wm-btn-resume-yes" onclick="wmDoResume()">Resume ↩</button>
+          <button class="wm-btn-resume-no" onclick="wmStartFresh()">Start Fresh</button>
+        </div>
+      </div>
+
       <div class="wm-stats-row">
         <div class="wm-badges">
           <div class="wm-badge">✓ <strong id="wmCorrectCount">0</strong> সঠিক</div>
@@ -199,6 +217,10 @@
   </div><!-- /wmScreen -->
 
 </div><!-- /game-container -->
+
+<div class="master-reset-bar">
+  <button class="btn-master-reset" onclick="masterReset()">⚠ Reset Everything</button>
+</div>
 
 <div class="toast" id="toast"></div>
 

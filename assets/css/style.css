@@ -417,6 +417,85 @@ body.wm-mode { background-color: #f0eeff; background-image: radial-gradient(circ
 .wm-btn-restart { background: #6030c8; color: #fff; padding: 12px 26px; border-radius: 12px; border: none; font-family: 'JetBrains Mono', monospace; font-size: clamp(0.68rem, 2.5vw, 0.78rem); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.18s; }
 .wm-btn-restart:hover { background: #8b5cf6; }
 
+/* ── SPELL IT RESUME BANNER ── */
+.si-resume-banner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px;
+  background: var(--accent-light); border: 2px solid var(--accent);
+  border-radius: 12px; padding: 10px 14px; margin-bottom: 10px;
+}
+.si-resume-banner .resume-info {
+  font-size: clamp(0.58rem, 2.2vw, 0.66rem); color: var(--accent);
+  font-weight: 700; letter-spacing: 0.04em;
+}
+.si-resume-banner .resume-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.btn-resume-yes {
+  background: var(--accent); color: #fff;
+  padding: 5px 12px; border-radius: 8px; border: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.52rem, 2vw, 0.6rem);
+  font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.18s;
+}
+.btn-resume-yes:hover { background: var(--accent2); }
+.btn-resume-no {
+  background: transparent; color: var(--muted);
+  padding: 5px 10px; border-radius: 8px; border: 2px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.52rem, 2vw, 0.6rem);
+  font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.18s;
+}
+.btn-resume-no:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── WM RESUME BANNER ── */
+.wm-resume-banner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px;
+  background: #ede8ff; border: 2px solid #6030c8;
+  border-radius: 12px; padding: 10px 14px; margin-bottom: 10px;
+}
+.wm-resume-banner .wm-resume-info {
+  font-size: clamp(0.58rem, 2.2vw, 0.66rem); color: #6030c8;
+  font-weight: 700; letter-spacing: 0.04em;
+}
+.wm-resume-banner .wm-resume-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.wm-btn-resume-yes {
+  background: #6030c8; color: #fff;
+  padding: 5px 12px; border-radius: 8px; border: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.52rem, 2vw, 0.6rem);
+  font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.18s;
+}
+.wm-btn-resume-yes:hover { background: #8b5cf6; }
+.wm-btn-resume-no {
+  background: transparent; color: #8b7ab8;
+  padding: 5px 10px; border-radius: 8px; border: 2px solid #d4c8f5;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.52rem, 2vw, 0.6rem);
+  font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.18s;
+}
+.wm-btn-resume-no:hover { border-color: #6030c8; color: #6030c8; }
+
+/* ── MASTER RESET BAR ── */
+.master-reset-bar {
+  width: 100%; max-width: 640px; margin-top: 14px;
+  text-align: center; padding-bottom: 8px;
+}
+.btn-master-reset {
+  background: transparent; border: 1.5px solid var(--wrong-border);
+  color: var(--muted); padding: 5px 14px; border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.46rem, 1.8vw, 0.54rem);
+  font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.18s;
+}
+.btn-master-reset:hover {
+  border-color: var(--wrong); color: var(--wrong); background: var(--wrong-bg);
+}
+
 /* ── 340px BREAKPOINT ── */
 @media (max-width: 380px) {
   body { padding: 12px 10px 36px; }
