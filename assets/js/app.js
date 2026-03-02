@@ -22,6 +22,10 @@ let currentBatch = '1';        // '1' | '2' | 'all'
 let currentDifficulty = 'all'; // 'all' | 'hard' | 'medium'
 let waitingForNext = false;
 
+// Custom list letter filter
+let siCustomWords = [];     // full parsed custom word list (before letter filter)
+let siCustomLetter = 'all'; // active letter filter for custom mode
+
 /* ═══════════════════════════════════════════════
    WORD LIST HELPERS
 ═══════════════════════════════════════════════ */
@@ -55,7 +59,11 @@ function shuffle(arr) {
 function cur() { return words[currentIndex]; }
 
 function batchLabel() {
-  if (isCustomMode) return 'Custom List';
+  if (isCustomMode) {
+    return siCustomLetter === 'all'
+      ? 'Custom List'
+      : `Custom · ${siCustomLetter}`;
+  }
   const diff = currentDifficulty !== 'all' ? ` · ${currentDifficulty.toUpperCase()}` : '';
   if (currentBatch === '1')  return `Batch 1${diff}`;
   if (currentBatch === '2')  return `Batch 2${diff}`;
@@ -70,7 +78,8 @@ function siSaveGame() {
   try {
     localStorage.setItem(SI_SAVE_KEY, JSON.stringify({
       words, currentIndex, correctCount, wrongCount, totalStarted,
-      currentBatch, currentDifficulty, isCustomMode
+      currentBatch, currentDifficulty, isCustomMode,
+      siCustomWords, siCustomLetter
     }));
   } catch {}
 }
@@ -103,10 +112,16 @@ function siDoResume() {
     currentBatch   = save.currentBatch;
     currentDifficulty = save.currentDifficulty;
     isCustomMode   = save.isCustomMode;
+    siCustomWords  = save.siCustomWords  || [];
+    siCustomLetter = save.siCustomLetter || 'all';
+
     document.querySelectorAll('.diff-btn').forEach(b =>
       b.classList.toggle('active', b.dataset.diff === currentDifficulty));
     document.querySelectorAll('.batch-btn').forEach(b =>
       b.classList.toggle('active', b.dataset.batch === currentBatch));
+
+    if (isCustomMode && siCustomWords.length) siBuildCustomLetterSelector();
+
     document.getElementById('siResumeBanner').style.display = 'none';
     updateUI();
   } catch { siStartFresh(); }
@@ -116,6 +131,7 @@ function siStartFresh() {
   siClearSave();
   document.getElementById('siResumeBanner').style.display = 'none';
   currentBatch = '1'; currentDifficulty = 'all'; isCustomMode = false;
+  siCustomWords = []; siCustomLetter = 'all';
   words = buildWordList(); shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length;
@@ -217,6 +233,7 @@ function updateUI() {
   document.getElementById('switchAllBtn').classList.toggle('hidden', !isCustomMode);
   document.getElementById('batchSelector').classList.toggle('hidden', isCustomMode);
   document.getElementById('diffSelector').classList.toggle('hidden', isCustomMode);
+  document.getElementById('siCustomLetterSelector').style.display = isCustomMode ? '' : 'none';
   setTimeout(() => inp.focus(), 50);
 }
 
@@ -231,7 +248,6 @@ function showCompletion() {
 function lockUI(opacity) {
   const inp = document.getElementById('spellingInput');
   inp.disabled = true;
-  // intentionally NOT clearing inp.value — user can see their correct spelling during the delay
   document.getElementById('checkBtn').disabled = true;
   document.getElementById('bottomActions').style.opacity = opacity;
   document.getElementById('bottomActions').style.pointerEvents = 'none';
@@ -308,6 +324,7 @@ function restartGame() {
 
 function switchToAllWords() {
   isCustomMode = false;
+  siCustomWords = []; siCustomLetter = 'all';
   words = buildWordList(); shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length;
@@ -318,19 +335,48 @@ function switchToAllWords() {
 }
 
 /* ═══════════════════════════════════════════════
-   CUSTOM MODE
+   CUSTOM MODE — SPELL IT
 ═══════════════════════════════════════════════ */
+function siBuildCustomLetterSelector() {
+  const letters = [...new Set(siCustomWords.map(w => w.word[0].toUpperCase()))].sort();
+  const el = document.getElementById('siCustomLetterSelector');
+  let html = `<button class="batch-btn${siCustomLetter === 'all' ? ' active' : ''}" onclick="siSelectCustomLetter('all')">All</button>`;
+  letters.forEach(l => {
+    html += `<button class="batch-btn${siCustomLetter === l ? ' active' : ''}" onclick="siSelectCustomLetter('${l}')">${l}</button>`;
+  });
+  el.innerHTML = html;
+}
+
+function siSelectCustomLetter(letter) {
+  siCustomLetter = letter;
+  siBuildCustomLetterSelector();
+  words = letter === 'all'
+    ? [...siCustomWords]
+    : siCustomWords.filter(w => w.word[0].toUpperCase() === letter);
+  shuffle(words);
+  currentIndex = 0; correctCount = 0; wrongCount = 0;
+  totalStarted = words.length;
+  siClearSave();
+  document.getElementById('completionScreen').style.display = 'none';
+  document.getElementById('gameScreen').style.display = 'block';
+  updateUI();
+}
+
 function startCustomGame() {
   const raw = document.getElementById('customInput').value;
   const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
   if (!lines.length) { showToast('Please enter at least one word!'); return; }
 
   const allMaster = [...BATCH1, ...BATCH2];
-  words = lines.map(w => {
+  siCustomWords = lines.map(w => {
     const found = allMaster.find(m => m.word.toLowerCase() === w.toLowerCase());
     return found || { word: w, bengali: '[ custom ]', meaning: 'Custom word' };
   });
 
+  siCustomLetter = 'all';
+  siBuildCustomLetterSelector();
+
+  words = [...siCustomWords];
   shuffle(words);
   currentIndex = 0; correctCount = 0; wrongCount = 0;
   totalStarted = words.length; isCustomMode = true;
@@ -382,6 +428,10 @@ let wmLetter = 'all';
 let wmWaiting = false;
 let wmIsCustomMode = false;
 
+// Custom list letter filter for Word Meaning
+let wmCustomWords = [];     // full matched custom list (before letter filter)
+let wmCustomLetter = 'all'; // active letter filter for WM custom mode
+
 function wmGetSourceList() {
   let list = WM_WORDS;
   if (wmDifficulty !== 'all') list = list.filter(w => w.difficulty === wmDifficulty);
@@ -397,7 +447,6 @@ function wmBuildLetterSelector() {
   const letters = new Set(sourceByDiff.map(w => w.word[0].toUpperCase()));
   const sorted = Array.from(letters).sort();
 
-  // If current letter no longer available, reset
   if (wmLetter !== 'all' && !letters.has(wmLetter)) wmLetter = 'all';
 
   const container = document.getElementById('wmLetterSelector');
@@ -408,8 +457,20 @@ function wmBuildLetterSelector() {
   container.innerHTML = html;
 }
 
+function wmBuildCustomLetterSelector() {
+  const letters = [...new Set(wmCustomWords.map(w => w.word[0].toUpperCase()))].sort();
+  const container = document.getElementById('wmCustomLetterSelector');
+  let html = `<button class="wm-letter-btn${wmCustomLetter === 'all' ? ' active' : ''}" onclick="wmSelectCustomLetter('all')">All</button>`;
+  letters.forEach(l => {
+    html += `<button class="wm-letter-btn${wmCustomLetter === l ? ' active' : ''}" onclick="wmSelectCustomLetter('${l}')">${l}</button>`;
+  });
+  container.innerHTML = html;
+}
+
 function wmModeLabel() {
-  if (wmIsCustomMode) return 'Custom List';
+  if (wmIsCustomMode) {
+    return wmCustomLetter === 'all' ? 'Custom List' : `Custom · ${wmCustomLetter}`;
+  }
   const diff = wmDifficulty !== 'all' ? ` · ${wmDifficulty.toUpperCase()}` : '';
   const letter = wmLetter !== 'all' ? ` · ${wmLetter}` : '';
   return `Word Meaning${diff}${letter}`;
@@ -447,17 +508,14 @@ function wmStartGame() {
 }
 
 function wmGetWrongOptions(correctWord, correctMeaning) {
-  // Exclude same word AND same meaning to avoid duplicate/ambiguous choices
   const pool = WM_WORDS.filter(w =>
     w.word.toLowerCase() !== correctWord.toLowerCase() &&
     w.meaning !== correctMeaning
   );
-  // Fisher-Yates shuffle on the pool
   for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
-  // Pick 3 with unique meanings
   const seen = new Set();
   const result = [];
   for (const w of pool) {
@@ -486,10 +544,8 @@ function wmUpdateUI() {
   const pct = wmTotalStarted > 0 ? ((wmTotalStarted - wmWords.length) / wmTotalStarted * 100) : 0;
   document.getElementById('wmProgressBar').style.width = pct + '%';
 
-  // Build 4 options: 1 correct + 3 wrong (all unique meanings)
   const wrongOpts = wmGetWrongOptions(w.word, w.meaning);
   const allOpts = [w.meaning, ...wrongOpts];
-  // Fisher-Yates shuffle the 4 options
   for (let i = allOpts.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [allOpts[i], allOpts[j]] = [allOpts[j], allOpts[i]];
@@ -512,10 +568,11 @@ function wmUpdateUI() {
   document.getElementById('wmActions').style.opacity = '1';
   document.getElementById('wmActions').style.pointerEvents = 'auto';
 
-  // Show/hide filters and back button based on mode
-  const showFilters = !wmIsCustomMode;
-  document.getElementById('wmDiffSelector').style.display   = showFilters ? '' : 'none';
-  document.getElementById('wmLetterSelector').style.display = showFilters ? '' : 'none';
+  // Show/hide filter selectors based on mode
+  const showNormalFilters = !wmIsCustomMode;
+  document.getElementById('wmDiffSelector').style.display         = showNormalFilters ? '' : 'none';
+  document.getElementById('wmLetterSelector').style.display       = showNormalFilters ? '' : 'none';
+  document.getElementById('wmCustomLetterSelector').style.display = wmIsCustomMode    ? '' : 'none';
   document.getElementById('wmBackBtn').classList.toggle('hidden', !wmIsCustomMode);
 }
 
@@ -523,7 +580,6 @@ function wmSelectAnswer(btn) {
   if (wmWaiting) return;
   const isCorrect = btn.dataset.correct === 'true';
 
-  // Disable all buttons & highlight
   document.querySelectorAll('.wm-choice-btn').forEach(b => {
     b.disabled = true;
     if (b.dataset.correct === 'true')   b.className = 'wm-choice-btn correct';
@@ -579,7 +635,7 @@ function wmRestartGame() {
   document.getElementById('wmCompletionScreen').style.display = 'none';
   document.getElementById('wmGameArea').style.display = 'block';
   if (wmIsCustomMode) {
-    wmStartCustomGame();
+    wmSelectCustomLetter(wmCustomLetter); // restart with same letter
   } else {
     wmStartGame();
   }
@@ -593,7 +649,8 @@ function wmSaveGame() {
   try {
     localStorage.setItem(WM_SAVE_KEY, JSON.stringify({
       wmWords, wmIndex, wmCorrect, wmWrong, wmTotalStarted,
-      wmDifficulty, wmLetter, wmIsCustomMode
+      wmDifficulty, wmLetter, wmIsCustomMode,
+      wmCustomWords, wmCustomLetter
     }));
   } catch {}
 }
@@ -626,9 +683,14 @@ function wmDoResume() {
     wmDifficulty   = save.wmDifficulty;
     wmLetter       = save.wmLetter;
     wmIsCustomMode = save.wmIsCustomMode;
+    wmCustomWords  = save.wmCustomWords  || [];
+    wmCustomLetter = save.wmCustomLetter || 'all';
+
     document.querySelectorAll('.wm-diff-btn').forEach(b =>
       b.classList.toggle('active', b.dataset.diff === wmDifficulty));
     wmBuildLetterSelector();
+    if (wmIsCustomMode && wmCustomWords.length) wmBuildCustomLetterSelector();
+
     document.getElementById('wmResumeBanner').style.display = 'none';
     document.getElementById('wmCompletionScreen').style.display = 'none';
     document.getElementById('wmGameArea').style.display = 'block';
@@ -640,8 +702,8 @@ function wmStartFresh() {
   wmClearSave();
   document.getElementById('wmResumeBanner').style.display = 'none';
   wmIsCustomMode = false;
-  wmDifficulty = 'all';
-  wmLetter = 'all';
+  wmDifficulty = 'all'; wmLetter = 'all';
+  wmCustomWords = []; wmCustomLetter = 'all';
   document.querySelectorAll('.wm-diff-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.diff === 'all'));
   wmBuildLetterSelector();
@@ -658,11 +720,36 @@ function wmSwitchSubTab(tab) {
   document.getElementById('wmGameArea').style.display    = isPractice ? 'block' : 'none';
   document.getElementById('wmCompletionScreen').style.display = 'none';
   document.getElementById('wmCustomArea').style.display  = isPractice ? 'none' : 'block';
-  // Diff/letter selectors only visible on practice tab in non-custom mode
+
   if (isPractice) {
-    document.getElementById('wmDiffSelector').style.display   = wmIsCustomMode ? 'none' : '';
-    document.getElementById('wmLetterSelector').style.display = wmIsCustomMode ? 'none' : '';
+    const showNormal = !wmIsCustomMode;
+    document.getElementById('wmDiffSelector').style.display         = showNormal ? '' : 'none';
+    document.getElementById('wmLetterSelector').style.display       = showNormal ? '' : 'none';
+    document.getElementById('wmCustomLetterSelector').style.display = wmIsCustomMode ? '' : 'none';
+  } else {
+    // On the "Custom List" input tab, hide all filter rows
+    document.getElementById('wmDiffSelector').style.display         = 'none';
+    document.getElementById('wmLetterSelector').style.display       = 'none';
+    document.getElementById('wmCustomLetterSelector').style.display = 'none';
   }
+}
+
+function wmSelectCustomLetter(letter) {
+  wmCustomLetter = letter;
+  wmBuildCustomLetterSelector();
+  wmWords = letter === 'all'
+    ? [...wmCustomWords]
+    : wmCustomWords.filter(w => w.word[0].toUpperCase() === letter);
+  for (let i = wmWords.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [wmWords[i], wmWords[j]] = [wmWords[j], wmWords[i]];
+  }
+  wmIndex = 0; wmCorrect = 0; wmWrong = 0;
+  wmTotalStarted = wmWords.length; wmWaiting = false;
+  wmClearSave();
+  document.getElementById('wmCompletionScreen').style.display = 'none';
+  document.getElementById('wmGameArea').style.display = 'block';
+  wmUpdateUI();
 }
 
 function wmStartCustomGame() {
@@ -676,7 +763,11 @@ function wmStartCustomGame() {
 
   if (!matched.length) { showToast('No words found in the dictionary!'); return; }
 
-  wmWords = matched;
+  wmCustomWords  = matched;
+  wmCustomLetter = 'all';
+  wmBuildCustomLetterSelector();
+
+  wmWords = [...wmCustomWords];
   for (let i = wmWords.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [wmWords[i], wmWords[j]] = [wmWords[j], wmWords[i]];
@@ -694,6 +785,7 @@ function wmStartCustomGame() {
 
 function wmSwitchToNormal() {
   wmIsCustomMode = false;
+  wmCustomWords = []; wmCustomLetter = 'all';
   wmSwitchSubTab('practice');
   wmStartGame();
 }

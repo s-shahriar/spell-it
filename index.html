@@ -46,6 +46,9 @@
       <button class="batch-btn" data-batch="all" onclick="selectBatch('all')">All Words</button>
     </div>
 
+    <!-- Custom list letter selector (shown in custom mode only) -->
+    <div class="batch-selector" id="siCustomLetterSelector" style="display:none"></div>
+
     <!-- Resume banner (shown when a saved session exists) -->
     <div class="si-resume-banner" id="siResumeBanner" style="display:none">
       <span class="resume-info" id="siResumeInfo"></span>
@@ -142,6 +145,9 @@
 
     <!-- Letter selector (dynamically populated) -->
     <div class="wm-letter-selector" id="wmLetterSelector"></div>
+
+    <!-- Custom list letter selector (shown in custom mode only) -->
+    <div class="wm-letter-selector" id="wmCustomLetterSelector" style="display:none"></div>
 
     <!-- Game area -->
     <div id="wmGameArea">
