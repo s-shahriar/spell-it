@@ -112,7 +112,7 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem,7vw,3.4rem); font-
 .word-tag { background: var(--accent-light); color: var(--accent); font-size: clamp(0.48rem, 2vw, 0.55rem); letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 8px; border-radius: 99px; font-weight: 700; white-space: nowrap; }
 .word-num { font-size: clamp(0.48rem, 2vw, 0.55rem); color: var(--muted); letter-spacing: 0.06em; }
 
-.bengali-hint { font-family: 'Tiro Bangla', serif; font-size: clamp(1.3rem, 5vw, 2.4rem); color: var(--accent); line-height: 1.3; margin-bottom: 5px; word-break: break-word; }
+.bengali-hint { font-family: 'Tiro Bangla', serif; font-size: clamp(1.1rem, 4vw, 1.9rem); color: var(--accent); line-height: 1.3; margin-bottom: 5px; word-break: break-word; }
 .meaning { font-size: clamp(0.74rem, 2.5vw, 0.86rem); color: var(--muted); line-height: 1.6; border-left: 3px solid var(--border); padding-left: 8px; margin-bottom: 12px; }
 
 /* ── INPUT ── */
@@ -347,7 +347,7 @@ body.wm-mode { background-color: #f0eeff; background-image: radial-gradient(circ
 }
 .wm-english-word {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(1.6rem, 6vw, 2.6rem);
+  font-size: clamp(1.2rem, 5vw, 2rem);
   font-weight: 800; color: #6030c8;
   line-height: 1.15; margin-bottom: 20px;
   letter-spacing: -0.01em; word-break: break-word;
@@ -514,7 +514,7 @@ body.wm-mode { background-color: #f0eeff; background-image: radial-gradient(circ
 
   .card { padding: 12px 12px 10px; border-radius: 12px; }
 
-  .bengali-hint { font-size: 1.3rem; }
+  .bengali-hint { font-size: 1.1rem; }
   .meaning { font-size: 0.72rem; }
 
   .input-row { flex-direction: column; gap: 6px; }
@@ -545,6 +545,6 @@ body.wm-mode { background-color: #f0eeff; background-image: radial-gradient(circ
   .wm-letter-btn { padding: 3px 7px; font-size: 0.46rem; }
   .wm-choices { grid-template-columns: 1fr; gap: 8px; }
   .wm-choice-btn { font-size: 0.85rem; padding: 11px 10px; }
-  .wm-english-word { font-size: 1.6rem; }
+  .wm-english-word { font-size: 1.2rem; }
   .wm-card { padding: 14px 12px 14px; }
 }
